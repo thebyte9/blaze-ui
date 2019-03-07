@@ -1,0 +1,122 @@
+.table-scroll {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin: auto;
+  overflow: scroll;
+  border-bottom: 1px solid $blue-grey-50;
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  & table {
+    width: 100%;
+    min-width: 800px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: $size-x-small;
+    @include mq($from: tablet) {
+      table-layout: auto;
+    }
+
+    & tr {
+      background-color: lighten($blue-grey-100, 12%);
+
+      & td {
+        background-color: lighten($blue-grey-100, 12%);
+      }
+
+      &:first-of-type {
+        background-color: $blue-grey-100;
+      }
+
+      &:nth-of-type(2n+2) {
+        background-color: $white;
+
+        & td {
+          background-color: $white;
+        }
+      }
+
+      & td {
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include mq($from: tablet) {
+          max-width: 100px;
+        }
+
+        &:first-of-type {
+          width: 41px;
+          max-width: 41px;
+          position: sticky;
+          left: 0;
+          z-index: 2;
+        }
+
+        &:nth-of-type(2) {
+          width: auto;
+          position: sticky;
+          left: 41px;
+          z-index: 2;
+          box-shadow: 1px 0 0 0 rgba(0, 0, 0, .1);
+        }
+      }
+
+      & th {
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include mq($from: tablet) {
+          max-width: 100px;
+        }
+
+        &:first-of-type {
+          width: 41px;
+          max-width: 41px;
+          position: sticky;
+          left: 0;
+          z-index: 2;
+          background-color: $blue-grey-100;
+        }
+
+        &:nth-of-type(2) {
+          width: auto;
+          position: sticky;
+          left: 41px;
+          z-index: 2;
+          background-color: $blue-grey-100;
+        }
+      }
+    }
+
+    & th {
+      padding: 10px;
+      font-weight: 600;
+      z-index: 1;
+    }
+
+    & td {
+      padding: 10px;
+      z-index: 1;
+      @include mq($from: tablet) {
+        padding: 20px 10px;
+      }
+    }
+
+    & .form-checkbox {
+      margin: 0;
+    }
+  }
+}
+
+.table {
+  padding: 10px;
+  overflow: hidden;
+  @include mq($from: tablet) {
+    padding: 20px;
+  }
+}

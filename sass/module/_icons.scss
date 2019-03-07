@@ -1,0 +1,54 @@
+.icon {
+  &--string {
+    background-color: $pink;
+  }
+  &--content {
+    background-color: $pink;
+  }
+
+  &--number {
+    background-color: $orange;
+  }
+  &--build {
+    background-color: $orange;
+  }
+
+  &--date {
+    background-color: $blue;
+  }
+  &--upload {
+    background-color: $blue;
+  }
+
+  &--email {
+    background-color: $green-light;
+  }
+
+  &--media {
+    background-color: $purple;
+  }
+
+  &--enumeration {
+    background-color: $red;
+  }
+
+  &--text {
+    background-color: $indigo;
+  }
+
+  &--boolean {
+    background-color: $teal;
+  }
+
+  &--json {
+    background-color: $yellow;
+  }
+
+  &--password {
+    background-color: $green;
+  }
+
+  &--relation {
+    background-color: $cyan;
+  }
+}

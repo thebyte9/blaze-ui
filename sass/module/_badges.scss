@@ -1,0 +1,157 @@
+.badge {
+  @extend %badge-basic;
+  letter-spacing: $x-small-space;
+  transition: $animate-default;
+  border-color: $grey;
+
+  &--primary {
+    color: $white;
+    background-color: $primary-badge-color;
+    border-color: $primary-badge-color;
+  }
+
+  &--secondary {
+    color: $white;
+    background-color: $secondary-badge-color;
+    border-color: $secondary-badge-color;
+  }
+
+  &--success {
+    color: $white;
+    background-color: $success-badge-color;
+    border-color: $success-badge-color;
+  }
+
+  &--alert {
+    color: $white;
+    background-color: $alert-badge-color;
+    border-color: $alert-badge-color;
+  }
+
+  &--info {
+    color: $white;
+    background-color: $info-badge-color;
+    border-color: $info-badge-color;
+  }
+
+  &--light {
+    color: $grey-dark;
+    background-color: $light-badge-color;
+    border-color: $light-badge-color;
+  }
+
+  &--dark {
+    color: $white;
+    background-color: $dark-badge-color;
+    border-color: $dark-badge-color;
+  }
+
+  &--pill {
+    border-radius: 15px;
+    padding: 5px 10px;
+  }
+
+  &--icon-text {
+    position: relative;
+    padding-left: 22px;
+
+    & i {
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: .875rem;
+    }
+  }
+  &--image {
+
+  }
+
+  &--round {
+    padding: 5px;
+    border-radius: 12px;
+    min-width: 24px;
+    text-align: center;
+    height: 24px;
+    line-height: 14px;
+    position: relative;
+
+    & .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--image-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  &--icon {
+    width: 48px;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $grey;
+    border: 0;
+
+    & i {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+a.badge {
+  &:hover {
+    background-color: $grey-light;
+  }
+
+  &--primary:hover {
+    background-color: darken($primary-badge-color, 10%);
+    border-color: darken($primary-badge-color, 10%);
+  }
+
+  &--secondary:hover {
+    background-color: darken($secondary-badge-color, 10%);
+    border-color: darken($secondary-badge-color, 10%);
+  }
+
+  &--success:hover {
+    background-color: darken($success-badge-color, 10%);
+    border-color: darken($success-badge-color, 10%);
+  }
+
+  &--alert:hover {
+    background-color: darken($alert-badge-color, 10%);
+    border-color: darken($alert-badge-color, 10%);
+  }
+
+  &--info:hover {
+    background-color: darken($info-badge-color, 10%);
+    border-color: darken($info-badge-color, 10%);
+  }
+
+  &--light:hover {
+    background-color: darken($light-badge-color, 10%);
+    border-color: darken($light-badge-color, 10%);
+  }
+
+  &--dark:hover {
+    background-color: darken($dark-badge-color, 10%);
+    border-color: darken($dark-badge-color, 10%);
+  }
+
+  & span {
+    opacity: .8;
+    transition: $animate-default;
+  }
+
+  &:hover span {
+    opacity: 1;
+  }
+}

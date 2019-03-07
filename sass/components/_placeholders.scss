@@ -1,0 +1,80 @@
+/*PLACEHOLDERS use ''@extend %placeholder' in css above all other styles in the class*/
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%button-basic {
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1em;
+  white-space: nowrap;
+  min-width: 140px;
+  font-weight: 600;
+}
+
+%outline-button {
+  background: none;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+%card-title {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+%badge-basic {
+  display: inline-block;
+  width: auto;
+  font-weight: 300;
+  font-size: .75rem;
+  padding: 5px 7px;
+  line-height: 1em;
+  white-space: nowrap;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+%alert-basic {
+  width: 100%;
+  padding: 20px;
+  margin: 0 0 15px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  font-size: .875rem;
+  font-weight: 400;
+}
+%header-icon {
+  margin: 0 2px;
+  border: 0;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+%header-icon-hover {
+  background: #eeeeee;
+}

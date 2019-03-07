@@ -1,0 +1,362 @@
+@import '_checkbox-radio.scss';
+
+input,
+label,
+select,
+textarea {
+  font-family: $primary-font;
+  font-size: $size-x-small;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid $grey;
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid $grey;
+  padding: 10px;
+  width: 100%;
+}
+/*all inputs styling apart from types excluded*/
+input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+  padding: 10px 0;
+}
+
+input.input-search {
+  border-color: $white;
+}
+
+select {
+  font-size: .875rem;
+  border: 1px solid $grey-light;
+  border-radius: 3px;
+  background: $white;
+  padding: 5px 10px;
+  height: 40px;
+  /* Removes the default <select> styling */
+  /*  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  /* Positions background arrow image */
+  /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAXNSR0IArs4c6QAAAJVJREFUGBlt0EEKwkAMBdAkXdRjeImCJyiCu9JTqNsBz9DpLFvwEqKIl1M6v4laGWqzS/6bvxhu264aIoKwHJ3bPyiZpulKEM6c8UkUeSKsI4aL9/1ucl90s4y0iPWwJY5XgHJFT+GsAvDSJkOrz01qtoY5Jn2ZIucO9zdcwHbSdqkN2fKDtiTNnCLL/kZ/oQih38yDET+eUFeYCxvjAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: 99.5% 50%;*/
+  width: 100%;
+}
+/* Internet Explorer 10–11 and Edge */
+select::-ms-expand {
+  display: none;
+}
+/*option {
+  padding: 5px;
+  color: red;
+}*/
+label {
+  white-space: nowrap;
+  font-size: $size-x-small;
+  color: $grey-dark;
+  font-weight: 300;
+  letter-spacing: $x-small-space;
+  margin: 0 0 5px;
+}
+
+input[type][disabled] {
+  background-color: $grey-100;
+  color: $grey;
+  border: 0;
+  cursor: default;
+  text-indent: 10px;
+}
+
+input[type=checkbox][disabled],
+input[type=radio][disabled] {
+  background-color: $grey-lightest;
+
+}
+
+input[type][disabled] + label {
+  color: $grey-medium;
+  cursor: default;
+}
+
+select[disabled] {
+  background-color: $grey-100;
+  color: $grey;
+  border: 0;
+  cursor: default;
+  padding: 10px;
+}
+
+select[disabled] + label {
+  color: $grey-medium;
+  cursor: default;
+}
+
+*:focus {
+  outline: none;
+}
+
+.form-field {
+  margin: 0 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include mq($from: tablet) {
+    max-width: 400px;
+  }
+  &--input {
+    & label {
+      margin: 0;
+    }
+  }
+
+  &--header {
+    margin: 0;
+  }
+
+  &--small {
+    max-width: 100px;
+
+    & select {
+      height: 30px;
+    }
+  }
+
+  &--full-width {
+    max-width: 100%;
+  }
+
+  &--radio {
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+
+    & label {
+      cursor: pointer;
+      margin: 0;
+      white-space: normal;
+    }
+  }
+
+  &--checkbox {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+
+    & input {
+      width: 20px;
+      height: 20px;
+    }
+
+    & label {
+      cursor: pointer;
+      margin: 0;
+      white-space: normal;
+    }
+  }
+
+  &--pagination {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+
+    & label {
+      margin-right: 10px;
+    }
+  }
+
+  &--password {
+    position: relative;
+  }
+}
+
+.toggle {
+  & input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  & label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 18px;
+    background: $grey;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  & label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: $white;
+    border-radius: 18px;
+    transition: .3s;
+  }
+
+  & input:checked + label {
+    background: $primary-button-color;
+  }
+
+  & input:checked + label:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+  }
+
+  & label:active:after {
+    width: 40px;
+  }
+
+  &__item {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: $x-small-space;
+  }
+}
+
+.form-group {
+  width: 100%;
+  margin: 20px 0;
+
+  &__heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .875rem;
+    color: $nearly-black;
+    margin-bottom: 20px;
+    font-weight: $font-semi-bold;
+  }
+
+  &--required {
+    position: relative;
+
+    &:before {
+      content: '*';
+      color: $secondary-color;
+      font-size: 1.125rem;
+      position: absolute;
+      left: -12px;
+      top: -2px;
+    }
+  }
+  & .form-field {
+    margin: 0 0 10px;
+  }
+}
+
+.required {
+  position: relative;
+
+  &::before {
+    content: '*';
+    color: red;
+    font-size: 1.125rem;
+    position: absolute;
+    top: 0;
+    left: -10px;
+  }
+}
+
+.input-search {
+  border: 0;
+  border-bottom: 1px solid $grey;
+  color: $nearly-black;
+  background: none;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: $size-x-small;
+
+  &--header {
+    border-color: $white;
+    color: white;
+  }
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: $grey-dark;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $grey-dark;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $grey-dark;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $grey-dark;
+}
+
+.input-search--header {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $white;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $white;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $white;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $white;
+    opacity: 1;
+  }
+}
+
+input.form-password {
+  padding-right: 60px!important;
+}
+
+.show-hide-password {
+  position: absolute;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 5px;
+  right: 0;
+  font-size: .813rem;
+  color: $grey;
+  cursor: pointer;
+
+  &.active {
+    display: flex;
+  }
+
+  & i {
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+}

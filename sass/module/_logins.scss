@@ -1,0 +1,143 @@
+.login {
+  width: 100%;
+  max-width: 490px;
+  padding: 10px;
+  margin: 0 auto auto;
+  @include mq($from: tablet) {
+    margin: auto;
+    max-width: 520px;
+  }
+
+  &--welcome {
+    max-width: 490px;
+    @include mq($from: tablet) {
+      max-width: 660px;
+    }
+    @include mq($from: desktop) {
+      max-width: 800px;
+    }
+  }
+
+  &__wrapper {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+
+    &--2col {
+      @include mq($from: tablet) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__side-panel {
+    background-color: darken($primary-color, 5%);
+    text-align: left;
+    padding: 30px 20px;
+    font-size: 1rem;
+    color: $white;
+    font-weight: 600;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @include mq($from: mobileBig) {
+      padding: 30px;
+    }
+    @include mq($from: phablet) {
+      padding: 30px 50px;
+    }
+    @include mq($from: tablet) {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 0;
+      text-align: right;
+      padding: 100px 30px;
+      flex: 0 1 320px;
+      font-size: 1.5rem;
+    }
+    @include mq($from: desktop) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    padding: 40px;
+    @include mq($from: phablet) {
+      padding: 50px;
+    }
+    @include mq($from: tablet) {
+      flex: 0 1 480px;
+      padding: 100px 50px;
+    }
+
+    &--welcome {
+      padding: 30px 20px;
+      @include mq($from: mobileBig) {
+        padding: 30px;
+      }
+      @include mq($from: phablet) {
+        padding: 50px;
+      }
+      @include mq($from: tablet) {
+        padding: 100px 50px;
+      }
+    }
+  }
+
+  &__heading {
+    margin: 0 0 10px;
+    color: $nearly-black;
+    font-size: 1.5rem;
+    line-height: 1em;
+    @include mq($from: tablet) {
+      font-size: 2.5rem;
+    }
+
+    &--welcome {
+      font-size: 1.75rem;
+      @include mq($from: phablet) {
+        margin: 0 0 5px;
+        font-size: 2rem;
+      }
+      @include mq($from: desktop) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__subheading {
+    margin: 0;
+    color: $grey-dark;
+    font-size: .813rem;
+    font-weight: 400;
+    @include mq($from: phablet) {
+      font-size: 1rem;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+
+  &__link {
+    font-size: .813rem;
+    white-space: nowrap;
+  }
+
+  &__2col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include mq($from: mobileBig) {
+      font-size: 1rem;
+      flex-direction: row;
+    }
+  }
+}

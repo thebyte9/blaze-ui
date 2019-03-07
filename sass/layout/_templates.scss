@@ -1,0 +1,72 @@
+.item-heading {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $grey;
+}
+
+.group-heading {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 10px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $grey;
+}
+
+.note {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 30px;
+  font-size: .875rem;
+  line-height: 1.75em;
+}
+
+.component-wrapper {
+  width: 100%;
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: $white;
+  text-align: left;
+  @include mq($from: tablet) {
+    padding: 50px;
+  }
+
+  &--full-width {
+    max-width: 100%;
+  }
+  &--dark-bg {
+    background-color: $grey-light;
+  }
+}
+
+pre {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: $grey-lightest;
+  border: 1px solid $grey;
+  text-align: left;
+  overflow: scroll;
+  font-size: .75rem;
+  word-break: normal;
+  word-wrap: normal;
+  color: $grey-medium;
+
+  & .tag {
+    color: $primary-color;
+  }
+
+  & .class {
+    color: $secondary-color;
+  }
+
+  & .text {
+    color: $black;
+  }
+}

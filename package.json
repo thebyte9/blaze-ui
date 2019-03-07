@@ -1,0 +1,24 @@
+{
+  "name": "blaze-ui",
+  "version": "0.0.1",
+  "description": "CSS Framework from Blaze-CMS",
+  "main": "blaze-ui.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --output-style expanded --source-map true blaze-ui.scss css/blaze-ui.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebyte9/blaze-ui.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebyte9/blaze-ui/issues"
+  },
+  "homepage": "https://github.com/thebyte9/blaze-ui#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "sass-lint": "^1.12.1"
+  }
+}

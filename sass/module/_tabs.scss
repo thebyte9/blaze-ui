@@ -1,0 +1,47 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+  }
+
+  &__list-item {
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px;
+    font-size: .875rem;
+    font-weight: $font-semi-bold;
+    color: $grey-medium;
+    border-bottom: 5px solid $white;
+
+    &.current {
+      border-color: $secondary-color;
+      color: $grey-dark;
+    }
+    @include mq($from: phablet) {
+      padding: 10px 30px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    border-top: 1px solid $grey-light;
+    padding: 30px 0;
+
+    &.current {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

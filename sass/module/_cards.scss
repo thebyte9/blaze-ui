@@ -1,0 +1,178 @@
+.card {
+  width: 100%;
+  max-width: 620px;
+  min-height: 450px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: $box-shadow;
+
+  &__content {
+    padding: 20px;
+    text-align: left;
+    @include mq($from: tablet) {
+      padding: 20px 30px 30px;
+    }
+
+    & p {
+      line-height: 1.5em;
+      margin: 0 0 30px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+
+      & a {
+        color: $primary-color;
+
+        &:hover {
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend %card-title;
+
+    &--header {
+      margin: 0;
+    }
+
+    &--with-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    & a {
+      color: $nearly-black;
+
+      &:hover {
+        border-color: $grey-dark;
+      }
+    }
+  }
+
+  &__image {
+    line-height: 0;
+    background: $pink url('../images/login-tile.png');
+    height: 213px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.cyan {
+      background-color: $cyan;
+    }
+    &.red {
+      background-color: $red;
+    }
+    &.blue {
+      background-color: $blue;
+    }
+    &.green {
+      background-color: $green;
+    }
+
+    &--with-badge {
+      position: relative;
+    }
+
+    &--text {
+      font-size: 3rem;
+      font-weight: 900;
+      color: rgba($white, .8);
+    }
+
+    & a {
+      border: 0;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: $grey-100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: .813rem;
+    color: $grey-dark;
+    text-transform: uppercase;
+    @include mq($from: tablet) {
+      padding: 5px 20px;
+      min-height: 70px;
+    }
+
+    & .button {
+      margin: 10px;
+    }
+
+    & p {
+      margin: 10px;
+      font-weight: $font-bold;
+      letter-spacing: $small-space;
+    }
+  }
+
+  &__header {
+    padding: 20px;
+    text-align: left;
+    background-color: $grey-lightest;
+    display: flex;
+
+    &--with-badge {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+
+    & i {
+      font-size: .75rem;
+    }
+  }
+
+  &__alert {
+    font-size: .875rem;
+    font-weight: $font-semi-bold;
+    color: $warning;
+    margin-top: auto;
+    text-align: left;
+    padding: 10px 20px;
+    @include mq($from: tablet) {
+      padding: 15px 30px;
+    }
+  }
+}
+
+.card__image + .card__content {
+  /*If there is an image before content*/
+  @include mq($from: tablet) {
+    padding-top: 20px;
+  }
+}
+
+.card__title + .author {
+  /*If author comes after title*/
+  margin-top: -15px;
+}
+
+.author--card + .date {
+  /*If date comes after author*/
+  margin-top: -15px;
+}
+
+.box {
+  width: 100%;
+  padding: 30px;
+  background-color: $warning;
+}
