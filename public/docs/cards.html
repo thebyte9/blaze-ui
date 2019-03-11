@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+         content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Cards</title>
+      <link href="../dist/main.css"
+         rel="stylesheet"
+         type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Cards</h2>
+         <p>&nbsp;</p>
+         <p class="item-heading">Simple card</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">A card with title + content</p>
+            <pre>
+&lt;<span class="tag">div</span> class="<span class="class">card</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+    &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+      &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+    &lt;/<span class="tag">h2</span>>
+    &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+         </div>
+         <p>&nbsp;</p>
+         <p class="item-heading">Image + simple content</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD IMAGE -->
+            <div class="card__image">
+               <a href="#"><img src="https://placeimg.com/640/480/any"></a>
+            </div>
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">A card with image + title + content</p>
+            <pre>
+            &lt;<span class="tag">div</span> class="<span class="class">card</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">card__image</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Image here</span>&lt;/a>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+                &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+                &lt;/<span class="tag">h2</span>>
+                &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+              &lt;/<span class="tag">div</span>>
+            &lt;/<span class="tag">div</span>>
+            </pre>
+         </div>
+         <p>&nbsp;</p>
+         <p class="item-heading">Image + content + author</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD IMAGE -->
+            <div class="card__image">
+               <a href="#"><img src="https://placeimg.com/640/480/any"></a>
+            </div>
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <div class="author author--card">
+                  <a href="#">Author name</a>
+               </div>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">Author can be placed after closing p tag or in a footer etc</p>
+            <pre>
+            &lt;<span class="tag">div</span> class="<span class="class">card</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">card__image</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Image here</span>&lt;/a>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+                &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+                &lt;/<span class="tag">h2</span>>
+                &lt;<span class="tag">div</span> class="<span class="class">author author--card</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Author name / link</span>&lt;/a>
+                &lt;/<span class="tag">div</span>>
+                &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+              &lt;/<span class="tag">div</span>>
+            &lt;/<span class="tag">div</span>>
+            </pre>
+         </div>
+         <p>&nbsp;</p>
+         <p class="item-heading">Image + content + author + date</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD IMAGE -->
+            <div class="card__image">
+               <a href="#"><img src="https://placeimg.com/640/480/any"></a>
+            </div>
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <div class="author author--card">
+                  <a href="#">Author name</a>
+               </div>
+               <div class="date date--card">
+                  03.07.2018
+               </div>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">Author & dates can be placed after closing p tag or in a footer etc</p>
+            <pre>
+            &lt;<span class="tag">div</span> class="<span class="class">card</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">card__image</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Image here</span>&lt;/a>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+                &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+                &lt;/<span class="tag">h2</span>>
+                &lt;<span class="tag">div</span> class="<span class="class">author author--card</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Author name / link</span>&lt;/a>
+                &lt;/<span class="tag">div</span>>
+                &lt;<span class="tag">div</span> class="<span class="class">date date--card</span>">
+                  <span class="text">01.01.2018</span>
+                &lt;/<span class="tag">div</span>>
+                &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+              &lt;/<span class="tag">div</span>>
+            &lt;/<span class="tag">div</span>>
+            </pre>
+         </div>
+         <p>&nbsp;</p>
+         <p class="item-heading">Image + content + author + date + footer</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD IMAGE -->
+            <div class="card__image">
+               <a href="#"><img src="https://placeimg.com/640/480/any"></a>
+            </div>
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <div class="author author--card">
+                  <a href="#">Author name</a>
+               </div>
+               <div class="date date--card">
+                  03.07.2018
+               </div>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+            <!-- CARD FOOTER -->
+            <footer class="card__footer">
+               <button type="button" class="button">Button</button>
+            </footer>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">Footer can contain a link/button/text/cta</p>
+            <pre>
+            &lt;<span class="tag">div</span> class="<span class="class">card</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">card__image</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Image here</span>&lt;/a>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+                &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+                &lt;/<span class="tag">h2</span>>
+                &lt;<span class="tag">div</span> class="<span class="class">author author--card</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Author name / link</span>&lt;/a>
+                &lt;/<span class="tag">div</span>>
+                &lt;<span class="tag">div</span> class="<span class="class">date date--card</span>">
+                  <span class="text">01.01.2018</span>
+                &lt;/<span class="tag">div</span>>
+                &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">footer</span> class="<span class="class">card__footer</span>">
+                <span class="text">Footer content</span>
+              &lt;/<span class="tag">footer</span>>
+            &lt;/<span class="tag">div</span>>
+            </pre>
+         </div>
+         <p>&nbsp;</p>
+         <p class="item-heading">Header + image + content + footer</p>
+         <!-- CARD -->
+         <div class="card">
+            <!-- CARD HEADER -->
+            <header class="card__header">
+               <h2 class="card__title card__title--header">Header</h2>
+            </header>
+            <!-- CARD IMAGE -->
+            <div class="card__image">
+               <a href="#"><img src="https://placeimg.com/640/480/any"></a>
+            </div>
+            <!-- CARD CONTENT -->
+            <div class="card__content">
+               <!-- CARD TITLE -->
+               <h2 class="card__title">
+                  <a href="#">Card title</a>
+               </h2>
+               <p>Card content here ipsum dolor sit <a href="#">amet consectetur adipiscing</a> elit in porta elementum rutrum eget lectus sem fringilla natoque habitasse convallis viverra, mus laoreet semper sociis praesent arcu dictum fermentum. Fringilla vestibulum maecenas sociosqu tempor vehicula rutrum suscipit nunc netus congue eget nisl massa, tortor lectus sollicitudin feugiat elementum eleifend curae torquent ridiculus dignissim commodo. Mauris netus libero torquent pellentesque lobortis placerat, nisi sodales laoreet aliquam suscipit sed, porttitor ultrices ac accumsan egestas</p>
+            </div>
+            <!-- CARD FOOTER -->
+            <footer class="card__footer">
+               <button type="button" class="button">Button</button>
+            </footer>
+         </div>
+         <div class="component-wrapper">
+            <p class="note">Header can contain a heading/button/link</p>
+            <pre>
+            &lt;<span class="tag">div</span> class="<span class="class">card</span>">
+            &lt;<span class="tag">header</span> class="<span class="class">card__header</span>">
+              <span class="text">Header content</span>
+            &lt;/<span class="tag">header</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__image</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Image here</span>&lt;/a>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">div</span> class="<span class="class">card__content</span>">
+                &lt;<span class="tag">h2</span> class="<span class="class">card__title</span>">
+                  &lt;<span class="tag">a</span> href="#"><span class="text">Title / link</span>&lt;/a>
+                &lt;/<span class="tag">h2</span>>
+                &lt;<span class="tag">p</span>><span class="text">Text here</span>&lt;/<span class="tag">p</span>>
+              &lt;/<span class="tag">div</span>>
+              &lt;<span class="tag">footer</span> class="<span class="class">card__footer</span>">
+                <span class="text">Footer content</span>
+              &lt;/<span class="tag">footer</span>>
+            &lt;/<span class="tag">div</span>>
+            </pre>
+         </div>
+      </div>
+   </body>
+</html>

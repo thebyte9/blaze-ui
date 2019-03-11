@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Pagination</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Pagination</h2>
+         <div class="component-wrapper">
+            <p class="item-heading">Pagination simple</p>
+            <div class="pagination">
+              <ul class="pagination__list">
+                  <li class="pagination__list-item disabled previous"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="pagination__list-item active"><a href="#">1</a></li>
+                  <li class="pagination__list-item"><a href="#">2</a></li>
+                  <li class="pagination__list-item"><a href="#">3</a></li>
+                  <li class="pagination__list-item"><a href="#">4</a></li>
+                  <li class="pagination__list-item"><a href="#">5</a></li>
+                  <li class="pagination__list-item next
+                  p"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">pagination</span>">
+  &lt;<span class="tag">ul</span> class="<span class="class">pagination__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled previous</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_left</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item active</span>">&lt;<span class="tag">a</span> href="#"><span class="text">1</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">2</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">3</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">4</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">5</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item next</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_right</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ul</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+
+
+            <p>&nbsp;</p>
+            <p class="item-heading">Pagination + go to first / last</p>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__list-item disabled go-to-first"><a href="#"><i class="material-icons">first_page</i></a></li>
+                  <li class="pagination__list-item disabled previous"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="pagination__list-item active"><a href="#">1</a></li>
+                  <li class="pagination__list-item"><a href="#">2</a></li>
+                  <li class="pagination__list-item"><a href="#">3</a></li>
+                  <li class="pagination__list-item"><a href="#">4</a></li>
+                  <li class="pagination__list-item"><a href="#">5</a></li>
+                  <li class="pagination__list-item next"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                  <li class="pagination__list-item next go-to-last"><a href="#"><i class="material-icons">last_page</i></a></li>
+                </ul>
+            </div>
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">pagination</span>">
+  &lt;<span class="tag">ul</span> class="<span class="class">pagination__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled go-to-first</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">first_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled previous</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_left</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item active</span>">&lt;<span class="tag">a</span> href="#"><span class="text">1</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">2</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">3</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">4</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">5</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item next</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_right</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item go-to-last</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">last_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ul</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+            <p>&nbsp;</p>
+            <p class="item-heading">Pagination + pages</p>
+            <div class="pagination">
+              <div class="pagination__pages">
+                Page <span class="active">1</span> of 20
+
+              </div>
+              <ul class="pagination__list">
+                <li class="pagination__list-item disabled go-to-first"><a href="#"><i class="material-icons">first_page</i></a></li>
+                  <li class="pagination__list-item disabled previous"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="pagination__list-item active"><a href="#">1</a></li>
+                  <li class="pagination__list-item"><a href="#">2</a></li>
+                  <li class="pagination__list-item"><a href="#">3</a></li>
+                  <li class="pagination__list-item"><a href="#">4</a></li>
+                  <li class="pagination__list-item"><a href="#">5</a></li>
+                  <li class="pagination__list-item next"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                  <li class="pagination__list-item next go-to-last"><a href="#"><i class="material-icons">last_page</i></a></li>
+                </ul>
+            </div>
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">pagination</span>">
+&lt;<span class="tag">div</span> class="<span class="class">pagination__pages</span>"><span class="text">Page &lt;<span class="tag">span</span> class="<span class="class">active</span>">1&lt;/<span class="tag">span</span>> of 20</span>&lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">ul</span> class="<span class="class">pagination__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled go-to-first</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">first_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled previous</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_left</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item active</span>">&lt;<span class="tag">a</span> href="#"><span class="text">1</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">2</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">3</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">4</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">5</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item next</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_right</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item go-to-last</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">last_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ul</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+            <p>&nbsp;</p>
+            <p class="item-heading">Pagination + show number of results</p>
+            <div class="pagination">
+              <div class="pagination__pages">
+                Page <span class="active">1</span> of 20
+
+              </div>
+              <ul class="pagination__list">
+                <li class="pagination__list-item disabled go-to-first"><a href="#"><i class="material-icons">first_page</i></a></li>
+                  <li class="pagination__list-item disabled previous"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="pagination__list-item active"><a href="#">1</a></li>
+                  <li class="pagination__list-item"><a href="#">2</a></li>
+                  <li class="pagination__list-item"><a href="#">3</a></li>
+                  <li class="pagination__list-item"><a href="#">4</a></li>
+                  <li class="pagination__list-item"><a href="#">5</a></li>
+                  <li class="pagination__list-item next"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                  <li class="pagination__list-item next go-to-last"><a href="#"><i class="material-icons">last_page</i></a></li>
+                </ul>
+
+                <div class="pagination__show-results">
+                  <div class="form-field form-field--select form-field--pagination">
+                     <label for="show-results">Show results</label>
+                     <select name="show-results" id="show-results">
+                        <option value="50" selected="">50</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                     </select>
+                  </div>
+
+                </div>
+            </div>
+
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">pagination</span>">
+&lt;<span class="tag">div</span> class="<span class="class">pagination__pages</span>"><span class="text">Page &lt;<span class="tag">span</span> class="<span class="class">active</span>">1&lt;/<span class="tag">span</span>> of 20</span>&lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">ul</span> class="<span class="class">pagination__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled go-to-first</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">first_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item disabled previous</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_left</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item active</span>">&lt;<span class="tag">a</span> href="#"><span class="text">1</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">2</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">3</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">4</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item</span>">&lt;<span class="tag">a</span> href="#"><span class="text">5</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item next</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">chevron_right</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">pagination__list-item go-to-last</span>">&lt;<span class="tag">a</span> href="#">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">last_page</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;/<span class="tag">ul</span>>
+&lt;/<span class="tag">div</span>>
+
+&lt;<span class="tag">div</span> class="<span class="class">pagination__show-results</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select form-field--pagination</span>">
+    &lt;<span class="tag">label</span> for="show-results"><span class="text">Show results</span>&lt;/<span class="tag">label</span>>
+    &lt;<span class="tag">select</span> name="show-results" id="show-results">
+      &lt;<span class="tag">option</span> value="value-here" selected>50&lt;/<span class="tag">option</span>>
+      &lt;<span class="tag">option</span> value="value-here">100&lt;/<span class="tag">option</span>>
+      &lt;<span class="tag">option</span> value="value-here">200&lt;/<span class="tag">option</span>>
+    &lt;/<span class="tag">select</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+            <p>&nbsp;</p>
+         </div>
+         </div>
+      </div>
+   </body>
+</html>

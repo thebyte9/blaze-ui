@@ -10,6 +10,7 @@
 @import 'sass/components/_mq';
 @import 'sass/components/_grid';
 @import 'sass/components/_placeholders';
+@import 'sass/components/_sprite';
 /* ==========================================================================
    Variables and mixins
    ========================================================================== */
@@ -41,20 +42,16 @@
 @import 'sass/module/_buttons';
 @import 'sass/module/_cards';
 @import 'sass/module/_content';
-@import 'sass/module/_dropdowns';
 @import 'sass/module/_flyout-panel';
 @import 'sass/module/_forms';
 @import 'sass/module/_icons';
 @import 'sass/module/_lists';
-@import 'sass/module/_logins';
 @import 'sass/module/_modal';
-@import 'sass/module/_nav';
 @import 'sass/module/_page-items';
 @import 'sass/module/_pagination';
 @import 'sass/module/_progress-breadcrumb';
 @import 'sass/module/_search';
-@import 'sass/module/_side-panel';
-@import 'sass/module/_tables';
+@import 'sass/module/_sidebar';
 @import 'sass/module/_tabs';
 @import 'sass/module/_tags';
-@import 'sass/module/_tooltip';
+@import 'sass/module/_tooltips';

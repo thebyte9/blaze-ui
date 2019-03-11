@@ -1,86 +1,14 @@
 .site-container {
   width: 100%;
-  height: 100vh;
 
   &--template {
     padding: 10px;
   }
 }
 
-.main-content {
-  padding-top: 60px;
+.page-content {
+  padding: 10px;
   @include mq($from: tablet) {
-    padding-top: 0;
-  }
-
-  &--login {
-    display: grid;
-    background-color: $primary-color;
-    height: 102vh;
-    @include mq($from: mobileBig) {
-      height: calc(100vh - 70px);
-    }
-  }
-}
-
-.page {
-  &__content {
-    &--with-side-panel {
-      display: grid;
-      grid-template-columns: 1fr;
-      @include mq($from: tablet) {
-        grid-template-columns: 160px auto;
-      }
-    }
-  }
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  justify-content: space-between;
-
-  & form {
-    display: flex;
-    align-items: center;
-
-    & div {
-      margin-right: 10px;
-    }
-  }
-
-  & .form-field {
-    margin-bottom: 0;
-  }
-
-  &__text {
-    font-size: .813rem;
-    white-space: nowrap;
-  }
-}
-
-.table-scroll__wrapper + .row {
-  margin-top: 20px;
-}
-
-.content {
-  background-color: $white;
-  border: 1px solid $grey-light;
-  padding: 15px;
-  text-align: left;
-  @include mq($from: phablet) {
     padding: 20px;
-  }
-  @include mq($from: tablet) {
-    padding: 30px;
-    box-shadow: $box-shadow-solid;
-  }
-
-  &__wrapper {
-    padding: 10px;
-    @include mq($from: phablet) {
-      padding: 20px;
-    }
   }
 }

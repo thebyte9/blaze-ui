@@ -1,63 +1,59 @@
+%alert-basic {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  font-size: .875rem;
+  font-weight: 400;
+}
+
 .alert {
   @extend %alert-basic;
   border-color: $grey-light;
-
-
 
   &--primary {
     color: darken($primary-alert-color, 70%);
     background-color: $primary-alert-color;
     border-color: darken($primary-alert-color, 10%);
-
-
   }
 
   &--secondary {
     color: darken($secondary-alert-color, 70%);
     background-color: $secondary-alert-color;
     border-color: darken($secondary-alert-color, 10%);
-
-
   }
 
   &--success {
     color: darken($success-alert-color, 70%);
     background-color: $success-alert-color;
     border-color: darken($success-alert-color, 10%);
-
-
   }
 
   &--warning {
     color: darken($warning-alert-color, 70%);
     background-color: $warning-alert-color;
     border-color: darken($warning-alert-color, 10%);
-
-
   }
 
   &--info {
     color: darken($info-alert-color, 60%);
     background-color: $info-alert-color;
     border-color: darken($info-alert-color, 10%);
-
-
   }
 
   &--light {
     color: darken($light-alert-color, 70%);
     background-color: $light-alert-color;
     border-color: darken($light-alert-color, 10%);
-
-
   }
 
   &--dark {
     color: darken($dark-alert-color, 70%);
     background-color: $dark-alert-color;
     border-color: darken($dark-alert-color, 10%);
-
-
   }
 
   &--dismissable {
@@ -69,6 +65,7 @@
       right: 10px;
     }
   }
+
   &--icon {
     padding-left: 40px;
 
@@ -79,6 +76,7 @@
       color: $secondary-color;
     }
   }
+
   & p:last-of-type {
     margin-bottom: 0;
   }

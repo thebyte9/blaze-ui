@@ -5,7 +5,9 @@
   "main": "blaze-ui.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass": "node-sass --output-style expanded --source-map true blaze-ui.scss css/blaze-ui.css"
+    "build": "node-sass --output-style expanded --source-map true blaze-ui.scss css/blaze-ui.css",
+    "dev": "webpack-dev-server --host localhost --port 3000 -d --mode development",
+    "lint": "sass-lint -v -q"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,16 @@
   },
   "homepage": "https://github.com/thebyte9/blaze-ui#readme",
   "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
-    "sass-lint": "^1.12.1"
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-mild-compile": "^3.3.1",
+    "webpack-spritesmith": "^1.0.0"
   }
 }

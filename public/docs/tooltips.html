@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Tooltips</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Tooltips</h2>
+
+         <div class="component-wrapper">
+           <p>Tooltips should only be used for small blocks of text (modal more suited to larger amounts of text) & will need js to position them on diff width screens, something like
+              <a href="https://popper.js.org/">Popper</a>
+           </p>
+           <p>&nbsp</p>
+            <p class="item-heading">Tooltip top</p>
+            <div class="tooltip-here">
+               Hover me for a tooltip on top
+               <span class="tooltip tooltip--top">
+               Tooltip text here
+               </span>
+            </div>
+            <pre>
+&lt;<span class="tag">div</span> class="<span class="class">tooltip-here</span>"><span class="text">Hover me for a tooltip on top</span>
+  &lt;<span class="tag">span</span> class="<span class="class">tooltip tooltip--top</span>"><span class="text">Tooltip text here</span>&lt;/<span class="tag">span</span>>
+&lt;/<span class="tag">div</span>>
+           </pre>
+
+            <p>&nbsp</p>
+             <p class="item-heading">Tooltip bottom</p>
+             <div class="tooltip-here">
+                Hover me for a tooltip on the bottom
+                <span class="tooltip tooltip--bottom">
+                Tooltip text here
+                </span>
+             </div>
+             <pre>
+&lt;<span class="tag">div</span> class="<span class="class">tooltip-here</span>"><span class="text">Hover me for a tooltip on the bottom</span>
+   &lt;<span class="tag">span</span> class="<span class="class">tooltip tooltip--bottom</span>"><span class="text">Tooltip text here</span>&lt;/<span class="tag">span</span>>
+&lt;/<span class="tag">div</span>>
+            </pre>
+
+             <p>&nbsp</p>
+              <p class="item-heading">Tooltip right</p>
+              <div class="tooltip-here">
+                 Hover me for a tooltip on the right
+                 <span class="tooltip tooltip--right">
+                 Tooltip text here
+                 </span>
+              </div>
+              <pre>
+&lt;<span class="tag">div</span> class="<span class="class">tooltip-here</span>"><span class="text">Hover me for a tooltip on the right</span>
+    &lt;<span class="tag">span</span> class="<span class="class">tooltip tooltip--right</span>"><span class="text">Tooltip text here</span>&lt;/<span class="tag">span</span>>
+&lt;/<span class="tag">div</span>>
+             </pre>
+
+              <p>&nbsp</p>
+               <p class="item-heading">Tooltip left</p>
+               <div class="tooltip-here">
+                  Hover me for a tooltip on the left
+                  <span class="tooltip tooltip--left">
+                  Tooltip text here
+                  </span>
+               </div>
+               <pre>
+ &lt;<span class="tag">div</span> class="<span class="class">tooltip-here</span>"><span class="text">Hover me for a tooltip on the left</span>
+     &lt;<span class="tag">span</span> class="<span class="class">tooltip tooltip--left</span>"><span class="text">Tooltip text here</span>&lt;/<span class="tag">span</span>>
+ &lt;/<span class="tag">div</span>>
+              </pre>
+
+         </div>
+      </div>
+   </body>
+</html>

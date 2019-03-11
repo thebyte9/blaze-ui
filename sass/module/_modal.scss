@@ -1,3 +1,21 @@
+%header-icon {
+  margin: 0 2px;
+  border: 0;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+%header-icon-hover {
+  background: #eeeeee;
+}
+
 .modal {
   width: 98%;
   height: 98%;
@@ -12,7 +30,7 @@
   overflow: hidden;
   z-index: 999;
   display: none;
-  grid-template-rows: 64px auto 60px;
+  grid-template-rows: 64px auto 52px;
   @include mq($from: tablet) {
     max-width: 700px;
     max-height: 500px;
@@ -32,7 +50,7 @@
   &--alert {
     max-width: 280px;
     height: auto;
-    grid-template-rows: 0 auto 52px;
+    grid-template-rows: 20px auto 52px;
   }
 
   &--full-screen {
@@ -47,7 +65,7 @@
 
   &__header {
     height: 64px;
-    padding: 0 20px 0 30px;
+    padding: 0 20px 0 40px;
     background-color: $white;
     color: $nearly-black;
     border-bottom: 1px solid $grey-light;
@@ -61,7 +79,7 @@
 
     &--alert {
       border: 0;
-      height: 0;
+      height: 20px;
     }
   }
 
@@ -69,17 +87,16 @@
     font-size: 1rem;
     font-weight: $font-semi-bold;
     letter-spacing: $x-small-space;
-    text-align: left;
     @include mq($from: phablet) {
       font-size: 1.313rem;
     }
-  }
 
-  &__close {
-    @extend %header-icon;
+    &__close {
+      @extend %header-icon;
 
-    &:hover {
-      @extend %header-icon-hover;
+      &:hover {
+        @extend %header-icon-hover;
+      }
     }
   }
 
@@ -96,7 +113,7 @@
     &--alert {
       max-height: 300px;
       overflow-y: scroll;
-      padding: 20px 30px;
+      padding: 30px;
     }
 
     &::-webkit-scrollbar {
@@ -110,21 +127,27 @@
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .2);
     }
     @include mq($from: tablet) {
-      padding: 40px;
+      padding: 20px 40px;
     }
   }
 
   &__footer {
-    height: 60px;
+    height: 52px;
     padding: 0 10px;
     display: flex;
-    background-color: $grey-100;
+    background-color: $grey-lightest;
+    border-top: 1px solid darken($grey-lightest, 3%);
     align-items: center;
     justify-content: flex-end;
 
-    &--alert {
+    &--simple {
+      border: 0;
       padding: 0 30px;
-      background: none;
+    }
+
+    &--alert {
+      border: 0;
+      padding: 0 30px;
     }
   }
 
@@ -134,7 +157,7 @@
     justify-content: flex-end;
 
     & .button:nth-child(n+2) {
-      margin-left: 10px;
+      margin-left: 30px;
     }
   }
 }

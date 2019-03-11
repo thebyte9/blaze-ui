@@ -1,0 +1,181 @@
+.progress-bar {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: .875rem;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    @extend %list;
+    display: flex;
+  }
+
+  &__list-item {
+    flex: 1 1 100px;
+    text-align: center;
+    position: relative;
+    margin: .4em 40px .4em 0;
+    white-space: nowrap;
+
+    & > * {
+      position: relative;
+      color: $nearly-black;
+      padding-bottom: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      background: $grey;
+      margin: 0;
+    }
+
+    &.visited {
+      &::after {
+        background-color: $primary-color;
+      }
+    }
+
+    &--text {
+      & * {
+        z-index: 1;
+        padding: .6em 1em;
+        border-radius: .25em;
+        background-color: $grey;
+        color: $grey-dark;
+      }
+
+      &:after {
+        width: 100%;
+        top: 50%;
+        left: 75%;
+        transform: translateY(-50%) translateX(-1px);
+        margin: 0;
+        @include mq($from: tablet) {
+          left: 80%;
+        }
+      }
+
+      &.visited {
+        & > * {
+          color: $white;
+          background-color: $primary-color;
+
+          &:hover {
+            background-color: darken($primary-color, 8%);
+            box-shadow: 0 0 0 3px rgba($primary-color, .3);
+          }
+        }
+      }
+
+      &.current {
+        & > * {
+          color: $white;
+          background-color: $primary-color;
+          box-shadow: 0 0 0 3px rgba($primary-color, .3);
+        }
+      }
+
+      &.final::after {
+        width: 0;
+      }
+    }
+
+    &--icon {
+      &.visited a:before {
+        content: '\2713';
+        margin-right: 3px;
+        color: rgba($white, .8);
+      }
+    }
+
+    &--dots {
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        right: auto;
+        bottom: -20px;
+        transform: translateX(-50%);
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: $grey;
+        transition: $animate-default;
+      }
+
+      &.visited::before {
+        background-color: $primary-color;
+      }
+
+      &.current::before {
+        background-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, .3);
+      }
+
+      &::after {
+        margin: 0;
+        left: 65%;
+        width: calc(100% + 50px);
+        bottom: -16px;
+        @include mq($from: tablet) {
+          left: 50%;
+          width: calc(100% + 52px);
+        }
+      }
+
+      &.visited::after {
+        background-color: $primary-color;
+      }
+
+      &.final::after {
+        width: 0;
+      }
+
+      &.visited:hover {
+        & > * {
+          color: $primary-color;
+        }
+
+        &::before {
+          background-color: darken($primary-color, 8%);
+          box-shadow: 0 0 0 3px rgba($primary-color, .3);
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--count {
+      counter-increment: steps;
+      text-indent: -999em;
+
+      &:first-of-type {
+        margin-left: 40px;
+        @include mq($from: mobileBig) {
+          margin-left: 0;
+        }
+      }
+      @include mq($from: mobileBig) {
+        text-indent: 0;
+      }
+
+      &::before {
+        content: counter(steps);
+        height: 26px;
+        width: 26px;
+        line-height: 26px;
+        font-size: .875rem;
+        color: $white;
+        bottom: -30px;
+        text-indent: 0;
+      }
+
+      &::after {
+        bottom: -19px;
+      }
+    }
+  }
+}

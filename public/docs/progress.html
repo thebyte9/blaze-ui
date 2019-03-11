@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Progress bar</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Progress bar</h2>
+         <div class="component-wrapper">
+            <p class="item-heading">Progress dot indicators</p>
+            <nav class="progress-bar">
+               <ol class="progress-bar__list">
+                  <li class="progress-bar__list-item progress-bar__list-item--dots visited">
+                     <a href="#">Cart</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots visited">
+                     <a href="#">Billing</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots current">
+                     <span>Delivery</span>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots final">
+                     <span>Review & pay</span>
+                  </li>
+               </ol>
+            </nav>
+            <p>&nbsp;</p>
+<pre>
+&lt;<span class="tag">nav</span> class="<span class="class">progress-bar</span>">
+  &lt;<span class="tag">ol</span> class="<span class="class">progress-bar__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Cart</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Billing</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots current</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Delivery</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots final</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Review &amp; Pay</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ol</span>>
+&lt;/<span class="tag">nav</span>>
+</pre>
+ </div>
+
+         <div class="component-wrapper">
+            <p class="item-heading">Progress dot indicators + steps counter - best if needed to be visible on phones</p>
+            <nav class="progress-bar">
+               <ol class="progress-bar__list">
+                  <li class="progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count visited">
+                     <a href="#">Cart</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count visited">
+                     <a href="#">Billing</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count current">
+                     <span>Delivery</span>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count final">
+                     <span>Review & pay</span>
+                  </li>
+               </ol>
+            </nav>
+            <p>&nbsp;</p>
+<pre>
+&lt;<span class="tag">nav</span> class="<span class="class">progress-bar</span>">
+  &lt;<span class="tag">ol</span> class="<span class="class">progress-bar__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Cart</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Billing</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count current</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Delivery</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--dots progress-bar__list-item--count final</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Review &amp; Pay</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ol</span>>
+&lt;/<span class="tag">nav</span>>
+</pre>
+         </div>
+
+         <div class="component-wrapper">
+            <p class="item-heading">Progress + text</p>
+            <nav class="progress-bar">
+               <ol class="progress-bar__list">
+                  <li class="progress-bar__list-item progress-bar__list-item--text visited">
+                     <a href="#">Cart</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text visited">
+                     <a href="#">Billing</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text current">
+                     <span>Delivery</span>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text final">
+                     <span>Review & pay</span>
+                  </li>
+               </ol>
+            </nav>
+            <p>&nbsp;</p>
+<pre>
+&lt;<span class="tag">nav</span> class="<span class="class">progress-bar</span>">
+  &lt;<span class="tag">ol</span> class="<span class="class">progress-bar__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Cart</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Billing</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text current</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Delivery</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text final</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Review &amp; Pay</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ol</span>>
+&lt;/<span class="tag">nav</span>>
+</pre>
+         </div>
+
+         <div class="component-wrapper">
+            <p class="item-heading">Progress + text + completed icon</p>
+            <nav class="progress-bar">
+               <ol class="progress-bar__list">
+                  <li class="progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon visited">
+                     <a href="#">Cart</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon visited">
+                     <a href="#">Billing</a>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon current">
+                     <span>Delivery</span>
+                  </li>
+                  <li class="progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon final">
+                     <span>Review & pay</span>
+                  </li>
+               </ol>
+            </nav>
+            <p>&nbsp;</p>
+<pre>
+&lt;<span class="tag">nav</span> class="<span class="class">progress-bar</span>">
+  &lt;<span class="tag">ol</span> class="<span class="class">progress-bar__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Cart</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon visited</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Billing</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon current</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Delivery</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">progress-bar__list-item progress-bar__list-item--text progress-bar__list-item--icon final</span>">&lt;<span class="tag">a</span> href="#"><span class="text">Review &amp; Pay</span>&lt;/<span class="tag">a</span>>&lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ol</span>>
+&lt;/<span class="tag">nav</span>>
+</pre>
+         </div>
+
+      </div>
+   </body>
+</html>

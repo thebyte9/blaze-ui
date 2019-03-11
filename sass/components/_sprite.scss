@@ -1,0 +1,178 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$alert-icon-red-name: 'alert-icon-red';
+$alert-icon-red-x: 979px;
+$alert-icon-red-y: 2899px;
+$alert-icon-red-offset-x: -979px;
+$alert-icon-red-offset-y: -2899px;
+$alert-icon-red-width: 16px;
+$alert-icon-red-height: 16px;
+$alert-icon-red-total-width: 3859px;
+$alert-icon-red-total-height: 3859px;
+$alert-icon-red-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$alert-icon-red: (979px, 2899px, -979px, -2899px, 16px, 16px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'alert-icon-red', );
+$back-icon-name: 'back-icon';
+$back-icon-x: 995px;
+$back-icon-y: 2899px;
+$back-icon-offset-x: -995px;
+$back-icon-offset-y: -2899px;
+$back-icon-width: 16px;
+$back-icon-height: 16px;
+$back-icon-total-width: 3859px;
+$back-icon-total-height: 3859px;
+$back-icon-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$back-icon: (995px, 2899px, -995px, -2899px, 16px, 16px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'back-icon', );
+$blaze-logo-black-name: 'blaze-logo-black';
+$blaze-logo-black-x: 0px;
+$blaze-logo-black-y: 2899px;
+$blaze-logo-black-offset-x: 0px;
+$blaze-logo-black-offset-y: -2899px;
+$blaze-logo-black-width: 960px;
+$blaze-logo-black-height: 960px;
+$blaze-logo-black-total-width: 3859px;
+$blaze-logo-black-total-height: 3859px;
+$blaze-logo-black-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$blaze-logo-black: (0px, 2899px, 0px, -2899px, 960px, 960px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'blaze-logo-black', );
+$close-icon-dark-name: 'close-icon-dark';
+$close-icon-dark-x: 1011px;
+$close-icon-dark-y: 2899px;
+$close-icon-dark-offset-x: -1011px;
+$close-icon-dark-offset-y: -2899px;
+$close-icon-dark-width: 12px;
+$close-icon-dark-height: 12px;
+$close-icon-dark-total-width: 3859px;
+$close-icon-dark-total-height: 3859px;
+$close-icon-dark-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$close-icon-dark: (1011px, 2899px, -1011px, -2899px, 12px, 12px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'close-icon-dark', );
+$close-icon-name: 'close-icon';
+$close-icon-x: 1023px;
+$close-icon-y: 2899px;
+$close-icon-offset-x: -1023px;
+$close-icon-offset-y: -2899px;
+$close-icon-width: 12px;
+$close-icon-height: 12px;
+$close-icon-total-width: 3859px;
+$close-icon-total-height: 3859px;
+$close-icon-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$close-icon: (1023px, 2899px, -1023px, -2899px, 12px, 12px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'close-icon', );
+$heart-icon-white-name: 'heart-icon-white';
+$heart-icon-white-x: 1035px;
+$heart-icon-white-y: 2899px;
+$heart-icon-white-offset-x: -1035px;
+$heart-icon-white-offset-y: -2899px;
+$heart-icon-white-width: 12px;
+$heart-icon-white-height: 11px;
+$heart-icon-white-total-width: 3859px;
+$heart-icon-white-total-height: 3859px;
+$heart-icon-white-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$heart-icon-white: (1035px, 2899px, -1035px, -2899px, 12px, 11px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'heart-icon-white', );
+$plus-icon-white-name: 'plus-icon-white';
+$plus-icon-white-x: 1047px;
+$plus-icon-white-y: 2899px;
+$plus-icon-white-offset-x: -1047px;
+$plus-icon-white-offset-y: -2899px;
+$plus-icon-white-width: 10px;
+$plus-icon-white-height: 10px;
+$plus-icon-white-total-width: 3859px;
+$plus-icon-white-total-height: 3859px;
+$plus-icon-white-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$plus-icon-white: (1047px, 2899px, -1047px, -2899px, 10px, 10px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'plus-icon-white', );
+$search-icon-name: 'search-icon';
+$search-icon-x: 960px;
+$search-icon-y: 2899px;
+$search-icon-offset-x: -960px;
+$search-icon-offset-y: -2899px;
+$search-icon-width: 19px;
+$search-icon-height: 19px;
+$search-icon-total-width: 3859px;
+$search-icon-total-height: 3859px;
+$search-icon-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$search-icon: (960px, 2899px, -960px, -2899px, 19px, 19px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'search-icon', );
+$sprite-name: 'sprite';
+$sprite-x: 0px;
+$sprite-y: 0px;
+$sprite-offset-x: 0px;
+$sprite-offset-y: 0px;
+$sprite-width: 3859px;
+$sprite-height: 2899px;
+$sprite-total-width: 3859px;
+$sprite-total-height: 3859px;
+$sprite-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$sprite: (0px, 0px, 0px, 0px, 3859px, 2899px, 3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', 'sprite', );
+$spritesheet-width: 3859px;
+$spritesheet-height: 3859px;
+$spritesheet-image: '/Users/oscar/Frontend/blaze-ui/images/sprite.png';
+$spritesheet-sprites: ($alert-icon-red, $back-icon, $blaze-logo-black, $close-icon-dark, $close-icon, $heart-icon-white, $plus-icon-white, $search-icon, $sprite, );
+$spritesheet: (3859px, 3859px, '/Users/oscar/Frontend/blaze-ui/images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

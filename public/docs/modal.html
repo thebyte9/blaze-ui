@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>Modal</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <style media="screen">
+         p.item-heading {
+         text-align: left;
+         margin: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="site-container">
+         <div class="overlay">
+         </div>
+         <div class="modal modal--show">
+            <header class="modal__header">
+               <div class="modal__title">
+                  Modal title
+               </div>
+               <div class="modal__close">
+                  <i class="material-icons">close</i>
+               </div>
+            </header>
+            <div class="modal__content">
+  <p>Content here that may need to be scrolled - can be text/forms/etc.</p>
+  <p>Code for default modal, simple & alert below;</p>
+  <p>Default modal with scrollable content:</p>
+               <pre>
+&lt;<span class="tag">div</span> class="<span class="class">overlay</span>">
+&lt;/<span class="tag">div</span>>
+&lt;<span class="tag">div</span> class="<span class="class">modal modal--show</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">modal__header</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">modal__title</span>"><span class="text">Modal title</span>&lt;/<span class="tag">div</span>>
+    &lt;<span class="tag">div</span> class="<span class="class">modal__close</span>">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">close</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__content</span>">
+    <span class="text">Content here etc</span>
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__footer</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">modal__button</span>">
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 1</span>&lt;/<span class="tag">button</span>>
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 2</span>&lt;/<span class="tag">button</span>>
+    &lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+              <p>&nbsp;</p>
+              <p>Code for simple modal with non scrolling content area</p>
+               <pre>
+&lt;<span class="tag">div</span> class="<span class="class">overlay</span>">
+&lt;/<span class="tag">div</span>>
+&lt;<span class="tag">div</span> class="<span class="class">modal modal--simple modal--show</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">modal__header modal__header--simple</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">modal__title</span>"><span class="text">Modal title</span>&lt;/<span class="tag">div</span>>
+    &lt;<span class="tag">div</span> class="<span class="class">modal__close</span>">&lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">close</span>&lt;/<span class="tag">i</span>>&lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__content modal__content--simple</span>">
+    <span class="text">Content here etc</span>
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__footer modal__footer--simple</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">modal__button</span>">
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 1</span>&lt;/<span class="tag">button</span>>
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 2</span>&lt;/<span class="tag">button</span>>
+    &lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+<p>&nbsp;</p>
+<p>Code for alert modal</p>
+               <pre>
+&lt;<span class="tag">div</span> class="<span class="class">overlay</span>">
+&lt;/<span class="tag">div</span>>
+&lt;<span class="tag">div</span> class="<span class="class">modal modal--alert modal--show</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">modal__header modal__header--alert</span>">
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__content modal__content--alert</span>">
+    <span class="text">Content here etc</span>
+  &lt;/<span class="tag">div</span>>
+  &lt;<span class="tag">div</span> class="<span class="class">modal__footer modal__footer--alert</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">modal__button</span>">
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 1</span>&lt;/<span class="tag">button</span>>
+      &lt;<span class="tag">button</span> class="<span class="class">button button--link</span>"><span class="text">Action 2</span>&lt;/<span class="tag">button</span>>
+    &lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+            </div>
+            <div class="modal__footer">
+               <div class="modal__button">
+                  <button type="button" name="button" class="button button--link">Action 1</button>
+                  <button type="button" name="button" class="button button--link">Action 2</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END CONTAINER -->
+   </body>
+</html>

@@ -1,26 +1,18 @@
 .search {
   width: 100%;
-  max-width: 800px;
+  max-width: 990px;
 
-  &--header {
-    display: none;
-    position: absolute;
-    right: 75px;
-    left: 10px;
-    width: auto;
-    background: $primary-color;
-    @include mq($from: tablet) {
-      display: flex;
-      margin-right: 30px;
-      position: relative;
-      right: auto;
-      left: auto;
-      width: 100%;
-    }
+  &__wrapper {
+    background-color: $white;
+    border: 1px solid $grey;
+    display: flex;
   }
 
-  & form {
-    display: flex;
-    width: 100%;
+  &--page-content {
+    margin: 10px auto;
+  }
+
+  &--tabs {
+    margin: 10px 0 -10px;
   }
 }

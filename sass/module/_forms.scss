@@ -5,92 +5,73 @@ label,
 select,
 textarea {
   font-family: $primary-font;
-  font-size: $size-x-small;
+  font-size: .875rem;
 }
 
-input {
-  border: 0;
-  border-bottom: 1px solid $grey;
-  width: 100%;
-}
-
+input,
 textarea {
   border: 1px solid $grey;
   padding: 10px;
   width: 100%;
 }
-/*all inputs styling apart from types excluded*/
-input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
-  padding: 10px 0;
-}
-
-input.input-search {
-  border-color: $white;
-}
 
 select {
   font-size: .875rem;
-  border: 1px solid $grey-light;
-  border-radius: 3px;
-  background: $white;
-  padding: 5px 10px;
-  height: 40px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid $grey;
+  background: none;
+  padding: 5px 30px 5px 0;
+  height: 30px;
   /* Removes the default <select> styling */
-  /*  -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;*/
+  appearance: none;
   /* Positions background arrow image */
-  /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAXNSR0IArs4c6QAAAJVJREFUGBlt0EEKwkAMBdAkXdRjeImCJyiCu9JTqNsBz9DpLFvwEqKIl1M6v4laGWqzS/6bvxhu264aIoKwHJ3bPyiZpulKEM6c8UkUeSKsI4aL9/1ucl90s4y0iPWwJY5XgHJFT+GsAvDSJkOrz01qtoY5Jn2ZIucO9zdcwHbSdqkN2fKDtiTNnCLL/kZ/oQih38yDET+eUFeYCxvjAAAAAElFTkSuQmCC');
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAXNSR0IArs4c6QAAAJVJREFUGBlt0EEKwkAMBdAkXdRjeImCJyiCu9JTqNsBz9DpLFvwEqKIl1M6v4laGWqzS/6bvxhu264aIoKwHJ3bPyiZpulKEM6c8UkUeSKsI4aL9/1ucl90s4y0iPWwJY5XgHJFT+GsAvDSJkOrz01qtoY5Jn2ZIucO9zdcwHbSdqkN2fKDtiTNnCLL/kZ/oQih38yDET+eUFeYCxvjAAAAAElFTkSuQmCC');
   background-repeat: no-repeat;
-  background-position: 99.5% 50%;*/
+  background-position: 99% 50%;
   width: 100%;
 }
 /* Internet Explorer 10–11 and Edge */
 select::-ms-expand {
   display: none;
 }
-/*option {
+
+option {
   padding: 5px;
   color: red;
-}*/
-label {
-  white-space: nowrap;
-  font-size: $size-x-small;
-  color: $grey-dark;
-  font-weight: 300;
-  letter-spacing: $x-small-space;
-  margin: 0 0 5px;
 }
 
+label {
+  color: $grey-dark;
+  margin-bottom: 3px;
+}
+
+textarea {}
+
 input[type][disabled] {
-  background-color: $grey-100;
+  background-color: $grey-light;
   color: $grey;
   border: 0;
   cursor: default;
-  text-indent: 10px;
-}
-
-input[type=checkbox][disabled],
-input[type=radio][disabled] {
-  background-color: $grey-lightest;
-
 }
 
 input[type][disabled] + label {
-  color: $grey-medium;
+  color: $grey-dark;
   cursor: default;
 }
 
 select[disabled] {
-  background-color: $grey-100;
+  background-color: $grey-light;
   color: $grey;
   border: 0;
   cursor: default;
-  padding: 10px;
+  padding-left: 5px;
 }
 
 select[disabled] + label {
-  color: $grey-medium;
+  color: $grey-dark;
   cursor: default;
 }
 
@@ -99,30 +80,15 @@ select[disabled] + label {
 }
 
 .form-field {
-  margin: 0 0 40px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @include mq($from: tablet) {
-    max-width: 400px;
-  }
-  &--input {
-    & label {
-      margin: 0;
-    }
-  }
-
-  &--header {
-    margin: 0;
-  }
+  margin: 0 0 20px;
+  width: 100%;
+  max-width: 400px;
 
   &--small {
     max-width: 100px;
-
-    & select {
-      height: 30px;
-    }
   }
 
   &--full-width {
@@ -137,24 +103,17 @@ select[disabled] + label {
     & label {
       cursor: pointer;
       margin: 0;
-      white-space: normal;
     }
   }
 
   &--checkbox {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     max-width: 100%;
-
-    & input {
-      width: 20px;
-      height: 20px;
-    }
 
     & label {
       cursor: pointer;
       margin: 0;
-      white-space: normal;
     }
   }
 
@@ -166,10 +125,6 @@ select[disabled] + label {
     & label {
       margin-right: 10px;
     }
-  }
-
-  &--password {
-    position: relative;
   }
 }
 
@@ -257,9 +212,6 @@ select[disabled] + label {
       top: -2px;
     }
   }
-  & .form-field {
-    margin: 0 0 10px;
-  }
 }
 
 .required {
@@ -272,91 +224,5 @@ select[disabled] + label {
     position: absolute;
     top: 0;
     left: -10px;
-  }
-}
-
-.input-search {
-  border: 0;
-  border-bottom: 1px solid $grey;
-  color: $nearly-black;
-  background: none;
-  padding: 10px 0;
-  font-weight: 600;
-  font-size: $size-x-small;
-
-  &--header {
-    border-color: $white;
-    color: white;
-  }
-}
-
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: $grey-dark;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: $grey-dark;
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: $grey-dark;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: $grey-dark;
-}
-
-.input-search--header {
-  &::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: $white;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder {
-    /* Firefox 19+ */
-    color: $white;
-    opacity: 1;
-  }
-
-  &:-ms-input-placeholder {
-    /* IE 10+ */
-    color: $white;
-    opacity: 1;
-  }
-
-  &:-moz-placeholder {
-    /* Firefox 18- */
-    color: $white;
-    opacity: 1;
-  }
-}
-
-input.form-password {
-  padding-right: 60px!important;
-}
-
-.show-hide-password {
-  position: absolute;
-  display: none;
-  justify-content: flex-end;
-  align-items: center;
-  bottom: 5px;
-  right: 0;
-  font-size: .813rem;
-  color: $grey;
-  cursor: pointer;
-
-  &.active {
-    display: flex;
-  }
-
-  & i {
-    font-size: 1rem;
-    margin-left: 5px;
   }
 }
