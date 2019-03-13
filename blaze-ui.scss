@@ -1,7 +1,4 @@
-// IMPORT SASS FILES HERE
-@charset "utf-8";
-
-// import sass module example: @import 'sass/[folder/file_name]'
+@charset 'UTF-8';
 
 /* ==========================================================================
   Components
@@ -10,12 +7,14 @@
 @import 'sass/components/_mq';
 @import 'sass/components/_grid';
 @import 'sass/components/_placeholders';
-@import 'sass/components/_sprite';
+
 /* ==========================================================================
    Variables and mixins
    ========================================================================== */
 
 @import 'sass/_vars';
+@import 'sass/_mixins.scss';
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -31,6 +30,12 @@
 @import 'sass/layout/_footer';
 @import 'sass/layout/_site';
 @import 'sass/layout/_templates';
+
+/* ==========================================================================
+  Vendor
+   ========================================================================== */
+
+/*@import 'sass/vendor/_jcf';*/
 
 /* ==========================================================================
   Module
@@ -55,3 +60,10 @@
 @import 'sass/module/_tabs';
 @import 'sass/module/_tags';
 @import 'sass/module/_tooltips';
+
+/* ==========================================================================
+  Fonts
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');

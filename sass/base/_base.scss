@@ -12,6 +12,11 @@ a {
   color: $nearly-black;
   text-decoration: none;
   transition: $animate-default;
+  /*border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $grey;
+  }*/
 }
 
 * {
