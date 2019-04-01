@@ -219,7 +219,7 @@ select[disabled] + label {
 
   &::before {
     content: '*';
-    color: red;
+    color: $red;
     font-size: 1.125rem;
     position: absolute;
     top: 0;

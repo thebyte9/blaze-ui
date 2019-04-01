@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Components</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script type="text/javascript">
+         <!--
+             function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if(e.style.display == 'block')
+                   e.style.display = 'none';
+                else
+                   e.style.display = 'block';
+             }
+         //-->
+
+         $(document).ready(function(){
+          $('#search-button,#menu-button').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
+
+      </script>
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+      <h2 class="group-heading">Search</h2>
+      <div class="component-wrapper">
+         <p class="item-heading">Search</p>
+         <div class="search">
+            <div class="search__wrapper">
+               <form class="" action="index.html" method="post">
+                  <div class="form-field form-field--input form-field--search">
+                    <label for="search" class="hidden">Search</label>
+                     <input type="text" name="demo" value="" placeholder="Search" id="search" class="input-search">
+                  </div>
+                  <button type="button" class="icon-button icon-button--search">
+                  <i class="material-icons">search</i>
+                </button>
+            </div>
+            </form>
+         </div>
+
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">search</span>"&gt;
+  &lt;<span class="tag">div</span> class="<span class="class">search__wrapper</span>"&gt;
+    &lt;<span class="tag">form</span> class="<span class="class"></span>" action="index.html" method="post"&gt;
+
+      &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--input form-field--search</span>"&gt;
+        &lt;<span class="tag">label</span> for="name-here" class="<span class="class">hidden</span>"&gt;<span class="text">Search</span>&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">input</span> type="<span class="tag">text</span>" name="value-here" placeholder="value-here" id="name-here"&gt;
+      &lt;/<span class="tag">div</span>&gt;
+
+      &lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--search</span>">
+        &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">search</span>&lt;/<span class="tag">i</span>>
+      &lt;/<span class="tag">button</span>>
+
+    &lt;/<span class="tag">form</span>&gt;
+  &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;
+</pre>
+
+      </div>
+      <div class="component-wrapper">
+         <p class="item-heading">Header search</p>
+         <div class="search search--header">
+            <div class="search__wrapper search__wrapper--header" id="toggle-search">
+               <form class="" action="index.html" method="post">
+                  <div class="form-field form-field--input form-field--search">
+                    <label for="search-header" class="hidden">Search</label>
+                    <input type="text" name="demo" value="" placeholder="Search" id="search-header" class="input-search">
+                  </div>
+                  <button type="button" class="icon-button icon-button--search icon-button--header"><i class="material-icons">
+                  search
+                  </i></button>
+               </form>
+            </div>
+            <div class="search__icon"  onclick="toggle_visibility('toggle-search');" id="search-button">
+               <i class="material-icons search-open">
+               search
+               </i>
+               <i class="material-icons search-close">
+               close
+               </i>
+            </div>
+         </div>
+
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">search search--header</span>"&gt;
+  &lt;<span class="tag">div</span> class="<span class="class">search__wrapper search__wrapper--header</span>"  id="<span class="class">toggle-search</span>"&gt;
+    &lt;<span class="tag">form</span> class="<span class="class"></span>" action="index.html" method="post"&gt;
+
+      &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--input form-field--search</span>"&gt;
+        &lt;<span class="tag">label</span> for="name-here" class="<span class="class">hidden</span>"&gt;<span class="text">Search</span>&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">input</span> type="<span class="tag">text</span>" name="value-here" placeholder="value-here" id="name-here"&gt;
+      &lt;/<span class="tag">div</span>&gt;
+
+      &lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--search</span>">
+        &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">search</span>&lt;/<span class="tag">i</span>>
+      &lt;/<span class="tag">button</span>>
+
+      &lt;<span class="tag">div</span> onclick="toggle_visibility('toggle-search');" id="<span class="class">search-button</span>">
+        &lt;<span class="tag">i</span> class="<span class="class">material-icons search-open</span>"><span class="text">search</span>&lt;/<span class="tag">i</span>>
+        &lt;<span class="tag">i</span> class="<span class="class">material-icons search-close</span>"><span class="text">close</span>&lt;/<span class="tag">i</span>>
+      &lt;/<span class="tag">div</span>>
+
+    &lt;/<span class="tag">form</span>&gt;
+   &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;
+</pre>
+
+       </div>
+      </div>
+   </body>
+</html>
