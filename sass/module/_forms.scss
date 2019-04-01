@@ -126,6 +126,15 @@ select[disabled] + label {
       margin-right: 10px;
     }
   }
+
+  &--search {
+    margin: 0;
+    max-width: 100%;
+
+    & input {
+      border: 0;
+    }
+  }
 }
 
 .toggle {
@@ -219,10 +228,22 @@ select[disabled] + label {
 
   &::before {
     content: '*';
-    color: red;
+    color: $ui-red;
     font-size: 1.125rem;
     position: absolute;
     top: 0;
     left: -10px;
   }
+}
+.hidden {/*visible on screen readers only*/
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
