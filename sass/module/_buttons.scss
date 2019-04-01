@@ -24,9 +24,11 @@
   justify-content: center;
   cursor: pointer;
   transition: $animate-default;
+  color: $black;
 
   &--round {
     background-color: $primary-button-color;
+    color: $white;
     box-shadow: $box-shadow;
     width: 36px;
     height: 36px;
@@ -39,15 +41,13 @@
   }
 
   &--search {
-    opacity: .5;
+    background: $white;
 
-    &:hover {
-      opacity: .8;
-    }
+    &:hover {}
   }
 
   &--close {
-    opacity: .5;
+    opacity: .8;
     width: 24px;
     height: 24px;
     border-radius: 12px;
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      opacity: .8;
+      opacity: 1;
     }
   }
 }
@@ -189,9 +189,10 @@
     padding: 5px 30px;
     width: auto;
 
-    & span {
-      margin-right: 10px;
-      margin-left: -10px;
+    & i {
+      left: -5px;
+      font-size: 1rem;
+      position: relative;
     }
   }
 
@@ -216,6 +217,7 @@
     letter-spacing: 0;
     box-shadow: none;
     border-radius: 3px;
+
     &:hover {
       background-color: $grey;
     }
