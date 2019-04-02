@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Layout Basic</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container grid grid--site-layout">
+         <header class="header">
+            <p>Header here</p>
+         </header>
+         <main class="main main--page-layout">
+           <div class="sidebar">
+              <p>Sidebar here</p>
+           </div>
+            <div class="page-content">
+               <h1>Page content</h1>
+               <p>Example using grid for site layout & flex for main page layout, which allows for any amount of columns to be laid out in a row (sidebar + page content/sidebar + page content + social/etc)</p>
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">site-container grid grid--site-layout</span>">
+  &lt;<span class="tag">header</span> class="<span class="class">header</span>">
+    Header here
+  &lt;/<span class="tag">header</span>>
+  &lt;<span class="tag">main</span> class="<span class="class">main main--page-layout</span>">
+    Can add any items in this main content area
+  &lt;/<span class="tag">main</span>>
+  &lt;<span class="tag">footer</span> class="<span class="class">footer</span>">
+    Footer here
+  &lt;/<span class="tag">footer</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+            </div>
+         </main>
+         <footer class="footer">
+            <p>Footer here</p>
+         </footer>
+      </div>
+   </body>
+</html>

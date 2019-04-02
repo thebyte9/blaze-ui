@@ -158,7 +158,15 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
+}
+
+.grid--site-layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-gap: 0;
 }
 
 .grid--one {
@@ -176,7 +184,7 @@
 
 @media (min-width: 48em) {
   .grid--two {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -192,7 +200,7 @@
 
 @media (min-width: 41.25em) {
   .grid--three {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -213,13 +221,235 @@
 
 @media (min-width: 48em) {
   .grid--four {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 64em) {
   .grid--four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid--five {
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 48em) {
+  .grid--five {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .grid--five {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.grid--six {
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 30em) {
+  .grid--six {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48em) {
+  .grid--six {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .grid--six {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/*IE 11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid--layout {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .grid--layout main {
+    flex-grow: 1;
+  }
+  .grid--layout header,
+  .grid--layout footer {
+    flex-shrink: 0;
+  }
+  .grid--two {
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 30em), (-ms-high-contrast: none) and (min-width: 30em) {
+  .grid--two .card {
+    flex: 0 0 48%;
+    margin: 1%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid--three {
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 41.25em), (-ms-high-contrast: none) and (min-width: 41.25em) {
+  .grid--three .card {
+    flex: 0 0 32%;
+    margin: 1% .5%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid--four {
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 30em), (-ms-high-contrast: none) and (min-width: 30em) {
+  .grid--four .card {
+    flex: 0 0 49%;
+    margin: 1% .5%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 48em), (-ms-high-contrast: none) and (min-width: 48em) {
+  .grid--four .card {
+    flex: 0 0 24%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid--five {
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 48em), (-ms-high-contrast: none) and (min-width: 48em) {
+  .grid--five .card {
+    flex: 0 0 49%;
+    margin: 1% .5%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 64em), (-ms-high-contrast: none) and (min-width: 64em) {
+  .grid--five .card {
+    flex: 0 0 19%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid--six {
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+    /* From: this breakpoint (inclusive)*/
+    /* Until: that breakpoint (exclusive)*/
+    /* Responsive support is disabled, rasterize the output outside @media blocks*/
+    /* The browser will rely on the cascade itself.*/
+    /* Remove unnecessary media query prefix 'all and '*/
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 30em), (-ms-high-contrast: none) and (min-width: 30em) {
+  .grid--six .card {
+    flex: 0 0 49%;
+    margin: 1% .5%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 48em), (-ms-high-contrast: none) and (min-width: 48em) {
+  .grid--six .card {
+    flex: 0 0 32%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 64em), (-ms-high-contrast: none) and (min-width: 64em) {
+  .grid--six .card {
+    flex: 0 0 15.5%;
   }
 }
 
@@ -271,6 +501,11 @@
 /*red*/
 /*green*/
 /*blue*/
+/*red*/
+/*green light*/
+/*UI colours*/
+/*Greyscale colours*/
+/**/
 /*blue*/
 /*green*/
 /*red*/
@@ -311,6 +546,12 @@
 /* ==========================================================================
    Base
    ========================================================================== */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -318,7 +559,7 @@ body {
   height: 100%;
   color: #333333;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  background-color: #eeeeee;
+  background-color: #e2e9ea;
 }
 
 a {
@@ -664,8 +905,17 @@ textarea {
 /* ==========================================================================
    Layout
    ========================================================================== */
+.header {
+  background-color: #bdbdbd;
+}
+
+.footer {
+  background-color: #bdbdbd;
+}
+
 .site-container {
   width: 100%;
+  background-color: #ffffff;
 }
 
 .site-container--template {
@@ -674,6 +924,8 @@ textarea {
 
 .page-content {
   padding: 10px;
+  flex: 1 1 auto;
+  margin: 0 20px;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -687,13 +939,21 @@ textarea {
   }
 }
 
+.main--page-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #f4f5f5;
+}
+
 .item-heading {
   display: inline-block;
   width: 100%;
   text-align: left;
   margin: 0 0 30px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .group-heading {
@@ -703,7 +963,7 @@ textarea {
   margin: 0 0 10px;
   font-weight: 400;
   padding-bottom: 5px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .note {
@@ -743,14 +1003,14 @@ pre {
   width: 100%;
   margin: 10px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
+  background-color: #f4f5f5;
+  border: 1px solid #bdbdbd;
   text-align: left;
   overflow: scroll;
   font-size: .75rem;
   word-break: normal;
   word-wrap: normal;
-  color: #999999;
+  color: #9e9e9e;
 }
 
 pre .tag {
@@ -785,7 +1045,7 @@ pre .text {
 }
 
 .alert {
-  border-color: #eeeeee;
+  border-color: #e2e9ea;
 }
 
 .alert--primary {
@@ -871,7 +1131,7 @@ pre .text {
 .badge {
   letter-spacing: 0.03rem;
   transition: all 0.5s ease;
-  border-color: #cccccc;
+  border-color: #bdbdbd;
 }
 
 .badge--primary {
@@ -905,7 +1165,7 @@ pre .text {
 }
 
 .badge--light {
-  color: #666666;
+  color: #616161;
   background-color: #eeeeee;
   border-color: #eeeeee;
 }
@@ -958,7 +1218,7 @@ pre .text {
 }
 
 a.badge:hover {
-  background-color: #eeeeee;
+  background-color: #e2e9ea;
 }
 
 a.badge--primary:hover {
@@ -1010,7 +1270,7 @@ a.badge:hover span {
   align-content: center;
   width: 100%;
   margin: 20px 0;
-  color: #cccccc;
+  color: #bdbdbd;
   font-size: .875rem;
 }
 
@@ -1037,7 +1297,7 @@ a.badge:hover span {
 }
 
 .breadcrumb__item:last-of-type a {
-  color: #999999;
+  color: #9e9e9e;
 }
 
 .button {
@@ -1070,7 +1330,7 @@ a.badge:hover span {
 
 .icon-button--round {
   background-color: #03a9f4;
-  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   width: 36px;
   height: 36px;
   border-radius: 18px;
@@ -1252,11 +1512,11 @@ a.badge:hover span {
 .button--plain {
   padding: 5px;
   min-width: 70px;
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
+  background-color: #f4f5f5;
+  border: 1px solid #bdbdbd;
   font-size: .813rem;
   height: 30px;
-  color: #444444;
+  color: #424242;
   text-transform: none;
   letter-spacing: 0;
   box-shadow: none;
@@ -1264,7 +1524,7 @@ a.badge:hover span {
 }
 
 .button--plain:hover {
-  background-color: #cccccc;
+  background-color: #bdbdbd;
 }
 
 .button--full-width {
@@ -1331,9 +1591,10 @@ a.badge:hover span {
   width: 100%;
   max-width: 760px;
   background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 
 .card__content {
@@ -1344,9 +1605,20 @@ a.badge:hover span {
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
   /* The browser will rely on the cascade itself.*/
   /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
 }
 
 @media (min-width: 48em) {
+  .card__content {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 85.375em) {
   .card__content {
     padding: 50px;
   }
@@ -1384,7 +1656,7 @@ a.badge:hover span {
 }
 
 .card__title a:hover {
-  border-color: #666666;
+  border-color: #616161;
 }
 
 .card__image {
@@ -1407,7 +1679,7 @@ a.badge:hover span {
   margin-top: auto;
   padding: 20px;
   text-align: left;
-  background-color: #f9f9f9;
+  background-color: #f4f5f5;
   display: flex;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
@@ -1425,7 +1697,7 @@ a.badge:hover span {
 .card__header {
   padding: 20px;
   text-align: left;
-  background-color: #f9f9f9;
+  background-color: #f4f5f5;
   display: flex;
 }
 
@@ -1466,7 +1738,7 @@ p {
 }
 
 .modal p {
-  color: #666666;
+  color: #616161;
 }
 
 .modal p:last-of-type {
@@ -1481,8 +1753,8 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: #eeeeee;
-  color: #999999;
+  background-color: #e2e9ea;
+  color: #9e9e9e;
   height: 20px;
   width: 20px;
   border: 0;
@@ -1499,15 +1771,15 @@ p {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #999999;
+  background-color: #9e9e9e;
 }
 
 .form-radio:hover {
-  background-color: #cccccc;
+  background-color: #bdbdbd;
 }
 
 .form-radio:checked {
-  background-color: #eeeeee;
+  background-color: #e2e9ea;
 }
 
 .form-checkbox {
@@ -1516,8 +1788,8 @@ p {
   appearance: none;
   display: inline-block;
   position: relative;
-  background-color: #eeeeee;
-  color: #666666;
+  background-color: #e2e9ea;
+  color: #616161;
   height: 20px;
   width: 20px;
   border: 0;
@@ -1538,11 +1810,11 @@ p {
 }
 
 .form-checkbox:hover {
-  background-color: #cccccc;
+  background-color: #bdbdbd;
 }
 
 .form-checkbox:checked {
-  background-color: #eeeeee;
+  background-color: #e2e9ea;
 }
 
 input,
@@ -1555,7 +1827,7 @@ textarea {
 
 input,
 textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #bdbdbd;
   padding: 10px;
   width: 100%;
 }
@@ -1564,7 +1836,7 @@ select {
   font-size: .875rem;
   border: 0;
   border-radius: 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #bdbdbd;
   background: none;
   padding: 5px 30px 5px 0;
   height: 30px;
@@ -1590,32 +1862,32 @@ option {
 }
 
 label {
-  color: #666666;
+  color: #616161;
   margin-bottom: 3px;
 }
 
 input[type][disabled] {
-  background-color: #eeeeee;
-  color: #cccccc;
+  background-color: #e2e9ea;
+  color: #bdbdbd;
   border: 0;
   cursor: default;
 }
 
 input[type][disabled] + label {
-  color: #666666;
+  color: #616161;
   cursor: default;
 }
 
 select[disabled] {
-  background-color: #eeeeee;
-  color: #cccccc;
+  background-color: #e2e9ea;
+  color: #bdbdbd;
   border: 0;
   cursor: default;
   padding-left: 5px;
 }
 
 select[disabled] + label {
-  color: #666666;
+  color: #616161;
   cursor: default;
 }
 
@@ -1683,7 +1955,7 @@ select[disabled] + label {
   text-indent: -9999px;
   width: 40px;
   height: 18px;
-  background: #cccccc;
+  background: #bdbdbd;
   display: block;
   border-radius: 20px;
   position: relative;
@@ -1762,7 +2034,7 @@ select[disabled] + label {
 
 .required::before {
   content: '*';
-  color: red;
+  color: #f44336;
   font-size: 1.125rem;
   position: absolute;
   top: 0;
@@ -1856,7 +2128,7 @@ select[disabled] + label {
   padding: 0 20px 0 40px;
   background-color: #ffffff;
   color: #333333;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e2e9ea;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1931,8 +2203,8 @@ select[disabled] + label {
   height: 52px;
   padding: 0 10px;
   display: flex;
-  background-color: #f9f9f9;
-  border-top: 1px solid #f1f1f1;
+  background-color: #f4f5f5;
+  border-top: 1px solid #eceeee;
   align-items: center;
   justify-content: flex-end;
 }
@@ -1977,7 +2249,7 @@ hr {
   width: 100%;
   height: 1px;
   border: 0;
-  background-color: #666666;
+  background-color: #616161;
 }
 
 .author {
@@ -2006,7 +2278,7 @@ hr {
 }
 
 .pagination__list-item a {
-  color: #666666;
+  color: #616161;
   padding: 5px 10px;
   display: flex;
   align-items: center;
@@ -2019,7 +2291,7 @@ hr {
   text-decoration: none;
   border: 0;
   color: #000000;
-  background-color: #eeeeee;
+  background-color: #e2e9ea;
   border-radius: 3px;
 }
 
@@ -2057,7 +2329,7 @@ hr {
 
 .pagination__pages {
   font-size: .875rem;
-  color: #666666;
+  color: #616161;
   margin-right: 20px;
   white-space: nowrap;
 }
@@ -2104,7 +2376,7 @@ hr {
   position: absolute;
   content: '';
   height: 4px;
-  background: #cccccc;
+  background: #bdbdbd;
   margin: 0;
 }
 
@@ -2116,8 +2388,8 @@ hr {
   z-index: 1;
   padding: .6em 1em;
   border-radius: .25em;
-  background-color: #cccccc;
-  color: #666666;
+  background-color: #bdbdbd;
+  color: #616161;
 }
 
 .progress-bar__list-item--text:after {
@@ -2176,7 +2448,7 @@ hr {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: #cccccc;
+  background-color: #bdbdbd;
   transition: all 0.5s ease;
 }
 
@@ -2279,7 +2551,7 @@ hr {
 
 .search__wrapper {
   background-color: #ffffff;
-  border: 1px solid #cccccc;
+  border: 1px solid #bdbdbd;
   display: flex;
 }
 
@@ -2289,6 +2561,72 @@ hr {
 
 .search--tabs {
   margin: 10px 0 -10px;
+}
+
+.sidebar {
+  flex: 0 0 300px;
+  background: #e2e9ea;
+}
+
+.social--vertical {
+  flex: 0 0 32px;
+  background: #e2e9ea;
+  margin: 0 10px;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs__list {
+  display: flex;
+  width: 100%;
+}
+
+.tabs__list-item {
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 10px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: #9e9e9e;
+  border: 0;
+  border-bottom: 5px solid #ffffff;
+  background: none;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+.tabs__list-item.current {
+  border-color: #f44336;
+  color: #616161;
+}
+
+@media (min-width: 41.25em) {
+  .tabs__list-item {
+    padding: 10px 30px;
+  }
+}
+
+.tabs__content {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  border-top: 1px solid #e2e9ea;
+  padding: 30px 0;
+}
+
+.tabs__content.current {
+  display: flex;
+  flex-direction: column;
 }
 
 .tags__tags-item {
@@ -2306,7 +2644,7 @@ hr {
 .tooltip {
   visibility: hidden;
   width: 120px;
-  background-color: #666666;
+  background-color: #616161;
   color: #ffffff;
   padding: 8px;
   border-radius: 3px;

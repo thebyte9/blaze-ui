@@ -9,14 +9,18 @@
   width: 100%;
   max-width: 760px;
   background-color: $white;
+  box-shadow: $box-shadow;
   display: flex;
   flex-direction: column;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 
   &__content {
     padding: 20px;
     text-align: left;
     @include mq($from: tablet) {
+      padding: 30px;
+    }
+    @include mq($from: wide) {
       padding: 50px;
     }
 
