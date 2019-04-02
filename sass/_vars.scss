@@ -20,7 +20,7 @@
 
 /* stakeholders, designers, developers, and testers.*/
 
-$mq-breakpoints: ( mobile: 320px, mobileBig: 480px, phablet: 660px, tablet: 768px, desktop: 1024px, wide: 1366px);
+$mq-breakpoints: (mobile: 320px, mobileBig: 480px, phablet: 660px, tablet: 768px, desktop: 1024px, wide: 1366px);
 
 /* Show the current breakpoint in the top right corner of the viewport:*/
 
@@ -146,7 +146,7 @@ $animate-default: all .5s ease;
   MISC
    ========================================================================== */
 
-$box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, .3);
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
 $box-shadow-button: 0 1px 3px 0 rgba(0, 0, 0, .3);
 $box-shadow-hover: 1px 2px 3px 0 rgba(0, 0, 0, .5);
 $breadcrumb-divider:  '\003e';

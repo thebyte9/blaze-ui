@@ -1,8 +1,14 @@
 .grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
 
-  &--basic {}
+  &--site-layout {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
 
   &--one {
     grid-template-columns: 1fr;
@@ -11,7 +17,7 @@
   &--two {
     grid-template-columns: 1fr;
     @include mq($from: tablet) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -19,7 +25,7 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     @include mq($from: phablet) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -27,10 +33,133 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     @include mq($from: tablet) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
     @include mq($from: desktop) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--five {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    @include mq($from: tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq($from: desktop) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &--six {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    @include mq($from: mobileBig) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq($from: tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq($from: desktop) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+/*IE 11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+
+    &--layout {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      & main {
+        flex-grow: 1;
+      }
+
+      & header,
+      footer {
+        flex-shrink: 0;
+      }
+    }
+
+    &--two {
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include mq($from: mobileBig) {
+        & .card {
+          flex: 0 0 48%;
+          margin: 1%;
+        }
+      }
+    }
+
+    &--three {
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include mq($from: phablet) {
+        & .card {
+          flex: 0 0 32%;
+          margin: 1% .5%;
+        }
+      }
+    }
+
+    &--four {
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include mq($from: mobileBig) {
+        & .card {
+          flex: 0 0 49%;
+          margin: 1% .5%;
+        }
+      }
+      @include mq($from: tablet) {
+        & .card {
+          flex: 0 0 24%;
+        }
+      }
+    }
+
+    &--five {
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include mq($from: tablet) {
+        & .card {
+          flex: 0 0 49%;
+          margin: 1% .5%;
+        }
+      }
+      @include mq($from: desktop) {
+        & .card {
+          flex: 0 0 19%;
+        }
+      }
+    }
+
+    &--six {
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include mq($from: mobileBig) {
+        & .card {
+          flex: 0 0 49%;
+          margin: 1% .5%;
+        }
+      }
+      @include mq($from: tablet) {
+        & .card {
+          flex: 0 0 32%;
+        }
+      }
+      @include mq($from: desktop) {
+        & .card {
+          flex: 0 0 15.5%;
+        }
+      }
     }
   }
 }
