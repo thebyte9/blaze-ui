@@ -25,3 +25,12 @@
     background: $grey-lightest;
   }
 }
+.hidden {
+  /*hidden but accesible*/
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+}
