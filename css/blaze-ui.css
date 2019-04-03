@@ -156,6 +156,7 @@
 /*/  @include mq-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 .grid {
   display: grid;
   grid-gap: 20px;
@@ -454,7 +455,7 @@
 }
 
 /*PLACEHOLDERS use ''@extend %placeholder' in css above all other styles in the class*/
-.breadcrumb, .pagination__list, .progress-bar__list, .tags {
+.breadcrumb, .pagination__list, .progress-bar__list, .social__list, .tags {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -945,6 +946,16 @@ textarea {
   height: 100%;
   margin: 0 auto;
   background: #f4f5f5;
+}
+
+.hidden {
+  /*hidden but accesible*/
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .item-heading {
@@ -2569,9 +2580,71 @@ hr {
 }
 
 .social--vertical {
+  width: 38px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social__list--vertical {
+  flex-direction: column;
+}
+
+.social__list-item {
+  margin: 2px;
   flex: 0 0 32px;
-  background: #e2e9ea;
-  margin: 0 10px;
+}
+
+.social__list-item a {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  color: #ffffff;
+  background-color: #e2e9ea;
+  opacity: .7;
+}
+
+.social__list-item a:hover {
+  opacity: 1;
+}
+
+.social__list-item a.facebook {
+  background-color: #3b5999;
+}
+
+.social__list-item a.twitter {
+  background-color: #55acee;
+}
+
+.social__list-item a.pinterest {
+  background-color: #bd081c;
+}
+
+.social__list-item a.linkedin {
+  background-color: #0077B5;
+}
+
+.social__list-item a.youtube {
+  background-color: #cd201f;
+}
+
+.social__list-item a.instagram {
+  background-color: #e4405f;
+}
+
+.social__list-item--follow {
+  margin: 0 8px 0 0;
+}
+
+.social p {
+  margin: 0;
+  font-size: .75rem;
 }
 
 .tabs {
