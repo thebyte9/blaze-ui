@@ -2081,6 +2081,22 @@ select[disabled] + label {
   left: -10px;
 }
 
+.media-container--video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.media-container--video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .modal__title__close {
   margin: 0 2px;
   border: 0;
@@ -2473,7 +2489,7 @@ hr {
   padding: .6em 1em;
   border-radius: .25em;
   background-color: #bdbdbd;
-  color: #616161;
+  color: #ffffff;
 }
 
 .progress-bar__list-item--text:after {
