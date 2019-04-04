@@ -23,41 +23,25 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: .6;
   transition: $animate-default;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &--round {
     background-color: $primary-button-color;
+    color: $white;
     box-shadow: $box-shadow;
     width: 36px;
     height: 36px;
     border-radius: 18px;
+    opacity: 1;
 
     &:hover {
       box-shadow: $box-shadow-hover;
       transform: scale(.9);
-    }
-  }
-
-  &--search {
-    opacity: .5;
-
-    &:hover {
-      opacity: .8;
-    }
-  }
-
-  &--close {
-    opacity: .5;
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
-
-    & i {
-      font-size: 16px;
-    }
-
-    &:hover {
-      opacity: .8;
     }
   }
 }
@@ -188,10 +172,14 @@
   &--icon {
     padding: 5px 30px;
     width: auto;
+    position: relative;
 
-    & span {
-      margin-right: 10px;
-      margin-left: -10px;
+    & i {
+      font-size: 1rem;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -216,6 +204,7 @@
     letter-spacing: 0;
     box-shadow: none;
     border-radius: 3px;
+
     &:hover {
       background-color: $grey;
     }
