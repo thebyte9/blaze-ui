@@ -1,18 +1,89 @@
 .search {
   width: 100%;
-  max-width: 990px;
+  max-width: 800px;
+  border: 1px solid $grey;
+  border-radius: 3px;
+  height: 42px;
+  display: flex;
+
+  & form {
+    display: flex;
+    width: 100%;
+  }
+
+  & input {
+    border: 0;
+  }
+
+  & .form-field {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  &--header {
+    display: flex;
+    line-height: 0;
+    position: relative;
+    border: 0;
+    @include mq($from: desktop) {
+      border: 1px solid $grey;
+    }
+
+    & input {
+      height: 40px;
+    }
+  }
 
   &__wrapper {
-    background-color: $white;
-    border: 1px solid $grey;
+    width: 100%;
     display: flex;
+    align-items: center;
+    &--header {
+      display: none;
+      position: absolute;
+      right: 34px;
+      left: 0;
+      width: auto;
+      border: 1px solid $grey;
+      border-radius: 3px;
+      @include mq($from: desktop) {
+        display: flex;
+        position: relative;
+        right: auto;
+        left: auto;
+        width: 100%;
+        border: 0;
+      }
+    }
   }
 
-  &--page-content {
-    margin: 10px auto;
-  }
+  &__icon {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: $black;
+    @include mq($from: desktop) {
+      display: none;
+    }
 
-  &--tabs {
-    margin: 10px 0 -10px;
+    & i {
+      font-size: 1.5rem;
+    }
+
+    & .search-close {
+      display: none;
+    }
+
+    &.open {
+      & .search-close {
+        display: block;
+      }
+
+      & .search-open {
+        display: none;
+      }
+    }
   }
 }
