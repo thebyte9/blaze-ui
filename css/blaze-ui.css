@@ -567,11 +567,6 @@ a {
   color: #333333;
   text-decoration: none;
   transition: all 0.5s ease;
-  /*border-bottom: 1px solid transparent;
-
-  &:hover {
-    border-bottom: 1px solid $grey;
-  }*/
 }
 
 * {
@@ -1379,6 +1374,7 @@ a.badge:hover span {
   cursor: pointer;
   opacity: .6;
   transition: all 0.5s ease;
+  background: none;
 }
 
 .icon-button:hover {
@@ -1409,7 +1405,7 @@ a.badge:hover span {
   height: 40px;
   padding: 5px 20px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  transition: all 0.5s ease;
+  transition: background-color 0.5s ease;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -1584,9 +1580,10 @@ a.badge:hover span {
   font-size: .875rem;
   justify-content: flex-start;
   letter-spacing: normal;
+  transition: all 0.5s ease;
 }
 
-.button--back span {
+.button--back i {
   margin-left: 0;
   margin-right: 5px;
   opacity: .6;
@@ -1596,7 +1593,7 @@ a.badge:hover span {
   background: none;
 }
 
-.button--back:hover span {
+.button--back:hover i {
   margin-left: -1px;
   margin-right: 6px;
   opacity: 1;
@@ -2079,6 +2076,178 @@ select[disabled] + label {
   position: absolute;
   top: 0;
   left: -10px;
+}
+
+.hero {
+  /* for 1300x700px image */
+  position: relative;
+  width: 100%;
+  padding-top: 53%;
+  overflow: hidden;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .hero {
+    padding-top: 40%;
+  }
+}
+
+@media (min-width: 85.375em) {
+  .hero {
+    padding-top: 30%;
+  }
+}
+
+.hero__media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero__media img {
+  width: 100%;
+}
+
+.hero__media:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+.hero__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.hero__text .button {
+  margin: 15px auto 0;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 30em) {
+  .hero__text .button {
+    margin: 25px auto 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .hero__text .button {
+    margin: 30px auto 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__text .button {
+    margin: 35px auto 0;
+  }
+}
+
+.hero__heading {
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 30em) {
+  .hero__heading {
+    font-size: 2.25rem;
+    margin: 0 0 15px;
+  }
+}
+
+@media (min-width: 48em) {
+  .hero__heading {
+    font-size: 2.5rem;
+    margin: 0 0 25px;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__heading {
+    font-size: 3rem;
+  }
+}
+
+.hero__intro {
+  font-size: .875rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.03rem;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 30em) {
+  .hero__intro {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .hero__intro {
+    font-size: 1.125rem;
+  }
 }
 
 .media-container--video {
