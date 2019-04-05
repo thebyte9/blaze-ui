@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Hero</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Basic Hero</h2>
+         <div class="component-wrapper component-wrapper--full-width" style="padding: 30px 0;">
+           <p>Using 1300 x 700px image</p>
+            <div class="hero">
+               <div class="hero__media">
+                  <picture>
+                     <source media="(max-width:414px)" data-srcset="http://lorempixel.com/414/223/city/" srcset="http://lorempixel.com/414/223/city/">
+                     <source media="(max-width:660px)" data-srcset="http://lorempixel.com/660/355/city/" srcset="http://lorempixel.com/660/355/city/">
+                     <source media="(max-width:768px)" data-srcset="http://lorempixel.com/768/414/city/" srcset="http://lorempixel.com/768/414/city/">
+                     <source media="(max-width:960px)" data-srcset="http://lorempixel.com/960/517/city/" srcset="http://lorempixel.com/960/517/city/">
+                     <source media="(max-width:1300px)" data-srcset="http://lorempixel.com/1300/700/city/" srcset="http://lorempixel.com/1300/700/city/">
+                     <img data-src="http://lorempixel.com/1300/700/city/" alt="alt text" src="http://lorempixel.com/1300/700/city/">
+                  </picture>
+                  <!--<img src="http://lorempixel.com/1300/700/city/" alt="alt text">-->
+               </div>
+               <div class="hero__text">
+                  <h2 class="hero__heading">Website hero heading</h2>
+                  <h3 class="hero__intro">Subheading or introduction text here</h3>
+                  <button type="button" name="button" class="button">Button</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
