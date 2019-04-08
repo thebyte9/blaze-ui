@@ -1378,6 +1378,27 @@ a.badge:hover span {
   transform: scale(0.9);
 }
 
+.icon-button--menu {
+  transition: none;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+.icon-button--menu.open {
+  background: #000000;
+  color: #ffffff;
+  opacity: 1;
+}
+
+@media (min-width: 64em) {
+  .icon-button--menu {
+    display: none;
+  }
+}
+
 .button {
   background-color: #03a9f4;
   color: #ffffff;
@@ -2249,7 +2270,7 @@ select[disabled] + label {
 }
 
 .menu--desktop {
-  display: flex;
+  display: none;
   background-color: #f4f5f5;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
@@ -2269,7 +2290,8 @@ select[disabled] + label {
   width: 100%;
   height: 100%;
   background: #000000;
-  display: none;
+  display: flex;
+  flex-direction: column;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -2293,25 +2315,12 @@ select[disabled] + label {
 
 .menu__list--responsive-nav {
   flex-direction: column;
-  max-width: 375px;
 }
 
 .menu__list-item {
   list-style: none;
   display: inline-block;
   white-space: nowrap;
-  background-color: #f4f5f5;
-}
-
-.menu__list-item:hover {
-  background-color: #eceeee;
-}
-
-.menu__list-item a {
-  display: inline-block;
-  color: #616161;
-  padding: 20px;
-  font-size: .875rem;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -2319,10 +2328,31 @@ select[disabled] + label {
   /* Remove unnecessary media query prefix 'all and '*/
 }
 
-@media (min-width: 85.375em) {
-  .menu__list-item a {
-    font-size: 1rem;
+@media (min-width: 64em) {
+  .menu__list-item {
+    background-color: #f4f5f5;
   }
+}
+
+.menu__list-item:hover {
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item:hover {
+    background-color: #eceeee;
+  }
+}
+
+.menu__list-item a {
+  display: inline-block;
+  color: #616161;
+  padding: 20px;
+  letter-spacing: 0.03rem;
 }
 
 .menu__list-item a:hover {
@@ -2334,7 +2364,33 @@ select[disabled] + label {
 }
 
 .menu__list-item--has-submenu a {
-  padding-right: 25px;
+  padding-left: 20px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item--has-submenu a {
+    padding-right: 25px;
+  }
+}
+
+.menu__list-item--has-submenu a:hover {
+  background-color: #333333;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item--has-submenu a:hover {
+    background: none;
+  }
 }
 
 .menu__list-item--has-submenu a:after {
@@ -2342,55 +2398,131 @@ select[disabled] + label {
   display: inline-block;
   width: 5px;
   height: 5px;
-  border-top: 2px solid #616161;
-  border-right: 2px solid #616161;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
   transform: rotate(135deg);
   position: absolute;
-  right: 10px;
-  bottom: 25px;
+  left: 10px;
+  top: 18px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item--has-submenu a:after {
+    border-color: #616161;
+    left: auto;
+    top: auto;
+    right: 10px;
+    bottom: 27px;
+  }
 }
 
 .menu__list-item--has-submenu a:hover:after {
-  border-color: #000000;
+  border-color: #ffffff;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item--has-submenu a:hover:after {
+    border-color: #000000;
+  }
+}
+
+.menu__list-item--has-submenu a.open {
+  background-color: #333333;
+}
+
+.menu__list-item--has-submenu a.open:after {
+  transform: rotate(315deg);
+  top: 20px;
+}
+
+.menu__list-item--responsive-nav {
+  background: none;
 }
 
 .menu__list-item--responsive-nav a {
   display: inline-block;
   width: 100%;
-  padding: 15px 0;
-  border-bottom: 1px solid #616161;
-  letter-spacing: 0.1rem;
+  padding: 15px 15px 15px 25px;
+  color: #ffffff;
 }
 
-.menu__list-item--responsive-nav:nth-last-child(-n+3) a {
-  border: 0;
-}
-
-.menu__list-item:last-of-type {
-  margin-right: 0;
+.menu__list-item--responsive-nav a:hover {
+  color: #ffffff;
+  opacity: 1;
 }
 
 .menu__children {
-  left: 0;
-  top: 55px;
-  position: absolute;
-  transition-duration: .9s;
-  z-index: 120;
   display: none;
-  text-align: left;
-  font-size: .875rem;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__children {
+    left: 0;
+    top: 55px;
+    position: absolute;
+    transition-duration: .9s;
+    z-index: 120;
+    text-align: left;
+  }
+}
+
+.menu__children.open {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.menu__children.open a {
+  background-color: #333333;
 }
 
 .menu__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   overflow-y: auto;
+  padding: 30px;
+  height: 100%;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 30em) {
+  .menu__content {
+    padding: 50px;
+  }
 }
 
 .submenu {
-  width: 200px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .submenu {
+    width: 200px;
+  }
 }
 
 .submenu--mobile {
@@ -2406,13 +2538,32 @@ select[disabled] + label {
   display: inline-block;
   width: 100%;
   padding: 15px 20px;
-  font-size: .875rem;
   position: relative;
-  background-color: #eceeee;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .submenu__list-item a {
+    background-color: #eceeee;
+  }
 }
 
 .submenu__list-item a:hover {
-  background-color: #f4f5f5;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .submenu__list-item a:hover {
+    background-color: #f4f5f5;
+  }
 }
 
 .submenu__list-item a:after {
@@ -2421,11 +2572,36 @@ select[disabled] + label {
 }
 
 .menu__list-item--has-submenu:hover .menu__children {
-  display: block;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu__list-item--has-submenu:hover .menu__children {
+    display: block;
+  }
 }
 
 .submenu__list-item--has-submenu:hover .submenu {
-  display: flex;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .submenu__list-item--has-submenu:hover .submenu {
+    display: flex;
+  }
+}
+
+.responsive-nav {
+  height: 100%;
+  display: none;
 }
 
 .modal__title__close {

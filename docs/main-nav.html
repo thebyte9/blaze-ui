@@ -1,142 +1,221 @@
 <!doctype html>
 <html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Main navigation</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script>
+         <!--
+         $(function(){
+         $(".toggle").click(function(){
+         $(this).next().toggleClass("open");
+         return false;
+         });
+         });
+         //-->
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main navigation</title>
-    <link href="../dist/main.css" rel="stylesheet" type="text/css">
+         function toggle_visibility(id) {
+                  var e = document.getElementById(id);
+                  if(e.style.display == 'block')
+                     e.style.display = 'none';
+                  else
+                     e.style.display = 'block';
+               }
 
-  </head>
+         $(document).ready(function(){
+          $('#menu-button, .toggle').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
 
-  <body>
-    <div class="site-container site-container--template" style="height: 100%;">
-      <h2 class="group-heading">Main navigation + submenu</h2>
-      <div class="component-wrapper component-wrapper--full-width" style="height: 100%;">
-        <p class="item-heading">Main nav</p>
-
-        <div class="menu menu--desktop">
-          <ul class="menu__list">
-            <li class="menu__list-item menu__list-item--has-submenu">
-              <a href="#">Link here 1</a>
-              <div class="menu__children">
-                <div class="submenu__wrapper">
-                  <div class="submenu">
-                    <ul class="submenu__list">
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="menu__list-item menu__list-item--has-submenu">
-              <a href="#">Link here</a>
-              <div class="menu__children">
-                <div class="submenu__wrapper">
-                  <div class="submenu">
-                    <ul class="submenu__list">
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="menu__list-item menu__list-item--has-submenu">
-              <a href="#">Link here</a>
-              <div class="menu__children">
-                <div class="submenu__wrapper">
-                  <div class="submenu">
-                    <ul class="submenu__list">
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                      <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="menu__list-item">
-              <a href="/">Link here</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="/">Link here</a>
-            </li>
-          </ul>
-        </div>
-        <div class="responsive-nav" id="responsive-nav">
-      <div class="menu menu--responsive-nav">
-         <div class="menu__content menu__content--responsive-nav">
-           <ul class="menu__list menu__list--responsive-nav">
-             <li class="menu__list-item menu__list-item--responsive-nav menu__list-item--has-submenu">
-               <a href="#">Link here 1</a>
-               <div class="menu__children menu__children--responsive-nav">
-                 <div class="submenu__wrapper submenu__wrapper--responsive-nav">
-                   <div class="submenu submenu--responsive-nav">
-                     <ul class="submenu__list">
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+      </script>
+   </head>
+   <body>
+      <div class="site-container site-container--template" style="height: 100%;">
+         <h2 class="group-heading">Main navigation + submenu</h2>
+         <div class="component-wrapper component-wrapper--full-width" style="height: 100%;">
+            <p class="item-heading">Main nav - resize to see responsive</p>
+            <button type="button" class="icon-button icon-button--menu" onclick="toggle_visibility('responsive-nav');" id="menu-button"><i class="material-icons">menu</i></button>
+            <div class="menu menu--desktop">
+               <ul class="menu__list">
+                  <li class="menu__list-item menu__list-item--has-submenu">
+                     <a href="#">Link here 1</a>
+                     <div class="menu__children">
+                        <div class="submenu__wrapper">
+                           <div class="submenu">
+                              <ul class="submenu__list">
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu__list-item menu__list-item--has-submenu">
+                     <a href="#">Link here</a>
+                     <div class="menu__children">
+                        <div class="submenu__wrapper">
+                           <div class="submenu">
+                              <ul class="submenu__list">
+                                 <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu__list-item menu__list-item--has-submenu">
+                     <a href="#">Link here</a>
+                     <div class="menu__children">
+                        <div class="submenu__wrapper">
+                           <div class="submenu">
+                              <ul class="submenu__list">
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                 <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu__list-item">
+                     <a href="/">Link here</a>
+                  </li>
+                  <li class="menu__list-item">
+                     <a href="/">Link here</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="responsive-nav" id="responsive-nav">
+               <div class="menu menu--responsive-nav">
+                  <div class="menu__content menu__content--responsive-nav">
+                     <ul class="menu__list menu__list--responsive-nav">
+                        <li class="menu__list-item menu__list-item--responsive-nav menu__list-item--has-submenu">
+                           <a href="#" class="toggle">Link here 1</a>
+                           <div class="menu__children menu__children--responsive-nav">
+                              <div class="submenu__wrapper submenu__wrapper--responsive-nav">
+                                 <div class="submenu submenu--responsive-nav">
+                                    <ul class="submenu__list submenu__list--responsive-nav">
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item menu__list-item--responsive-nav menu__list-item--has-submenu">
+                           <a href="#" class="toggle">Link here 1</a>
+                           <div class="menu__children menu__children--responsive-nav">
+                              <div class="submenu__wrapper submenu__wrapper--responsive-nav">
+                                 <div class="submenu submenu--responsive-nav">
+                                    <ul class="submenu__list submenu__list--responsive-nav">
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item menu__list-item--responsive-nav menu__list-item--has-submenu">
+                           <a href="#" class="toggle">Link here 1</a>
+                           <div class="menu__children menu__children--responsive-nav">
+                              <div class="submenu__wrapper submenu__wrapper--responsive-nav">
+                                 <div class="submenu submenu--responsive-nav">
+                                    <ul class="submenu__list submenu__list--responsive-nav">
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--responsive-nav"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item menu__list-item--responsive-nav">
+                           <a href="/">Link here</a>
+                        </li>
+                        <li class="menu__list-item menu__list-item--responsive-nav">
+                           <a href="/">Link here</a>
+                        </li>
                      </ul>
-                   </div>
-                 </div>
+                  </div>
                </div>
-             </li>
-             <li class="menu__list-item menu__list-item--has-submenu">
-               <a href="#">Link here</a>
-               <div class="menu__children">
-                 <div class="submenu__wrapper">
-                   <div class="submenu">
-                     <ul class="submenu__list">
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-             </li>
-             <li class="menu__list-item menu__list-item--has-submenu">
-               <a href="#">Link here</a>
-               <div class="menu__children">
-                 <div class="submenu__wrapper">
-                   <div class="submenu">
-                     <ul class="submenu__list">
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-             </li>
-             <li class="menu__list-item">
-               <a href="/">Link here</a>
-             </li>
-             <li class="menu__list-item">
-               <a href="/">Link here</a>
-             </li>
-           </ul>
+            </div>
+
+<pre>
+&lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--menu</span>">
+  &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">menu</span>&lt;/<span class="tag">i</span>>
+&lt;/<span class="tag">button</span>>
+
+&lt;<span class="tag">div</span> class="<span class="class">menu menu--desktop</span>">
+  &lt;<span class="tag">ul</span> class="<span class="class">menu__list</span>">
+    &lt;<span class="tag">li</span> class="<span class="class">menu__list-item menu__list-item--has-submenu</span>">
+    &lt;<span class="tag">a</span> href="#"><span class="text">Link with submenu</span>&lt;/<span class="tag">a</span>>
+      &lt;<span class="tag">div</span> class="<span class="class">menu__children</span>">
+        &lt;<span class="tag">div</span> class="<span class="class">submenu__wrapper</span>">
+          &lt;<span class="tag">div</span> class="<span class="class">submenu</span>">
+            &lt;<span class="tag">ul</span> class="<span class="class">submenu__list</span>">
+              &lt;<span class="tag">li</span> class="<span class="class">submenu__list-item</span>">
+                &lt;<span class="tag">a</span> href="#"><span class="text">Submenu link</span>&lt;/<span class="tag">a</span>>
+              &lt;/<span class="tag">li</span>>
+            &lt;/<span class="tag">ul</span>>
+          &lt;/<span class="tag">div</span>>
+        &lt;/<span class="tag">div</span>>
+      &lt;/<span class="tag">div</span>>
+    &lt;/<span class="tag">li</span>>
+    &lt;<span class="tag">li</span> class="<span class="class">menu__list-item</span>">
+      &lt;<span class="tag">a</span> href="#"><span class="text">Link here</span>&lt;/<span class="tag">a</span>>
+    &lt;/<span class="tag">li</span>>
+  &lt;/<span class="tag">ul</span>>
+&lt;/<span class="tag">div</span>>
+
+&lt;<span class="tag">div</span> class="<span class="class">responsive-nav</span>" id="<span class="class">responsive-nav</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">menu menu--responsive-nav</span>">
+    &lt;<span class="tag">div</span> class="<span class="class">menu__content menu__content--responsive-nav</span>">
+      &lt;<span class="tag">ul</span> class="<span class="class">menu__list menu__list--responsive-nav</span>">
+        &lt;<span class="tag">li</span> class="<span class="class">menu__list-item menu__list-item--responsive-nav menu__list-item--has-submenu</span>">
+          &lt;<span class="tag">a</span> href="#" class="<span class="class">toggle</span>"><span class="text">Link with submenu</span>&lt;/<span class="tag">a</span>>
+          &lt;<span class="tag">div</span> class="<span class="class">menu__children menu__children--responsive-nav</span>">
+            &lt;<span class="tag">div</span> class="<span class="class">submenu__wrapper submenu__wrapper--responsive-nav</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">submenu submenu--responsive-nav</span>">
+                &lt;<span class="tag">ul</span> class="<span class="class">submenu__list submenu__list--responsive-nav</span>">
+                  &lt;<span class="tag">li</span> class="<span class="class">submenu__list-item submenu__list-item--responsive-nav</span>">
+                    &lt;<span class="tag">a</span> href="#"><span class="text">Submenu link</span>&lt;/<span class="tag">a</span>>
+                  &lt;/<span class="tag">li</span>>
+                &lt;/<span class="tag">ul</span>>
+              &lt;/<span class="tag">div</span>>
+            &lt;/<span class="tag">div</span>>
+          &lt;/<span class="tag">div</span>>
+        &lt;/<span class="tag">li</span>>
+        &lt;<span class="tag">li</span> class="<span class="class">menu__list-item menu__list-item--responsive-nav</span>">
+          &lt;<span class="tag">a</span> href="#"><span class="text">Link here</span>&lt;/<span class="tag">a</span>>
+        &lt;/<span class="tag">li</span>>
+      &lt;/<span class="tag">ul</span>>
+    &lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
          </div>
       </div>
-   </div>
-      </div>
-    </div>
-  </body>
-
+   </body>
 </html>
