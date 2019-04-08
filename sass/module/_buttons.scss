@@ -45,6 +45,19 @@
       transform: scale(.9);
     }
   }
+
+  &--menu {
+    transition: none;
+
+    &.open {
+      background: $black;
+      color: $white;
+      opacity: 1;
+    }
+    @include mq($from: desktop) {
+      display: none;
+    }
+  }
 }
 
 .button {
