@@ -455,28 +455,10 @@
 }
 
 /*PLACEHOLDERS use ''@extend %placeholder' in css above all other styles in the class*/
-.breadcrumb, .more-menu__list, .pagination__list, .progress-bar__list, .social__list, .tags {
+.breadcrumb, .menu__list, .submenu__list, .more-menu__list, .pagination__list, .progress-bar__list, .social__list, .tags {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.modal__title__close {
-  margin: 0 2px;
-  border: 0;
-  font-size: 18px;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all .5s ease;
-  cursor: pointer;
-}
-
-.modal__title__close:hover {
-  background: #eeeeee;
 }
 
 /* ==========================================================================
@@ -2264,6 +2246,186 @@ select[disabled] + label {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.menu--desktop {
+  display: flex;
+  background-color: #f4f5f5;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu--desktop {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}
+
+.menu--responsive-nav {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: none;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .menu--responsive-nav {
+    display: none;
+  }
+}
+
+.menu__list {
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  display: flex;
+  color: #000000;
+}
+
+.menu__list--responsive-nav {
+  flex-direction: column;
+  max-width: 375px;
+}
+
+.menu__list-item {
+  list-style: none;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: #f4f5f5;
+}
+
+.menu__list-item:hover {
+  background-color: #eceeee;
+}
+
+.menu__list-item a {
+  display: inline-block;
+  color: #616161;
+  padding: 20px;
+  font-size: .875rem;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 85.375em) {
+  .menu__list-item a {
+    font-size: 1rem;
+  }
+}
+
+.menu__list-item a:hover {
+  color: #000000;
+}
+
+.menu__list-item--has-submenu {
+  position: relative;
+}
+
+.menu__list-item--has-submenu a {
+  padding-right: 25px;
+}
+
+.menu__list-item--has-submenu a:after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #616161;
+  border-right: 2px solid #616161;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 10px;
+  bottom: 25px;
+}
+
+.menu__list-item--has-submenu a:hover:after {
+  border-color: #000000;
+}
+
+.menu__list-item--responsive-nav a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #616161;
+  letter-spacing: 0.1rem;
+}
+
+.menu__list-item--responsive-nav:nth-last-child(-n+3) a {
+  border: 0;
+}
+
+.menu__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.menu__children {
+  left: 0;
+  top: 55px;
+  position: absolute;
+  transition-duration: .9s;
+  z-index: 120;
+  display: none;
+  text-align: left;
+  font-size: .875rem;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.submenu {
+  width: 200px;
+}
+
+.submenu--mobile {
+  padding: 0;
+}
+
+.submenu__wrapper {
+  position: relative;
+  height: auto;
+}
+
+.submenu__list-item a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: .875rem;
+  position: relative;
+  background-color: #eceeee;
+}
+
+.submenu__list-item a:hover {
+  background-color: #f4f5f5;
+}
+
+.submenu__list-item a:after {
+  content: '';
+  display: none;
+}
+
+.menu__list-item--has-submenu:hover .menu__children {
+  display: block;
+}
+
+.submenu__list-item--has-submenu:hover .submenu {
+  display: flex;
 }
 
 .modal__title__close {
