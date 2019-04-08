@@ -10,21 +10,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-%header-icon {
-  margin: 0 2px;
-  border: 0;
-  font-size: 18px;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all .5s ease;
-  cursor: pointer;
-}
-
-%header-icon-hover {
-  background: #eeeeee;
-}
