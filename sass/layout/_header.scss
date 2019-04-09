@@ -1,3 +1,10 @@
 .header {
   background-color: $grey;
+  min-height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  @include mq($from: tablet) {
+    position: relative;
+  }
 }
