@@ -1,4 +1,7 @@
 .sidebar {
-  flex: 0 0 300px;
+  flex: 1 1 auto;
   background: $grey-light;
+  @include mq($from: tablet) {
+    flex: 0 0 300px;
+  }
 }

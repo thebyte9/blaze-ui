@@ -37,8 +37,14 @@
          <h2 class="group-heading">Main navigation + submenu</h2>
          <div class="component-wrapper component-wrapper--full-width" style="height: 100%;">
             <p class="item-heading">Main nav - resize to see responsive</p>
-            <button type="button" class="icon-button icon-button--menu" onclick="toggle_visibility('responsive-nav');" id="menu-button"><i class="material-icons">menu</i></button>
-            <div class="menu menu--desktop">
+
+            <button type="button" class="icon-button icon-button--menu" onclick="toggle_visibility('responsive-nav');" id="menu-button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="menu">
                <ul class="menu__list">
                   <li class="menu__list-item menu__list-item--has-submenu">
                      <a href="#">Link here 1</a>
@@ -167,7 +173,7 @@
   &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">menu</span>&lt;/<span class="tag">i</span>>
 &lt;/<span class="tag">button</span>>
 
-&lt;<span class="tag">div</span> class="<span class="class">menu menu--desktop</span>">
+&lt;<span class="tag">div</span> class="<span class="class">menu</span>">
   &lt;<span class="tag">ul</span> class="<span class="class">menu__list</span>">
     &lt;<span class="tag">li</span> class="<span class="class">menu__list-item menu__list-item--has-submenu</span>">
     &lt;<span class="tag">a</span> href="#"><span class="text">Link with submenu</span>&lt;/<span class="tag">a</span>>

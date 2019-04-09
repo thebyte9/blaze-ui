@@ -58,6 +58,13 @@
       display: none;
     }
   }
+
+  &--side-menu {
+    display: block;
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
 }
 
 .button {
