@@ -28,7 +28,7 @@
 		"../sass/module/_icons.scss",
 		"../sass/module/_lists.scss",
 		"../sass/module/_media.scss",
-		"../sass/module/_main-nav.scss",
+		"../sass/module/_menu.scss",
 		"../sass/module/_modal.scss",
 		"../sass/module/_more-menu.scss",
 		"../sass/module/_page-items.scss",
