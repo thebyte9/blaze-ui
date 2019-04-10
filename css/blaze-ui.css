@@ -2679,6 +2679,8 @@ select[disabled] + label {
     transition-duration: .9s;
     z-index: 120;
     text-align: left;
+    border: 1px solid #ffffff;
+    border-top: 0;
   }
 }
 

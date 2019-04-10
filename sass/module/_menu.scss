@@ -175,6 +175,8 @@
       transition-duration: .9s;
       z-index: 120;
       text-align: left;
+      border: 1px solid $white;
+      border-top: 0;
     }
 
     &.open {
