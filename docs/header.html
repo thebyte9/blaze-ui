@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Header</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script>
+         <!--
+         $(function(){
+         $(".toggle").click(function(){
+         $(this).next().toggleClass("open");
+         return false;
+         });
+         });
+         //-->
+
+         function toggle_visibility(id) {
+                  var e = document.getElementById(id);
+                  if(e.style.display == 'block')
+                     e.style.display = 'none';
+                  else
+                     e.style.display = 'block';
+               }
+
+         $(document).ready(function(){
+          $('#menu-button, .toggle').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
+
+      </script>
+   </head>
+   <body>
+      <div class="site-container site-container--template" style="padding: 0;">
+         <header class="header">
+            <!-- HEADER WRAPPER -->
+            <div class="header__wrapper">
+               <!-- HEADER ROW USER MENU -->
+               <div class="header__row header__row--user-menu">
+                  <div class="menu menu--user">
+                     <ul class="menu__list menu__list--user">
+                        <li class="menu__list-item menu__list-item--user">
+                           <a href="/">Link here</a>
+                        </li>
+                        <li class="menu__list-item menu__list-item--user">
+                           <a href="/">Link here</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- HEADER ROW -->
+               <div class="header__row">
+                  <!-- LOGO -->
+                  <div class="logo">
+                     <a href="#">
+                     <img src="images/logo.png" alt="Company name" class="logo__desktop">
+                     <img src="images/logo-small.png" alt="Company name" class="logo__mobile">
+                     </a>
+                  </div>
+                  <!-- COLUMN -->
+                  <div class="header__column">
+                     <!-- SEARCH -->
+                     <div class="search">
+                        <div class="search__wrapper">
+                           <form class="" action="index.html" method="post">
+                              <div class="form-field form-field--input form-field--search">
+                                 <label for="search" class="hidden">Search</label>
+                                 <input type="text" name="demo" value="" placeholder="Search" id="search" class="input-search">
+                              </div>
+                              <button type="button" class="icon-button icon-button--search">
+                              <i class="material-icons">search</i>
+                              </button>
+                        </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <!-- HEADER ROW MAIN MENU-->
+               <div class="header__row header__row--main-menu">
+                  <!-- MENU -->
+                  <div class="menu menu--header">
+                     <ul class="menu__list">
+                        <li class="menu__list-item menu__list-item--has-submenu">
+                           <a href="#">Shop</a>
+                           <div class="menu__children">
+                              <div class="submenu__wrapper">
+                                 <div class="submenu">
+                                    <ul class="submenu__list">
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item menu__list-item--has-submenu">
+                           <a href="#">Channel</a>
+                           <div class="menu__children">
+                              <div class="submenu__wrapper">
+                                 <div class="submenu">
+                                    <ul class="submenu__list">
+                                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--has-submenu"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item menu__list-item--has-submenu">
+                           <a href="#">Subjects</a>
+                           <div class="menu__children">
+                              <div class="submenu__wrapper">
+                                 <div class="submenu">
+                                    <ul class="submenu__list">
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu__list-item">
+                           <a href="/">About</a>
+                        </li>
+                        <li class="menu__list-item">
+                           <a href="/">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- HEADER ROW MOBILE -->
+               <div class="header__row header__row--mobile">
+                  <!-- MENU BUTTON -->
+                  <button type="button" class="icon-button icon-button--menu" onclick="toggle_visibility('responsive-nav');" id="menu-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+                  <!-- LOGO -->
+                  <div class="logo">
+                     <a href="#">
+                     <img src="images/logo-small.png" alt="Company name" class="logo__mobile">
+                     </a>
+                  </div>
+                  <!-- BUTTON USER -->
+                  <button class="icon-button icon-button--user"><i class="material-icons">account_circle</i></button>
+               </div>
+               <!-- HEADER ROW MOBILE -->
+               <div class="header__row header__row--mobile">
+                  <!-- SEARCH -->
+                  <div class="search search--mobile">
+                     <div class="search__wrapper">
+                        <form class="" action="index.html" method="post">
+                           <div class="form-field form-field--input form-field--search">
+                              <label for="search" class="hidden">Search</label>
+                              <input type="text" name="demo" value="" placeholder="Search" id="search" class="input-search">
+                           </div>
+                           <button type="button" class="icon-button icon-button--search">
+                           <i class="material-icons">search</i>
+                           </button>
+                     </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- MOBILE NAV -->
+               <div class="responsive-nav" id="responsive-nav">
+                  <div class="menu menu--mobile">
+                     <div class="menu__content menu__content--mobile">
+                        <ul class="menu__list menu__list--mobile">
+                           <li class="menu__list-item menu__list-item--mobile menu__list-item--has-submenu">
+                              <a href="#" class="toggle">Link here 1</a>
+                              <div class="menu__children menu__children--mobile">
+                                 <div class="submenu__wrapper submenu__wrapper--mobile">
+                                    <div class="submenu submenu--mobile">
+                                       <ul class="submenu__list submenu__list--mobile">
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="menu__list-item menu__list-item--mobile menu__list-item--has-submenu">
+                              <a href="#" class="toggle">Link here 1</a>
+                              <div class="menu__children menu__children--mobile">
+                                 <div class="submenu__wrapper submenu__wrapper--mobile">
+                                    <div class="submenu submenu--mobile">
+                                       <ul class="submenu__list submenu__list--mobile">
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="menu__list-item menu__list-item--mobile menu__list-item--has-submenu">
+                              <a href="#" class="toggle">Link here 1</a>
+                              <div class="menu__children menu__children--mobile">
+                                 <div class="submenu__wrapper submenu__wrapper--mobile">
+                                    <div class="submenu submenu--mobile">
+                                       <ul class="submenu__list submenu__list--mobile">
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                          <li class="submenu__list-item submenu__list-item--mobile"><a href="#">Submenu link</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="menu__list-item menu__list-item--mobile">
+                              <a href="/">Link here</a>
+                           </li>
+                           <li class="menu__list-item menu__list-item--mobile">
+                              <a href="/">Link here</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <p>&nbsp;</p>
+         <h2 class="group-heading">Basic header</h2>
+      </div>
+   </body>
+</html>

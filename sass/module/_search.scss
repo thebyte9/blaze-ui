@@ -1,10 +1,13 @@
 .search {
   width: 100%;
-  max-width: 800px;
-  border: 1px solid $grey;
-  border-radius: 3px;
-  height: 42px;
+  border-top: 1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
   display: flex;
+  @include mq($from: desktop) {
+    border-radius: 3px;
+    max-width: 400px;
+    border: 1px solid $grey;
+  }
 
   & form {
     display: flex;
@@ -13,6 +16,11 @@
 
   & input {
     border: 0;
+    height: 46px;
+    padding: 10px 15px;
+    @include mq($from: desktop) {
+      height: 46px;
+    }
   }
 
   & .form-field {
@@ -20,11 +28,12 @@
     max-width: 100%;
   }
 
-  &--header {
+  &--toggle {
     display: flex;
     line-height: 0;
     position: relative;
     border: 0;
+    margin-top: 50px;
     @include mq($from: desktop) {
       border: 1px solid $grey;
     }
@@ -38,7 +47,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    &--header {
+
+    &--toggle {
       display: none;
       position: absolute;
       right: 34px;
