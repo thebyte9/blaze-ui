@@ -1,20 +1,37 @@
 .menu {
   display: none;
-  background-color: $grey-lightest;
   @include mq($from: desktop) {
     display: flex;
     flex: 1 1 auto;
   }
 
-  &--responsive-nav {
+  &--mobile {
     width: 100%;
     height: 100%;
-    background: $black;
+    background: $white;
     display: flex;
     flex-direction: column;
     @include mq($from: desktop) {
       display: none;
     }
+  }
+
+  &--user {
+    justify-content: flex-end;
+    font-size: .875rem;
+    background: none;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px;
+    @include mq($from: wide) {
+      padding: 10px 0;
+    }
+  }
+  &--header {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
   }
 
   &__list {
@@ -25,8 +42,16 @@
     display: flex;
     color: $black;
 
-    &--responsive-nav {
+    &--mobile {
       flex-direction: column;
+      max-width: 400px;
+      height: 100%;
+      padding: 30px 0;
+      background: $grey-200;
+    }
+
+    &--user {
+      width: auto;
     }
   }
 
@@ -34,13 +59,11 @@
     list-style: none;
     display: inline-block;
     white-space: nowrap;
-    @include mq($from: desktop) {
-      background-color: $grey-lightest;
-    }
+    @include mq($from: desktop) {}
 
     &:hover {
       @include mq($from: desktop) {
-        background-color: darken($grey-lightest, 3%);
+        background-color: $grey-lightest;
       }
     }
 
@@ -52,7 +75,7 @@
 
       &:hover {
         color: $black;
-        background-color: $nearly-black;
+        background-color: $grey-100;
         @include mq($from: desktop) {
           background: none;
         }
@@ -73,11 +96,11 @@
           display: inline-block;
           width: 5px;
           height: 5px;
-          border-top: 2px solid $white;
-          border-right: 2px solid $white;
+          border-top: 2px solid $black;
+          border-right: 2px solid $black;
           transform: rotate(135deg);
           position: absolute;
-          left: 10px;
+          left: 15px;
           top: 18px;
           @include mq($from: desktop) {
             border-color: $grey-dark;
@@ -89,14 +112,14 @@
         }
 
         &:hover:after {
-          border-color: $white;
+          border-color: $black;
           @include mq($from: desktop) {
             border-color: $black;
           }
         }
 
         &.open {
-          background-color: $nearly-black;
+          background-color: $grey-100;
 
           &:after {
             transform: rotate(315deg);
@@ -106,18 +129,38 @@
       }
     }
 
-    &--responsive-nav {
+    &--mobile {
       background: none;
+      text-align: left;
 
       & a {
         display: inline-block;
         width: 100%;
-        padding: 15px 15px 15px 25px;
-        color: $white;
+        padding: 15px 15px 15px 40px;
 
         &:hover {
-          color: $white;
           opacity: 1;
+        }
+      }
+    }
+
+    &--user {
+      background: none;
+      margin-left: 10px;
+
+      &:hover {
+        background: none;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      & a {
+        padding: 0;
+
+        &:hover {
+          background: none;
         }
       }
     }
@@ -127,11 +170,13 @@
     display: none;
     @include mq($from: desktop) {
       left: 0;
-      top: 55px;
+      top: 58px;
       position: absolute;
       transition-duration: .9s;
       z-index: 120;
       text-align: left;
+      border: 1px solid $white;
+      border-top: 0;
     }
 
     &.open {
@@ -139,7 +184,7 @@
       margin-bottom: 20px;
 
       & a {
-        background-color: $nearly-black;
+        background-color: $grey-100;
       }
     }
   }
@@ -154,6 +199,11 @@
     height: 100%;
     @include mq($from: mobileBig) {
       padding: 50px;
+    }
+
+    &--mobile {
+      padding: 0;
+      background-color: $grey-100;
     }
   }
 }
@@ -241,7 +291,7 @@
         }
 
         &.open {
-          background-color: lighten($nearly-black, 4%);
+          background-color: $grey-darkest;
 
           &:after {
             transform: rotate(315deg);
@@ -256,15 +306,15 @@
     display: inline-block;
     width: 100%;
     padding: 10px 20px;
-    color: $grey-light;
+    color: $white;
     border-left: 5px solid $nearly-black;
     border-bottom: 1px solid $grey-darkest;
 
     &:hover {
       color: $primary-color;
       text-decoration: none;
-      background-color: lighten($nearly-black, 4%);
-      border-color: lighten($nearly-black, 4%);
+      background-color: $grey-darkest;
+      border-color: $grey-darkest;
     }
 
     &.current {
@@ -286,7 +336,7 @@
 
 .submenu {
   @include mq($from: desktop) {
-    width: 200px;
+    width: 230px;
   }
 
   &--mobile {
@@ -315,12 +365,12 @@
       padding: 15px 20px;
       position: relative;
       @include mq($from: desktop) {
-        background-color: darken($grey-lightest, 3%);
+        background-color: $grey-100;
       }
 
       &:hover {
         @include mq($from: desktop) {
-          background-color: $grey-lightest;
+          background-color: $grey-50;
         }
       }
 
@@ -356,6 +406,11 @@
 
 .responsive-nav {
   height: 100%;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   display: none;
 }
 
@@ -365,8 +420,6 @@
   /*45px*/
   height: 20px;
   position: relative;
-  top: 12px;
-  margin-bottom: 12px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
@@ -380,50 +433,45 @@
     border-radius: 2px;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
+    /*-webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;*/
     transition: .25s ease-in-out;
 
     &:nth-child(1) {
       top: 0;
-      -webkit-transform-origin: left center;
+      /*-webkit-transform-origin: left center;
       -moz-transform-origin: left center;
-      -o-transform-origin: left center;
+      -o-transform-origin: left center;*/
       transform-origin: left center;
     }
 
     &:nth-child(2) {
       /*18px*/
       top: 8px;
-      -webkit-transform-origin: left center;
+      /*-webkit-transform-origin: left center;
       -moz-transform-origin: left center;
-      -o-transform-origin: left center;
+      -o-transform-origin: left center;*/
       transform-origin: left center;
     }
 
     &:nth-child(3) {
       /*36px*/
       top: 16px;
-      -webkit-transform-origin: left center;
+      /*-webkit-transform-origin: left center;
       -moz-transform-origin: left center;
-      -o-transform-origin: left center;
+      -o-transform-origin: left center;*/
       transform-origin: left center;
     }
   }
 
   &.open {
     & span {
-      background-color: $white;
-
       &:nth-child(1) {
-        -webkit-transform: rotate(45deg);
+        /*-webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
+        -o-transform: rotate(45deg);*/
         transform: rotate(45deg);
         top: 0;
         left: 3px;
@@ -435,9 +483,9 @@
       }
 
       &:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
+        /*-webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);*/
         transform: rotate(-45deg);
         top: 17px;
         left: 3px;

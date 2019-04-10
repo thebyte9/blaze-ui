@@ -48,10 +48,9 @@
 
   &--menu {
     transition: none;
+    margin-left: 10px;
 
     &.open {
-      background: $black;
-      color: $white;
       opacity: 1;
     }
     @include mq($from: desktop) {
@@ -63,6 +62,14 @@
     display: block;
     @include mq($from: tablet) {
       display: none;
+    }
+  }
+
+  &--user {
+    color: $black;
+
+    & i {
+      font-size: 2rem;
     }
   }
 }

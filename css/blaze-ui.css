@@ -455,7 +455,7 @@
 }
 
 /*PLACEHOLDERS use ''@extend %placeholder' in css above all other styles in the class*/
-.breadcrumb, .menu__list, .side-menu__list, .submenu__list, .more-menu__list, .pagination__list, .progress-bar__list, .social__list, .tags {
+.breadcrumb, .menu__list, .side-menu__list, .submenu__list, .more-menu__list, .pagination__list, .progress-bar__list, .social__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -720,7 +720,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -884,11 +884,10 @@ textarea {
    Layout
    ========================================================================== */
 .header {
-  background-color: #bdbdbd;
-  min-height: 50px;
   position: fixed;
   width: 100%;
   z-index: 100;
+  min-height: 50px;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -896,9 +895,116 @@ textarea {
   /* Remove unnecessary media query prefix 'all and '*/
 }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .header {
     position: relative;
+    min-height: 60px;
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.header__row {
+  display: none;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .header__row {
+    display: flex;
+  }
+}
+
+.header__row--user-menu {
+  background: #f5f5f5;
+  max-width: 100%;
+}
+
+.header__row--main-menu {
+  border-bottom: 1px solid #e2e9ea;
+  max-width: 100%;
+}
+
+.header__row--mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .header__row--mobile {
+    display: none;
+  }
+}
+
+.header__column {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 85.375em) {
+  .header__column {
+    padding: 10px 0;
+  }
+}
+
+.logo {
+  padding: 10px 20px;
+}
+
+.logo__desktop {
+  display: none;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .logo__desktop {
+    display: block;
+  }
+}
+
+.logo__mobile {
+  padding: 5px 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .logo__mobile {
+    display: none;
   }
 }
 
@@ -1408,6 +1514,7 @@ a.badge:hover span {
 
 .icon-button--menu {
   transition: none;
+  margin-left: 10px;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -1416,8 +1523,6 @@ a.badge:hover span {
 }
 
 .icon-button--menu.open {
-  background: #000000;
-  color: #ffffff;
   opacity: 1;
 }
 
@@ -1440,6 +1545,14 @@ a.badge:hover span {
   .icon-button--side-menu {
     display: none;
   }
+}
+
+.icon-button--user {
+  color: #000000;
+}
+
+.icon-button--user i {
+  font-size: 2rem;
 }
 
 .button {
@@ -1941,7 +2054,7 @@ select::-ms-expand {
 
 option {
   padding: 5px;
-  color: red;
+  color: #000000;
 }
 
 label {
@@ -2314,7 +2427,6 @@ select[disabled] + label {
 
 .menu {
   display: none;
-  background-color: #f4f5f5;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -2329,10 +2441,10 @@ select[disabled] + label {
   }
 }
 
-.menu--responsive-nav {
+.menu--mobile {
   width: 100%;
   height: 100%;
-  background: #000000;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   /* From: this breakpoint (inclusive)*/
@@ -2343,9 +2455,36 @@ select[disabled] + label {
 }
 
 @media (min-width: 64em) {
-  .menu--responsive-nav {
+  .menu--mobile {
     display: none;
   }
+}
+
+.menu--user {
+  justify-content: flex-end;
+  font-size: .875rem;
+  background: none;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 85.375em) {
+  .menu--user {
+    padding: 10px 0;
+  }
+}
+
+.menu--header {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .menu__list {
@@ -2356,8 +2495,16 @@ select[disabled] + label {
   color: #000000;
 }
 
-.menu__list--responsive-nav {
+.menu__list--mobile {
   flex-direction: column;
+  max-width: 400px;
+  height: 100%;
+  padding: 30px 0;
+  background: #eeeeee;
+}
+
+.menu__list--user {
+  width: auto;
 }
 
 .menu__list-item {
@@ -2371,12 +2518,6 @@ select[disabled] + label {
   /* Remove unnecessary media query prefix 'all and '*/
 }
 
-@media (min-width: 64em) {
-  .menu__list-item {
-    background-color: #f4f5f5;
-  }
-}
-
 .menu__list-item:hover {
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
@@ -2387,7 +2528,7 @@ select[disabled] + label {
 
 @media (min-width: 64em) {
   .menu__list-item:hover {
-    background-color: #eceeee;
+    background-color: #f4f5f5;
   }
 }
 
@@ -2400,7 +2541,7 @@ select[disabled] + label {
 
 .menu__list-item a:hover {
   color: #000000;
-  background-color: #333333;
+  background-color: #f5f5f5;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -2438,11 +2579,11 @@ select[disabled] + label {
   display: inline-block;
   width: 5px;
   height: 5px;
-  border-top: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
   transform: rotate(135deg);
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 18px;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
@@ -2462,7 +2603,7 @@ select[disabled] + label {
 }
 
 .menu__list-item--has-submenu a:hover:after {
-  border-color: #ffffff;
+  border-color: #000000;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -2477,7 +2618,7 @@ select[disabled] + label {
 }
 
 .menu__list-item--has-submenu a.open {
-  background-color: #333333;
+  background-color: #f5f5f5;
 }
 
 .menu__list-item--has-submenu a.open:after {
@@ -2485,20 +2626,40 @@ select[disabled] + label {
   top: 20px;
 }
 
-.menu__list-item--responsive-nav {
+.menu__list-item--mobile {
+  background: none;
+  text-align: left;
+}
+
+.menu__list-item--mobile a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 15px 15px 40px;
+}
+
+.menu__list-item--mobile a:hover {
+  opacity: 1;
+}
+
+.menu__list-item--user {
+  background: none;
+  margin-left: 10px;
+}
+
+.menu__list-item--user:hover {
   background: none;
 }
 
-.menu__list-item--responsive-nav a {
-  display: inline-block;
-  width: 100%;
-  padding: 15px 15px 15px 25px;
-  color: #ffffff;
+.menu__list-item--user:first-child {
+  margin-left: 0;
 }
 
-.menu__list-item--responsive-nav a:hover {
-  color: #ffffff;
-  opacity: 1;
+.menu__list-item--user a {
+  padding: 0;
+}
+
+.menu__list-item--user a:hover {
+  background: none;
 }
 
 .menu__children {
@@ -2513,11 +2674,13 @@ select[disabled] + label {
 @media (min-width: 64em) {
   .menu__children {
     left: 0;
-    top: 55px;
+    top: 58px;
     position: absolute;
     transition-duration: .9s;
     z-index: 120;
     text-align: left;
+    border: 1px solid #ffffff;
+    border-top: 0;
   }
 }
 
@@ -2527,7 +2690,7 @@ select[disabled] + label {
 }
 
 .menu__children.open a {
-  background-color: #333333;
+  background-color: #f5f5f5;
 }
 
 .menu__content {
@@ -2549,6 +2712,11 @@ select[disabled] + label {
   .menu__content {
     padding: 50px;
   }
+}
+
+.menu__content--mobile {
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
 .side-menu {
@@ -2659,7 +2827,7 @@ select[disabled] + label {
 }
 
 .side-menu__list-item--has-submenu a.open {
-  background-color: #3d3d3d;
+  background-color: #424242;
 }
 
 .side-menu__list-item--has-submenu a.open:after {
@@ -2671,7 +2839,7 @@ select[disabled] + label {
   display: inline-block;
   width: 100%;
   padding: 10px 20px;
-  color: #e2e9ea;
+  color: #ffffff;
   border-left: 5px solid #333333;
   border-bottom: 1px solid #424242;
 }
@@ -2679,8 +2847,8 @@ select[disabled] + label {
 .side-menu__list-link:hover {
   color: #03a9f4;
   text-decoration: none;
-  background-color: #3d3d3d;
-  border-color: #3d3d3d;
+  background-color: #424242;
+  border-color: #424242;
 }
 
 .side-menu__list-link.current {
@@ -2708,7 +2876,7 @@ select[disabled] + label {
 
 @media (min-width: 64em) {
   .submenu {
-    width: 200px;
+    width: 230px;
   }
 }
 
@@ -2741,7 +2909,7 @@ select[disabled] + label {
 
 @media (min-width: 64em) {
   .submenu__list-item a {
-    background-color: #eceeee;
+    background-color: #f5f5f5;
   }
 }
 
@@ -2755,7 +2923,7 @@ select[disabled] + label {
 
 @media (min-width: 64em) {
   .submenu__list-item a:hover {
-    background-color: #f4f5f5;
+    background-color: #fafafa;
   }
 }
 
@@ -2804,6 +2972,11 @@ select[disabled] + label {
 
 .responsive-nav {
   height: 100%;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   display: none;
 }
 
@@ -2813,8 +2986,6 @@ select[disabled] + label {
   /*45px*/
   height: 20px;
   position: relative;
-  top: 12px;
-  margin-bottom: 12px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
@@ -2829,50 +3000,43 @@ select[disabled] + label {
   border-radius: 2px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
+  /*-webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;*/
   transition: .25s ease-in-out;
 }
 
 #menu-button span:nth-child(1) {
   top: 0;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
+  /*-webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;*/
   transform-origin: left center;
 }
 
 #menu-button span:nth-child(2) {
   /*18px*/
   top: 8px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
+  /*-webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;*/
   transform-origin: left center;
 }
 
 #menu-button span:nth-child(3) {
   /*36px*/
   top: 16px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
+  /*-webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;*/
   transform-origin: left center;
 }
 
-#menu-button.open span {
-  background-color: #ffffff;
-}
-
 #menu-button.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  /*-webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);*/
   transform: rotate(45deg);
   top: 0;
   left: 3px;
@@ -2884,9 +3048,9 @@ select[disabled] + label {
 }
 
 #menu-button.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+  /*-webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);*/
   transform: rotate(-45deg);
   top: 17px;
   left: 3px;
@@ -3441,11 +3605,22 @@ hr {
 
 .search {
   width: 100%;
-  max-width: 800px;
-  border: 1px solid #bdbdbd;
-  border-radius: 3px;
-  height: 42px;
+  border-top: 1px solid #e2e9ea;
+  border-bottom: 1px solid #e2e9ea;
   display: flex;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .search {
+    border-radius: 3px;
+    max-width: 400px;
+    border: 1px solid #bdbdbd;
+  }
 }
 
 .search form {
@@ -3455,18 +3630,8 @@ hr {
 
 .search input {
   border: 0;
-}
-
-.search .form-field {
-  margin: 0;
-  max-width: 100%;
-}
-
-.search--header {
-  display: flex;
-  line-height: 0;
-  position: relative;
-  border: 0;
+  height: 46px;
+  padding: 10px 15px;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -3475,12 +3640,36 @@ hr {
 }
 
 @media (min-width: 64em) {
-  .search--header {
+  .search input {
+    height: 46px;
+  }
+}
+
+.search .form-field {
+  margin: 0;
+  max-width: 100%;
+}
+
+.search--toggle {
+  display: flex;
+  line-height: 0;
+  position: relative;
+  border: 0;
+  margin-top: 50px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .search--toggle {
     border: 1px solid #bdbdbd;
   }
 }
 
-.search--header input {
+.search--toggle input {
   height: 40px;
 }
 
@@ -3490,7 +3679,7 @@ hr {
   align-items: center;
 }
 
-.search__wrapper--header {
+.search__wrapper--toggle {
   display: none;
   position: absolute;
   right: 34px;
@@ -3506,7 +3695,7 @@ hr {
 }
 
 @media (min-width: 64em) {
-  .search__wrapper--header {
+  .search__wrapper--toggle {
     display: flex;
     position: relative;
     right: auto;
@@ -3851,11 +4040,6 @@ hr {
 .tabs__content.current {
   display: flex;
   flex-direction: column;
-}
-
-.tags__tags-item {
-  display: inline-block;
-  margin-right: 5px;
 }
 
 /* Add this class where a tooltip is needed */

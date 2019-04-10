@@ -40,15 +40,13 @@ select::-ms-expand {
 
 option {
   padding: 5px;
-  color: red;
+  color: $black;
 }
 
 label {
   color: $grey-dark;
   margin-bottom: 3px;
 }
-
-textarea {}
 
 input[type][disabled] {
   background-color: $grey-light;
