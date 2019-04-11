@@ -7,6 +7,14 @@
       <link href="../dist/main.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script type="text/javascript">
+      <!--
+      $(function(){
+      $(".toggle").click(function(){
+      $(this).next().toggleClass("open");
+      return false;
+      });
+      });
+      //-->
    <!--
        function toggle_visibility(id) {
           var e = document.getElementById(id);
@@ -30,9 +38,9 @@
          <h2 class="group-heading">More menu</h2>
          <div class="component-wrapper" style="text-align: right;">
             <p class="item-heading">Click on more icon button to toggle menu</p>
-            <div class="more-menu__wrapper" onclick="toggle_visibility('more-menu');" id="more-menu-button">
-                  <button type="button" class="icon-button"><i class="material-icons">more_vert</i></button>
-                  <div class="more-menu" id="more-menu">
+            <div class="more-menu__wrapper">
+                  <button type="button" class="icon-button toggle"><i class="material-icons">more_vert</i></button>
+                  <div class="more-menu">
                      <ul class="more-menu__list">
                         <li class="more-menu__list-item">
                            <a href="#">Link here</a>

@@ -1009,7 +1009,72 @@ textarea {
 }
 
 .footer {
-  background-color: #bdbdbd;
+  border-top: 1px solid #bdbdbd;
+  width: 100%;
+  font-size: .875rem;
+}
+
+.footer__wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+.footer__row:first-child {
+  background: #f5f5f5;
+}
+
+.footer__row:last-child {
+  border: 0;
+}
+
+@media (min-width: 48em) {
+  .footer__row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 85.375em) {
+  .footer__row {
+    padding: 10px 0;
+  }
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.footer__list-item {
+  margin-right: 10px;
+}
+
+.footer__list-item:last-child {
+  margin-right: 0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .site-container {
@@ -1297,6 +1362,10 @@ pre .text {
   border-color: #bdbdbd;
 }
 
+.badge i {
+  font-size: .875rem;
+}
+
 .badge--primary {
   color: #ffffff;
   background-color: #03a9f4;
@@ -1350,7 +1419,7 @@ pre .text {
   /*for 12px icon*/
 }
 
-.badge--icon-text span {
+.badge--icon-text i {
   position: absolute;
   left: 5px;
   top: 50%;
@@ -1367,7 +1436,7 @@ pre .text {
   position: relative;
 }
 
-.badge--round .icon {
+.badge--round i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2409,6 +2478,314 @@ select[disabled] + label {
   }
 }
 
+.list {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: .875rem;
+  position: relative;
+  /*  & + .list__button {
+    margin-top: -30px;
+  }*/
+}
+
+.list--notifications {
+  margin: 0;
+}
+
+.list--search {
+  margin: 0;
+}
+
+.list--search a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.list__column {
+  flex: 0 1 auto;
+  margin: 0 5px;
+}
+
+.list__column--text {
+  flex: 1 1 auto;
+}
+
+.list__column .form-field {
+  margin: 0;
+}
+
+.list__item {
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  padding: 20px 15px;
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: flex-start;
+  border-top: 0;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+.list__item:nth-of-type(1) {
+  border-top: 1px solid #bdbdbd;
+}
+
+@media (min-width: 30em) {
+  .list__item {
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.list__item--simple {
+  flex-direction: column;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 41.25em) {
+  .list__item--simple {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.list__item--search {
+  justify-content: flex-start;
+  border-left: 0;
+  padding: 15px 20px;
+}
+
+.list__item--search:hover {
+  background-color: #ebf0f0;
+}
+
+.list__item:hover .list__header-actions {
+  opacity: 1;
+}
+
+.list__item:hover .list__actions {
+  opacity: 1;
+}
+
+.list__item.expanded {
+  border-color: #f44336;
+  border-top: 1px solid #f44336;
+  margin-top: -1px;
+}
+
+.list__item.expanded .list__number-count {
+  /*display: none;*/
+}
+
+.list__item.selected {
+  border-color: #f44336;
+  border-top: 1px solid #f44336;
+  margin-bottom: -1px;
+  background-color: #f1f4f5;
+}
+
+.list__item.selected:last-of-type {
+  margin: 0;
+}
+
+.list__item--select {
+  flex-wrap: wrap;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 48em) {
+  .list__item--select {
+    flex-wrap: nowrap;
+  }
+}
+
+.list__item-button {
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f44336;
+}
+
+.list__item-heading {
+  font-weight: 500;
+  color: #333333;
+}
+
+.list__item-sub-heading {
+  color: #616161;
+}
+
+.list__item-label {
+  color: #616161;
+}
+
+.list__item-data {
+  font-weight: 500;
+}
+
+.list__icon {
+  line-height: 1em;
+  padding: 0 10px;
+  cursor: pointer;
+  margin-left: auto;
+  color: #9e9e9e;
+  font-size: .875rem;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 48em) {
+  .list__icon {
+    padding: 0 5px;
+  }
+}
+
+.list__icon--project-list {
+  margin-left: 20px;
+}
+
+.list__icon--search {
+  margin-left: 10px;
+}
+
+.list__select {
+  margin-left: auto;
+  flex: 0 0 100%;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 48em) {
+  .list__select {
+    flex: 0 0 165px;
+  }
+}
+
+.list__select .formcell:first-of-type {
+  margin: 0;
+}
+
+.list__button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 100;
+}
+
+.list__button--content {
+  margin-top: 0;
+}
+
+.list__button--content + .list__button--content {
+  margin-top: 20px;
+}
+
+.list__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 20px 40px 65px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.list__content.expanded {
+  border: 1px solid #f44336;
+  border-top-color: #e2e9ea;
+  margin-top: -1px;
+  padding: 30px 20px;
+}
+
+.list__content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list__content-heading {
+  font-weight: 600;
+  font-size: .875rem;
+  color: #f44336;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+.list__header-actions {
+  display: flex;
+  margin-left: auto;
+  margin-right: 15px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.list__header-actions + .list__icon {
+  margin-left: 0;
+}
+
+.list__actions {
+  display: flex;
+  margin-left: auto;
+  margin-right: 15px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.list__actions + .list__icon {
+  margin-left: 0;
+}
+
+.list__actions-icon {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.list__item-details {
+  font-size: .75rem;
+  color: #9e9e9e;
+  margin-top: 10px;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 41.25em) {
+  .list__item-details {
+    margin-top: 0;
+    margin-left: auto;
+    flex: 1 0 130px;
+    text-align: right;
+  }
+}
+
+.list__item-details--search {
+  margin-left: auto;
+}
+
 .media-container--video {
   position: relative;
   padding-bottom: 56.25%;
@@ -3265,6 +3642,10 @@ select[disabled] + label {
   display: none;
 }
 
+.more-menu.open {
+  display: block;
+}
+
 .more-menu__wrapper {
   position: relative;
   display: inline-block;
@@ -3996,7 +4377,19 @@ hr {
 
 .tabs__list {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 41.25em) {
+  .tabs__list {
+    flex-direction: row;
+  }
 }
 
 .tabs__list-item {
@@ -4009,7 +4402,7 @@ hr {
   font-weight: 500;
   color: #9e9e9e;
   border: 0;
-  border-bottom: 5px solid #ffffff;
+  border-bottom: 1px solid #bdbdbd;
   background: none;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
@@ -4026,6 +4419,7 @@ hr {
 @media (min-width: 41.25em) {
   .tabs__list-item {
     padding: 10px 30px;
+    border-bottom: 5px solid #ffffff;
   }
 }
 
@@ -4033,8 +4427,19 @@ hr {
   width: 100%;
   display: none;
   justify-content: space-between;
-  border-top: 1px solid #e2e9ea;
-  padding: 30px 0;
+  padding: 20px 0;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 41.25em) {
+  .tabs__content {
+    padding: 30px 0;
+    border-top: 1px solid #e2e9ea;
+  }
 }
 
 .tabs__content.current {

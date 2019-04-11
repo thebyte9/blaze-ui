@@ -1,3 +1,46 @@
 .footer {
-  background-color: $grey;
+  border-top: 1px solid $grey;
+  width: 100%;
+  font-size: .875rem;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid $grey-100;
+    &:first-child {
+      background: $grey-100;
+    }
+    &:last-child {
+      border: 0;
+    }
+    @include mq($from: tablet) {
+      flex-direction: row;
+    }
+    @include mq($from: wide) {
+      padding: 10px 0;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__list-item {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & a:hover {
+    text-decoration: underline;
+  }
 }

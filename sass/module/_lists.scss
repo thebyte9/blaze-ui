@@ -1,0 +1,264 @@
+.list {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: .875rem;
+  position: relative;
+
+  &--notifications {
+    margin: 0;
+  }
+
+  &--search {
+    margin: 0;
+
+    & a {
+      color: $nearly-black;
+      text-decoration: none;
+    }
+  }
+
+  &__column {
+    flex: 0 1 auto;
+    margin: 0 5px;
+
+    &--text {
+      flex: 1 1 auto;
+    }
+
+    & .form-field {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    border: 1px solid $grey;
+    padding: 20px 15px;
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    border-top: 0;
+
+    &:nth-of-type(1) {
+      border-top: 1px solid $grey;
+    }
+    @include mq($from: mobileBig) {
+      align-items: center;
+      align-content: center;
+    }
+
+    &--simple {
+      flex-direction: column;
+      @include mq($from: phablet) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+    }
+
+    &--search {
+      justify-content: flex-start;
+      border-left: 0;
+      padding: 15px 20px;
+
+      &:hover {
+        background-color: lighten($grey-light, 3%);
+      }
+    }
+
+    &:hover .list__header-actions {
+      opacity: 1;
+    }
+
+    &:hover .list__actions {
+      opacity: 1;
+    }
+
+    &.expanded {
+      border-color: $secondary-color;
+      border-top: 1px solid $secondary-color;
+      margin-top: -1px;
+
+      & .list__number-count {
+        /*display: none;*/
+      }
+    }
+
+    &.selected {
+      border-color: $secondary-color;
+      border-top: 1px solid $secondary-color;
+      margin-bottom: -1px;
+      background-color: lighten($grey-light, 5%);
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &--select {
+      flex-wrap: wrap;
+      @include mq($from: tablet) {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &__item-button {
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
+  }
+
+  &__item-heading {
+    font-weight: $font-semi-bold;
+    color: $nearly-black;
+  }
+
+  &__item-sub-heading {
+    color: $grey-dark;
+  }
+
+  &__item-link {
+    &:hover {}
+  }
+
+  &__item-label {
+    color: $grey-dark;
+  }
+
+  &__item-data {
+    font-weight: 500;
+  }
+
+  &__icon {
+    line-height: 1em;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-left: auto;
+    color: $grey-medium;
+    font-size: .875rem;
+    @include mq($from: tablet) {
+      padding: 0 5px;
+    }
+
+    &--project-list {
+      margin-left: 20px;
+    }
+
+    &--search {
+      margin-left: 10px;
+    }
+  }
+
+  &__select {
+    margin-left: auto;
+    flex: 0 0 100%;
+    @include mq($from: tablet) {
+      flex: 0 0 165px;
+    }
+
+    & .formcell:first-of-type {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 100;
+
+    &--content {
+      margin-top: 0;
+
+      & + .list__button--content {
+        margin-top: 20px;
+      }
+    }
+  }
+  /*  & + .list__button {
+    margin-top: -30px;
+  }*/
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px 40px 65px;
+    background-color: $white;
+    text-align: left;
+
+    &.expanded {
+      border: 1px solid $secondary-color;
+      border-top-color: $grey-light;
+      margin-top: -1px;
+      padding: 30px 20px;
+    }
+  }
+
+  &__content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__content-heading {
+    font-weight: 600;
+    font-size: .875rem;
+    color: $secondary-color;
+    text-transform: uppercase;
+    letter-spacing: $x-small-space;
+  }
+
+  &__content-text {}
+
+  &__header-actions {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+    opacity: 0;
+    transition: $animate-default;
+
+    & + .list__icon {
+      margin-left: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+    opacity: 0;
+    transition: $animate-default;
+
+    & + .list__icon {
+      margin-left: 0;
+    }
+  }
+
+  &__actions-icon {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__item-details {
+    font-size: .75rem;
+    color: $grey-medium;
+    margin-top: 10px;
+    @include mq($from: phablet) {
+      margin-top: 0;
+      margin-left: auto;
+      flex: 1 0 130px;
+      text-align: right;
+    }
+
+    &--search {
+      margin-left: auto;
+    }
+  }
+}
