@@ -2888,11 +2888,6 @@ select[disabled] + label {
   list-style: none;
   display: inline-block;
   white-space: nowrap;
-  /* From: this breakpoint (inclusive)*/
-  /* Until: that breakpoint (exclusive)*/
-  /* Responsive support is disabled, rasterize the output outside @media blocks*/
-  /* The browser will rely on the cascade itself.*/
-  /* Remove unnecessary media query prefix 'all and '*/
 }
 
 .menu__list-item:hover {

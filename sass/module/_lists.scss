@@ -122,10 +122,6 @@
     color: $grey-dark;
   }
 
-  &__item-link {
-    &:hover {}
-  }
-
   &__item-label {
     color: $grey-dark;
   }
@@ -214,8 +210,6 @@
     text-transform: uppercase;
     letter-spacing: $x-small-space;
   }
-
-  &__content-text {}
 
   &__header-actions {
     display: flex;
