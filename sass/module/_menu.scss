@@ -28,6 +28,7 @@
       padding: 10px 0;
     }
   }
+
   &--header {
     width: 100%;
     max-width: 1180px;
@@ -59,7 +60,6 @@
     list-style: none;
     display: inline-block;
     white-space: nowrap;
-    @include mq($from: desktop) {}
 
     &:hover {
       @include mq($from: desktop) {

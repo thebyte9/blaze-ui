@@ -5,21 +5,33 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Lists</title>
       <link href="../dist/main.css" rel="stylesheet" type="text/css">
-      <style media="screen">
-         p.item-heading {
-         display: inline-block;
-         text-align: left;
-         margin: 0 0 30px;
-         padding-bottom: 5px;
-         border-bottom: 1px solid #cccccc;
-         }
-         h2.group-heading {
-         margin: 0 0 50px;
-         font-weight: 400;
-         padding-bottom: 5px;
-         border-bottom: 1px solid #cccccc;
-         }
-      </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script type="text/javascript">
+            <!--
+            $(function(){
+            $(".toggle").click(function(){
+            $(this).next().toggleClass("open");
+            return false;
+            });
+            });
+            //-->
+         <!--
+             function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if(e.style.display == 'block')
+                   e.style.display = 'none';
+                else
+                   e.style.display = 'block';
+             }
+         //-->
+
+         $(document).ready(function(){
+          $('#more-menu-button').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
+
+      </script>
    </head>
    <body>
       <div class="site-container">
@@ -30,7 +42,7 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -38,13 +50,28 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__icon">
-                     <span class="icon icon--more-menu"></span>
+                  <div class="list__column list__column--button">
+                    <div class="more-menu__wrapper">
+                          <button type="button" class="icon-button toggle"><i class="material-icons">more_vert</i></button>
+                          <div class="more-menu">
+                             <ul class="more-menu__list">
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                             </ul>
+                          </div>
+                       </div>
                   </div>
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -52,13 +79,28 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__icon">
-                     <span class="icon icon--more-menu"></span>
+                  <div class="list__column list__column--button">
+                    <div class="more-menu__wrapper">
+                          <button type="button" class="icon-button toggle"><i class="material-icons">more_vert</i></button>
+                          <div class="more-menu">
+                             <ul class="more-menu__list">
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                             </ul>
+                          </div>
+                       </div>
                   </div>
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -66,8 +108,23 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__icon">
-                     <span class="icon icon--more-menu"></span>
+                  <div class="list__column list__column--button">
+                    <div class="more-menu__wrapper">
+                          <button type="button" class="icon-button toggle"><i class="material-icons">more_vert</i></button>
+                          <div class="more-menu" id="more-menu">
+                             <ul class="more-menu__list">
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                                <li class="more-menu__list-item">
+                                   <a href="#">Link here</a>
+                                </li>
+                             </ul>
+                          </div>
+                       </div>
                   </div>
                </div>
             </div>
@@ -77,10 +134,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -91,10 +151,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -105,10 +168,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -124,10 +190,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item list__item--select">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -135,8 +204,8 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__select">
-                     <div class="formcell">
+                  <div class="list__column list__column--select">
+                     <div class="form-field form-field--select">
                         <select class="" name="">
                            <option value="Option 1" selected>Option 1</option>
                            <option value="Option 2">Option 2</option>
@@ -147,10 +216,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item list__item--select">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -158,8 +230,8 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__select">
-                     <div class="formcell">
+                  <div class="list__column list__column--select">
+                     <div class="form-field form-field--select">
                         <select class="" name="">
                            <option value="Option 1" selected>Option 1</option>
                            <option value="Option 2">Option 2</option>
@@ -170,10 +242,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item list__item--select">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -181,8 +256,8 @@
                         Sub heading here
                      </div>
                   </div>
-                  <div class="list__select">
-                     <div class="formcell">
+                  <div class="list__column list__column--select">
+                     <div class="form-field form-field--select">
                         <select class="" name="">
                            <option value="Option 1" selected>Option 1</option>
                            <option value="Option 2">Option 2</option>
@@ -198,12 +273,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__radio">
-                     <div class="radio">
-                        <input type="radio" name="" value="">
-                     </div>
+                  <div class="list__column list__column--radio">
+                    <div class="form-field form-field--radio">
+                       <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
+                       <label for="radio-one" class="hidden">Radio label 1</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -214,12 +290,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__radio">
-                     <div class="radio">
-                        <input type="radio" name="" value="">
-                     </div>
+                  <div class="list__column list__column--radio">
+                    <div class="form-field form-field--radio">
+                       <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
+                       <label for="radio-one" class="hidden">Radio label 1</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -230,12 +307,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__radio">
-                     <div class="radio">
-                        <input type="radio" name="" value="" checked>
-                     </div>
+                  <div class="list__column list__column--radio">
+                    <div class="form-field form-field--radio">
+                       <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
+                       <label for="radio-one" class="hidden">Radio label 1</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -251,12 +329,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__checkbox">
-                     <div class="checkbox">
-                        <input type="checkbox" name="" value="" checked>
-                     </div>
+                  <div class="list__column list__column--checkbox">
+                    <div class="form-field form-field--checkbox">
+                       <input type="checkbox" class="form-checkbox" id="check-3">
+                       <label for="check-3" class="hidden">Checkbox label</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -267,12 +346,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__checkbox">
-                     <div class="checkbox">
-                        <input type="checkbox" name="" value="">
-                     </div>
+                  <div class="list__column list__column--checkbox">
+                    <div class="form-field form-field--checkbox">
+                       <input type="checkbox" class="form-checkbox" id="check-2">
+                       <label for="check-2" class="hidden">Checkbox label</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -283,12 +363,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__checkbox">
-                     <div class="checkbox">
-                        <input type="checkbox" name="" value="">
-                     </div>
+                  <div class="list__column list__column--checkbox">
+                    <div class="form-field form-field--checkbox">
+                       <input type="checkbox" class="form-checkbox" id="check-1">
+                       <label for="check-1" class="hidden">Checkbox label</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -304,10 +385,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -318,12 +402,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__radio">
-                     <div class="radio">
-                        <input type="radio" name="" value="" checked>
-                     </div>
+                  <div class="list__column list__column--radio">
+                    <div class="form-field form-field--radio">
+                       <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
+                       <label for="radio-one" class="hidden">Radio label 1</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -334,10 +419,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -353,10 +441,13 @@
             <div class="list">
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -367,10 +458,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__number-count">
-                     23
+                 <!-- LIST COLUMN -->
+                  <div class="list__column list__column--count">
+                    <div class="badge badge--dark badge--round">
+                      23
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>
@@ -381,12 +475,13 @@
                </div>
                <!-- LIST ITEM -->
                <div class="list__item">
-                  <div class="list__checkbox">
-                     <div class="checkbox">
-                        <input type="checkbox" name="" value="" checked>
-                     </div>
+                  <div class="list__column list__column--checkbox">
+                    <div class="form-field form-field--checkbox">
+                       <input type="checkbox" class="form-checkbox" id="check-4">
+                       <label for="check-4" class="hidden">Checkbox label</label>
+                    </div>
                   </div>
-                  <div class="list__item-text">
+                  <div class="list__column list__column--text">
                      <div class="list__item-heading">
                         Heading here (company name)
                      </div>

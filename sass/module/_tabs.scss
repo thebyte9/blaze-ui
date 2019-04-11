@@ -6,7 +6,11 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    @include mq($from: phablet) {
+      flex-direction: row;
+    }
   }
 
   &__list-item {
@@ -19,7 +23,7 @@
     font-weight: $font-semi-bold;
     color: $grey-medium;
     border: 0;
-    border-bottom: 5px solid $white;
+    border-bottom: 1px solid $grey;
     background: none;
 
     &.current {
@@ -28,6 +32,7 @@
     }
     @include mq($from: phablet) {
       padding: 10px 30px;
+      border-bottom: 5px solid $white;
     }
   }
 
@@ -35,8 +40,11 @@
     width: 100%;
     display: none;
     justify-content: space-between;
-    border-top: 1px solid $grey-light;
-    padding: 30px 0;
+    padding: 20px 0;
+    @include mq($from: phablet) {
+      padding: 30px 0;
+      border-top: 1px solid $grey-light;
+    }
 
     &.current {
       display: flex;
