@@ -42,23 +42,27 @@
    ========================================================================== */
 
 @import 'sass/module/_alerts';
+@import 'sass/module/_avatars';
 @import 'sass/module/_badges';
 @import 'sass/module/_breadcrumb';
 @import 'sass/module/_buttons';
 @import 'sass/module/_cards';
 @import 'sass/module/_content';
-@import 'sass/module/_flyout-panel';
 @import 'sass/module/_forms';
-@import 'sass/module/_icons';
+@import 'sass/module/_hero';
 @import 'sass/module/_lists';
+@import 'sass/module/_media';
+@import 'sass/module/_menu';
 @import 'sass/module/_modal';
+@import 'sass/module/_more-menu';
 @import 'sass/module/_page-items';
 @import 'sass/module/_pagination';
 @import 'sass/module/_progress-breadcrumb';
 @import 'sass/module/_search';
 @import 'sass/module/_sidebar';
+@import 'sass/module/_social';
+@import 'sass/module/_tables';
 @import 'sass/module/_tabs';
-@import 'sass/module/_tags';
 @import 'sass/module/_tooltips';
 
 /* ==========================================================================
@@ -67,3 +71,4 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');

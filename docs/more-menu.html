@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>More menu</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script type="text/javascript">
+      <!--
+      $(function(){
+      $(".toggle").click(function(){
+      $(this).next().toggleClass("open");
+      return false;
+      });
+      });
+      //-->
+   <!--
+       function toggle_visibility(id) {
+          var e = document.getElementById(id);
+          if(e.style.display == 'block')
+             e.style.display = 'none';
+          else
+             e.style.display = 'block';
+       }
+   //-->
+
+   $(document).ready(function(){
+    $('#more-menu-button').click(function(){
+      $(this).toggleClass('open');
+    });
+   });
+
+</script>
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">More menu</h2>
+         <div class="component-wrapper" style="text-align: right;">
+            <p class="item-heading">Click on more icon button to toggle menu</p>
+            <div class="more-menu__wrapper">
+                  <button type="button" class="icon-button toggle"><i class="material-icons">more_vert</i></button>
+                  <div class="more-menu">
+                     <ul class="more-menu__list">
+                        <li class="more-menu__list-item">
+                           <a href="#">Link here</a>
+                        </li>
+                        <li class="more-menu__list-item">
+                           <a href="#">Link here</a>
+                        </li>
+                        <li class="more-menu__list-item">
+                           <a href="#">Link here</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+         </div>
+      </div>
+   </body>
+</html>

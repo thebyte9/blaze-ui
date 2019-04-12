@@ -85,7 +85,7 @@ $mq-responsive: true !default;
 
 /*/ @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples*/
 
-$mq-breakpoints: ( mobile: 320px, phablet: 660px, tablet: 768px,desktop: 1024px, wide: 1366px) !default;
+$mq-breakpoints: ( mobile: 320px, mobileBig: 480px, phablet: 660px, tablet: 768px, desktop: 1024px, wide: 1366px) !default;
 
 /*/ Static breakpoint (for fixed-width layouts)*/
 
@@ -546,7 +546,6 @@ $mq-media-type: all !default;
         border-bottom: 1px solid #fbeed5;
         border-left: 1px solid #fbeed5;
         color: #c09853;
-        font: small-caption;
         padding: 3px 6px;
         pointer-events: none;
         position: fixed;

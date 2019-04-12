@@ -16,6 +16,9 @@
   letter-spacing: $x-small-space;
   transition: $animate-default;
   border-color: $grey;
+  & i {
+    font-size: .875rem;
+  }
 
   &--primary {
     color: $white;
@@ -68,7 +71,7 @@
     position: relative;
     padding-left: 22px;
     /*for 12px icon*/
-    & span {
+    & i {
       position: absolute;
       left: 5px;
       top: 50%;
@@ -85,7 +88,7 @@
     line-height: 14px;
     position: relative;
 
-    & .icon {
+    & i {
       position: absolute;
       top: 50%;
       left: 50%;

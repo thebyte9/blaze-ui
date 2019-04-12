@@ -23,8 +23,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: .6;
   transition: $animate-default;
-  color: $black;
+  background: none;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &--round {
     background-color: $primary-button-color;
@@ -33,6 +38,7 @@
     width: 36px;
     height: 36px;
     border-radius: 18px;
+    opacity: 1;
 
     &:hover {
       box-shadow: $box-shadow-hover;
@@ -40,24 +46,30 @@
     }
   }
 
-  &--search {
-    background: $white;
+  &--menu {
+    transition: none;
+    margin-left: 10px;
 
-    &:hover {}
+    &.open {
+      opacity: 1;
+    }
+    @include mq($from: desktop) {
+      display: none;
+    }
   }
 
-  &--close {
-    opacity: .8;
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
+  &--side-menu {
+    display: block;
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+
+  &--user {
+    color: $black;
 
     & i {
-      font-size: 16px;
-    }
-
-    &:hover {
-      opacity: 1;
+      font-size: 2rem;
     }
   }
 }
@@ -72,7 +84,7 @@
   height: $button-height;
   padding: $button-padding;
   box-shadow: $box-shadow-button;
-  transition: $animate-default;
+  transition: $animate-background;
   @include mq($from: phablet) {
     max-width: $button-max-width;
   }
@@ -188,11 +200,14 @@
   &--icon {
     padding: 5px 30px;
     width: auto;
+    position: relative;
 
     & i {
-      left: -5px;
       font-size: 1rem;
-      position: relative;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -240,8 +255,9 @@
     font-size: .875rem;
     justify-content: flex-start;
     letter-spacing: normal;
+    transition: $animate-default;
 
-    & span {
+    & i {
       margin-left: 0;
       margin-right: 5px;
       opacity: .6;
@@ -250,7 +266,7 @@
     &:hover {
       background: none;
 
-      & span {
+      & i {
         margin-left: -1px;
         margin-right: 6px;
         opacity: 1;

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Side navigation</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script>
+         <!--
+         $(function(){
+         $(".toggle").click(function(){
+         $(this).next().toggleClass("open");
+         return false;
+         });
+         });
+         //-->
+
+         function toggle_visibility(id) {
+                  var e = document.getElementById(id);
+                  if(e.style.display == 'block')
+                     e.style.display = 'none';
+                  else
+                     e.style.display = 'block';
+               }
+
+         $(document).ready(function(){
+          $('#menu-button, .toggle').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
+
+      </script>
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <!-- BUTTON FOR RESPONSIVE SIDE NAV -->
+         <button type="button" class="icon-button icon-button--menu icon-button--side-menu" onclick="toggle_visibility('responsive-nav');" id="menu-button">
+         <span></span>
+         <span></span>
+         <span></span>
+         </button>
+         <div class="component-wrapper component-wrapper--full-width" style="height: 100%;">
+            <p class="item-heading">Side menu + submenu - resize to see responsive</p>
+            <div class="side-menu" id="responsive-nav">
+               <div class="side-menu__wrapper">
+                  <!-- SIDE NAV BLOCK -->
+                  <div class="side-menu__block">
+                     <div class="side-menu__block-heading">
+                        Heading here
+                     </div>
+                     <ul class="side-menu__list">
+                        <li class="side-menu__list-item side-menu__list-item--has-submenu">
+                           <a href="#" class="side-menu__list-link toggle">Link here</a>
+                           <div class="side-menu__children">
+                              <div class="submenu__wrapper submenu__wrapper--side-menu">
+                                 <div class="submenu submenu--side-menu">
+                                    <ul class="submenu__list submenu__list--side-menu">
+                                       <li class="submenu__list-item submenu__list-item--side-menu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--side-menu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--side-menu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--side-menu"><a href="#">Submenu link</a></li>
+                                       <li class="submenu__list-item submenu__list-item--side-menu"><a href="#">Submenu link</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link current">Link here</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- SIDE NAV BLOCK -->
+                  <div class="side-menu__block">
+                     <div class="side-menu__block-heading">
+                        Heading here
+                     </div>
+                     <ul class="side-menu__list">
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- SIDE NAV BLOCK -->
+                  <div class="side-menu__block">
+                     <div class="side-menu__block-heading">
+                        Heading here
+                     </div>
+                     <ul class="side-menu__list">
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                        <li class="side-menu__list-item">
+                           <a href="#" class="side-menu__list-link">Link here</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">side-menu</span>" id="<span class="class">responsive-nav</span>">
+  &lt;<span class="tag">div</span> class="<span class="class">side-menu__wrapper</span>">
+
+    &lt;<span class="tag">div</span> class="<span class="class">side-menu__block</span>">
+
+      &lt;<span class="tag">div</span> class="<span class="class">side-menu__block-heading</span>">
+      <span class="text">Heading here</span>
+      &lt;/<span class="tag">div</span>>
+
+      &lt;<span class="tag">ul</span> class="<span class="class">side-menu__list</span>">
+        &lt;<span class="tag">li</span> class="<span class="class">side-menu__list-item side-menu__list-item--has-submenu</span>">
+          &lt;<span class="tag">a</span> href="#" class="<span class="class">side-menu__list-link toggle</span>"><span class="text">Link with submenu</span>&lt;/<span class="tag">a</span>>
+          &lt;<span class="tag">div</span> class="<span class="class">menu__children menu__children--side-menu</span>">
+            &lt;<span class="tag">div</span> class="<span class="class">submenu__wrapper submenu__wrapper--side-menu</span>">
+              &lt;<span class="tag">div</span> class="<span class="class">submenu submenu--side-menu</span>">
+                &lt;<span class="tag">ul</span> class="<span class="class">submenu__list submenu__list--side-menu</span>">
+                  &lt;<span class="tag">li</span> class="<span class="class">submenu__list-item submenu__list-item--side-menu</span>">
+                    &lt;<span class="tag">a</span> href="#"><span class="text">Submenu link</span>&lt;/<span class="tag">a</span>>
+                  &lt;/<span class="tag">li</span>>
+                  &lt;<span class="tag">li</span> class="<span class="class">submenu__list-item submenu__list-item--side-menu</span>">
+                    &lt;<span class="tag">a</span> href="#"><span class="text">Submenu link</span>&lt;/<span class="tag">a</span>>
+                  &lt;/<span class="tag">li</span>>
+                &lt;/<span class="tag">ul</span>>
+              &lt;/<span class="tag">div</span>>
+            &lt;/<span class="tag">div</span>>
+        &lt;/<span class="tag">li</span>>
+        &lt;<span class="tag">li</span> class="<span class="class">side-menu__list-item</span>">
+          &lt;<span class="tag">a</span> href="#" class="<span class="class">side-menu__list-link</span>"><span class="text">Link here</span>&lt;/<span class="tag">a</span>>
+        &lt;/<span class="tag">li</span>>
+      &lt;/<span class="tag">ul</span>>
+
+    &lt;/<span class="tag">div</span>>
+  &lt;/<span class="tag">div</span>>
+&lt;/<span class="tag">div</span>>
+</pre>
+         </div>
+      </div>
+   </body>
+</html>

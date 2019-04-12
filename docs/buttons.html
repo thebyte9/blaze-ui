@@ -3,11 +3,35 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport"
-         content="width=device-width, initial-scale=1.0, user-scalable=no">
+         content="width=device-width, initial-scale=1.0">
       <title>Buttons</title>
-      <link href="../dist/main.css"
-         rel="stylesheet"
-         type="text/css">
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script>
+         <!--
+         $(function(){
+         $(".toggle").click(function(){
+         $(this).next().toggleClass("open");
+         return false;
+         });
+         });
+         //-->
+
+         function toggle_visibility(id) {
+                  var e = document.getElementById(id);
+                  if(e.style.display == 'block')
+                     e.style.display = 'none';
+                  else
+                     e.style.display = 'block';
+               }
+
+         $(document).ready(function(){
+          $('#menu-button, .toggle').click(function(){
+            $(this).toggleClass('open');
+          });
+         });
+
+      </script>
    </head>
    <body>
       <div class="site-container site-container--template">
@@ -144,7 +168,7 @@
          <div class="component-wrapper">
             <p class="item-heading">Icon button</p>
             <p class="note">Example shows button with a modifer '--icon' for icon + text<br>
-               Icon added as a span with icon classes
+               Icon added using material icon
             </p>
             <button type="button" class="button button--icon"><i class="material-icons">add</i> Button</button>
             <pre>
@@ -228,7 +252,14 @@
               &lt;/<span class="tag">button</span>>
             </pre>
             <p>&nbsp;</p>
-            <button type="button" class="icon-button icon-button--search"><i class="material-icons">search</i></button>
+            <button type="button" class="icon-button"><i class="material-icons">more_vert</i></button>
+            <pre>
+              &lt;<span class="tag">button</span> class="<span class="class">icon-button</span>">
+                &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">more_vert</span>&lt;/<span class="tag">i</span>>
+              &lt;/<span class="tag">button</span>>
+            </pre>
+            <p>&nbsp;</p>
+            <button type="button" class="icon-button"><i class="material-icons">search</i></button>
             <pre>
               &lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--search</span>">
                 &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">search</span>&lt;/<span class="tag">i</span>>
@@ -236,14 +267,27 @@
             </pre>
 
             <p>&nbsp;</p>
-            <button class="icon-button icon-button--close">
-              <i class="material-icons">close</i>
-               </button>
+            <button class="icon-button"><i class="material-icons">close</i></button>
                <pre>
                  &lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--close</span>">
                    &lt;<span class="tag">i</span> class="<span class="class">material-icons</span>"><span class="text">close</span>&lt;/<span class="tag">i</span>>
                  &lt;/<span class="tag">button</span>>
                </pre>
+               <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="note">Animated menu button for use with responsive nav. Vissible on screens below 1024px</p>
+                <button type="button" class="icon-button icon-button--menu" onclick="toggle_visibility('responsive-nav');" id="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                </button>
+                <pre>
+                  &lt;<span class="tag">button</span> class="<span class="class">icon-button icon-button--menu</span>" id="<span class="class">menu-button</span>" onclick="<span class="class">toggle_visibility('responsive-nav');</span>">
+                    &lt;<span class="tag">span</span>>&lt;/<span class="tag">span</span>>
+                    &lt;<span class="tag">span</span>>&lt;/<span class="tag">span</span>>
+                    &lt;<span class="tag">span</span>>&lt;/<span class="tag">span</span>>
+                  &lt;/<span class="tag">button</span>>
+                </pre>
          </div>
       </div>
    </body>

@@ -1,0 +1,76 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  min-height: 50px;
+  @include mq($from: desktop) {
+    position: relative;
+    min-height: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+  }
+
+  &__row {
+    display: none;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    @include mq($from: desktop) {
+      display: flex;
+    }
+
+    &--user-menu {
+      background: $grey-100;
+      max-width: 100%;
+    }
+
+    &--main-menu {
+      border-bottom: 1px solid $grey-light;
+      max-width: 100%;
+    }
+
+    &--mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      @include mq($from: desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__column {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    @include mq($from: wide) {
+      padding: 10px 0;
+    }
+  }
+}
+
+.logo {
+  padding: 10px 20px;
+
+  &__desktop {
+    display: none;
+    @include mq($from: desktop) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    padding: 5px 10px;
+    @include mq($from: desktop) {
+      display: none;
+    }
+  }
+}

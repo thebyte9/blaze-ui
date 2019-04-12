@@ -1,101 +1,96 @@
 <!doctype html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-         content="width=device-width, initial-scale=1.0, user-scalable=no">
-      <title>Tabs</title>
-      <link href="../dist/main.css"
-         rel="stylesheet"
-         type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
-         rel="stylesheet">
-      <style media="screen">
-         p.item-heading {
-         display: inline-block;
-         text-align: left;
-         margin: 0 0 30px;
-         padding-bottom: 5px;
-         border-bottom: 1px solid #cccccc;
-         }
-         h2.group-heading {
-         margin: 0 0 50px;
-         font-weight: 400;
-         padding-bottom: 5px;
-         border-bottom: 1px solid #cccccc;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="site-container">
-         <div style="text-align: left; padding: 50px; background-color: #ffffff;">
-            <h2 class="group-heading">Tabs</h2>
-            <div class="tabs">
-               <ul class="tabs__list">
-                  <li class="tabs__list-item current">
-                     Tab heading
-                  </li>
-                  <li class="tabs__list-item">
-                     Tab heading
-                  </li>
-               </ul>
-               <div class="tabs__content current">
-                  <!-- LIST -->
-                  <div class="list">
-                     <!-- LIST ITEM -->
-                     <div class="list__item list__item--number-heading">
-                        <div class="list__number-count">
-                           23
-                        </div>
-                        <div class="list__item-text">
-                           <div class="list__item-heading">
-                              Heading here (company name)
-                           </div>
-                           <div class="list__item-sub-heading">
-                              Sub heading here
-                           </div>
-                        </div>
-                     </div>
-                     <!-- LIST ITEM -->
-                     <div class="list__item list__item--radio">
-                        <div class="list__radio">
-                           <div class="radio">
-                              <input type="radio"
-                                 name=""
-                                 value=""
-                                 checked>
-                           </div>
-                        </div>
-                        <div class="list__item-text">
-                           <div class="list__item-heading">
-                              Heading here (company name)
-                           </div>
-                           <div class="list__item-sub-heading">
-                              Sub heading here
-                           </div>
-                        </div>
-                     </div>
-                     <!-- LIST ITEM -->
-                     <div class="list__item list__item--number-heading">
-                        <div class="list__number-count">
-                           23
-                        </div>
-                        <div class="list__item-text">
-                           <div class="list__item-heading">
-                              Heading here (company name)
-                           </div>
-                           <div class="list__item-sub-heading">
-                              Sub heading here
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="tabs__content">
-                  Content here
-               </div>
-            </div>
-         </div>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link href="../dist/main.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $('.tabs__list-item').click(function() {
+          var tab_id = $(this).attr('data-tab');
+
+          $('.tabs__list-item').removeClass('current');
+          $('.tabs__content').removeClass('current');
+
+          $(this).addClass('current');
+          $("#" + tab_id).addClass('current');
+        })
+
+      })
+
+      function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'flex')
+          e.style.display = 'none';
+        else
+          e.style.display = 'flex';
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="site-container site-container--template">
+      <h2 class="group-heading">Tabs</h2>
+      <div class="component-wrapper">
+        <div class="tabs">
+          <div class="tabs__list">
+            <button class="tabs__list-item current" data-tab="tab1">
+              Basic
+            </button>
+            <button class="tabs__list-item" data-tab="tab2">
+              Advanced
+            </button>
+            <button class="tabs__list-item" data-tab="tab3">
+              Other
+            </button>
+          </div>
+          <div class="tabs__content current" id="tab1">
+            Basic content here
+          </div>
+          <div class="tabs__content" id="tab2">
+            Advanced content here
+          </div>
+          <div class="tabs__content" id="tab3">
+            Other content here
+          </div>
+        </div>
+
+<pre>
+&lt;<span class="tag">div</span> class="<span class="class">tabs</span>"&gt;
+
+  &lt;<span class="tag">div</span> class="<span class="class">tabs__list</span>"&gt;
+
+    &lt;<span class="tag">button</span> class="<span class="class">tabs__list-item current</span>" data-tab="tab1">
+      <span class="text">Basic</span>
+    &lt;/<span class="tag">button</span>>
+    &lt;<span class="tag">button</span> class="<span class="class">tabs__list-item</span>" data-tab="tab2">
+      <span class="text">Advanced</span>
+    &lt;/<span class="tag">button</span>>
+    &lt;<span class="tag">button</span> class="<span class="class">tabs__list-item</span>" data-tab="tab3">
+      <span class="text">Other</span>
+    &lt;/<span class="tag">button</span>>
+
+  &lt;/<span class="tag">div</span>&gt;
+
+  &lt;<span class="tag">div</span> class="<span class="class">tabs__content current</span>" id="tab1"&gt;
+    Basic content here
+  &lt;/<span class="tag">div</span>&gt;
+  &lt;<span class="tag">div</span> class="<span class="class">tabs__content</span>" id="tab2"&gt;
+    Advanced content here
+  &lt;/<span class="tag">div</span>&gt;
+  &lt;<span class="tag">div</span> class="<span class="class">tabs__content</span>" id="tab3"&gt;
+    Other content here
+  &lt;/<span class="tag">div</span>&gt;
+
+&lt;/<span class="tag">div</span>&gt;
+</pre>
+
       </div>
-   </body>
+    </div>
+  </body>
+
 </html>

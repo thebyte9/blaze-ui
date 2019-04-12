@@ -1,0 +1,91 @@
+.hero {
+  /* for 1300x700px image */
+  position: relative;
+  width: 100%;
+  padding-top: 53%;
+  overflow: hidden;
+  @include mq($from: desktop) {
+    padding-top: 40%;
+  }
+  @include mq($from: wide) {
+    padding-top: 30%;
+  }
+
+  &__media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6));
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+
+    & .button {
+      margin: 15px auto 0;
+      @include mq($from: mobileBig) {
+        margin: 25px auto 0;
+      }
+      @include mq($from: tablet) {
+        margin: 30px auto 0;
+      }
+      @include mq($from: desktop) {
+        margin: 35px auto 0;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    letter-spacing: $small-space;
+    margin: 0 0 10px;
+    font-weight: 600;
+    @include mq($from: mobileBig) {
+      font-size: 2.25rem;
+      margin: 0 0 15px;
+    }
+    @include mq($from: tablet) {
+      font-size: 2.5rem;
+      margin: 0 0 25px;
+    }
+    @include mq($from: desktop) {
+      font-size: 3rem;
+    }
+  }
+
+  &__intro {
+    font-size: .875rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: $x-small-space;
+    @include mq($from: mobileBig) {
+      font-size: 1rem;
+    }
+    @include mq($from: tablet) {
+      font-size: 1.125rem;
+    }
+  }
+}
