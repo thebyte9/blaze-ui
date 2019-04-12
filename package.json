@@ -1,6 +1,6 @@
 {
-  "name": "blaze-ui",
-  "version": "0.0.1",
+  "name": "@blaze-cms/blaze-ui",
+  "version": "0.0.2",
   "description": "CSS Framework from Blaze-CMS",
   "main": "blaze-ui.scss",
   "scripts": {
@@ -13,12 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/thebyte9/blaze-ui.git"
   },
-  "author": "",
+  "author": "byte9",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thebyte9/blaze-ui/issues"
   },
   "homepage": "https://github.com/thebyte9/blaze-ui#readme",
+  "dependencies": {},
   "devDependencies": {
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
@@ -32,5 +33,11 @@
     "webpack-dev-server": "^3.2.1",
     "webpack-mild-compile": "^3.3.1",
     "webpack-spritesmith": "^1.0.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "css"
+  ]
 }
