@@ -7,6 +7,7 @@
   width: 160px;
   z-index: 101;
   display: none;
+
   &.open {
     display: block;
   }
@@ -42,9 +43,5 @@
         background-color: $grey-100;
       }
     }
-  }
-
-  &__wrapper {
-    position: relative;
   }
 }
