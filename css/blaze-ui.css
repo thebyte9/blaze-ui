@@ -488,7 +488,6 @@
 /*green light*/
 /*UI colours*/
 /*Greyscale colours*/
-/**/
 /*blue*/
 /*green*/
 /*red*/
@@ -520,9 +519,6 @@
 /* ==========================================================================
    Fonts
    ========================================================================== */
-/*
-
-*/
 /* PROJECT PATHS */
 /*$project-path: '/project';*/
 /* USE EXAMPLE: background: url('../images/sprites.png') -459px -396px no-repeat; */
@@ -3670,10 +3666,6 @@ select[disabled] + label {
   background-color: #f5f5f5;
 }
 
-.more-menu__wrapper {
-  position: relative;
-}
-
 a {
   color: #03a9f4;
 }
@@ -4259,6 +4251,8 @@ hr {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 10px;
+  z-index: 1;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -4269,6 +4263,7 @@ hr {
 @media (min-width: 48em) {
   .table-scroll table tr td {
     max-width: 100px;
+    padding: 20px 10px;
   }
 }
 
@@ -4277,6 +4272,9 @@ hr {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 10px;
+  font-weight: 600;
+  z-index: 1;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -4287,28 +4285,6 @@ hr {
 @media (min-width: 48em) {
   .table-scroll table tr th {
     max-width: 100px;
-  }
-}
-
-.table-scroll table th {
-  padding: 10px;
-  font-weight: 600;
-  z-index: 1;
-}
-
-.table-scroll table td {
-  padding: 10px;
-  z-index: 1;
-  /* From: this breakpoint (inclusive)*/
-  /* Until: that breakpoint (exclusive)*/
-  /* Responsive support is disabled, rasterize the output outside @media blocks*/
-  /* The browser will rely on the cascade itself.*/
-  /* Remove unnecessary media query prefix 'all and '*/
-}
-
-@media (min-width: 48em) {
-  .table-scroll table td {
-    padding: 20px 10px;
   }
 }
 

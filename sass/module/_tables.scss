@@ -45,8 +45,11 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        padding: 10px;
+        z-index: 1;
         @include mq($from: tablet) {
           max-width: 100px;
+          padding: 20px 10px;
         }
       }
 
@@ -55,23 +58,12 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        padding: 10px;
+        font-weight: 600;
+        z-index: 1;
         @include mq($from: tablet) {
           max-width: 100px;
         }
-      }
-    }
-
-    & th {
-      padding: 10px;
-      font-weight: 600;
-      z-index: 1;
-    }
-
-    & td {
-      padding: 10px;
-      z-index: 1;
-      @include mq($from: tablet) {
-        padding: 20px 10px;
       }
     }
 
