@@ -49,7 +49,6 @@
 &lt;/<span class="tag">div</span>>
               </pre>
                <p>&nbsp;</p>
-
                <p class="item-heading">Text input + required - add 'required' class to the element that needs the required indicator</p>
                <div class="form-field form-field--input">
                   <label for="input1" class="required">Text input label</label>
@@ -73,232 +72,234 @@
 &lt;<span class="tag">input</span> type="<span class="tag">text</span>" name="Text here" placeholder="" id="name-here" disabled>
 &lt;/<span class="tag">div</span>>
               </pre>
-             </div>
-             <div class="component-wrapper">
-
-               <p class="item-heading">Textarea</p>
-               <div class="form-field form-field--textarea">
-                  <label for="textarea1">Text area label</label>
-                  <textarea rows="4" cols="50" id="textarea1"></textarea>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--textarea</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Text area label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">textarea</span> rows="4" cols="50" id="name-here">&lt;/<span class="tag">textarea</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
                <p>&nbsp;</p>
-               <p class="item-heading">Textarea full width</p>
-               <div class="form-field form-field--textarea form-field--full-width">
-                  <label for="textarea1">Text area label</label>
-                  <textarea rows="4" cols="50" id="textarea1"></textarea>
+               <p class="item-heading">Password with show/hide</p>
+               <div class="form-field form-field--input form-field--password">
+                  <label class="">Password - show hide</label>
+                  <input type="password" name="password" value="secret">
+                  <span class="show-hide-password active" role="button">Show<i class="material-icons">visibility_on</i></span>
                </div>
                <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--textarea form-field--full-width</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Text area label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">textarea</span> rows="4" cols="50" id="name-here">&lt;/<span class="tag">textarea</span>>
+&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--input</span>">
+&lt;<span class="tag">label</span> for="name-here"><span class="text">Text input label</span>&lt;/<span class="tag">label</span>>
+&lt;<span class="tag">input</span> type="<span class="tag">text</span>" name="Text here" placeholder="" id="name-here" disabled>
 &lt;/<span class="tag">div</span>>
-               </pre>
-             </div>
-             <div class="component-wrapper">
-               <p class="item-heading">Basic select</p>
-               <div class="form-field form-field--select">
-                  <label for="select1">Select label</label>
-                  <select name="demo" id="select1">
-                     <option value="Option 1" selected="">Option 1</option>
-                     <option value="Option 2">Option 2</option>
-                     <option value="Option 3">Option 3</option>
-                  </select>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">select</span> name="demo" id="name-here">
-&lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
-&lt;/<span class="tag">select</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <p>&nbsp;</p>
-               <p class="item-heading">Basic select small</p>
-               <div class="form-field form-field--select form-field--small">
-                  <label for="select1">Select label</label>
-                  <select name="demo" id="select1">
-                     <option value="Option 1" selected="">Option 1</option>
-                     <option value="Option 2">Option 2</option>
-                     <option value="Option 3">Option 3</option>
-                  </select>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select form-field--small</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">select</span> name="demo" id="name-here">
-&lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
-&lt;/<span class="tag">select</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <p>&nbsp;</p>
-               <p class="item-heading">Basic select full width</p>
-               <div class="form-field form-field--select form-field--full-width">
-                  <label for="select1">Select label</label>
-                  <select name="demo" id="select1">
-                     <option value="Option 1" selected="">Option 1</option>
-                     <option value="Option 2">Option 2</option>
-                     <option value="Option 3">Option 3</option>
-                  </select>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select form-field--full-width</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">select</span> name="demo" id="name-here">
-&lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
-&lt;/<span class="tag">select</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <p>&nbsp;</p>
-               <p class="item-heading">Basic select disabled</p>
-               <div class="form-field form-field--select">
-                  <label for="select1">Select label</label>
-                  <select name="demo" id="select1" disabled>
-                     <option value="Option 1" selected="">Option 1</option>
-                     <option value="Option 2">Option 2</option>
-                     <option value="Option 3">Option 3</option>
-                  </select>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
-&lt;<span class="tag">select</span> name="demo" id="name-here" disabled>
-&lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
-&lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
-&lt;/<span class="tag">select</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-             </div>
-<div class="component-wrapper">
-               <p class="item-heading">Radio buttons</p>
-               <div class="form-field form-field--radio">
-                  <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
-                  <label for="radio-one">Radio label 1</label>
-               </div>
-               <div class="form-field form-field--radio">
-                  <input type="radio" name="demo" value="one" id="radio-two" class="form-radio">
-                  <label for="radio-two">Radio label 2</label>
-               </div>
-               <div class="form-field form-field--radio">
-                  <input type="radio" name="demo" value="one" id="radio-three" class="form-radio" disabled>
-                  <label for="radio-three">Radio label disabled</label>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>" checked>
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label 1 (checked)</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label 2</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>" disabled>
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label disabled</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-             </div>
-          <div class="component-wrapper">
-               <p class="item-heading">Checkboxes</p>
-               <div class="form-field form-field--checkbox">
-                  <input type="checkbox" class="form-checkbox" id="check-one" checked>
-                  <label for="check-one">Checkbox label 1</label>
-               </div>
-               <div class="form-field form-field--checkbox">
-                  <input type="checkbox" class="form-checkbox" id="check-two">
-                  <label for="check-two">Checkbox label 2</label>
-               </div>
-               <div class="form-field form-field--checkbox">
-                  <input type="checkbox" class="form-checkbox" id="check-three" disabled>
-                  <label for="check-three">Checkbox label disabled</label>
-               </div>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" checked>
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 1 (checked)</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 2</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" disabled>
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label disabled</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-               </pre>
-             </div>
-             <div class="component-wrapper">
-               <p class="item-heading">Example of related form fields with fieldset + legend (<a href="https://accessibility.blog.gov.uk/2016/07/22/using-the-fieldset-and-legend-elements/">more info</a>)</p>
-               <div class="form-group form-group--checkbox">
-                 <div class="form-group__heading">
-                   Form group heading
-                 </div>
-                  <fieldset>
-                     <legend>These items belong together</legend>
-                     <div class="form-field form-field--checkbox">
-                        <input type="checkbox" class="form-checkbox" id="check-one" checked>
-                        <label for="check-one">Checkbox group item 1</label>
-                     </div>
-                     <div class="form-field form-field--checkbox">
-                        <input type="checkbox" class="form-checkbox" id="check-two">
-                        <label for="check-two">Checkbox group item 2</label>
-                     </div>
-                     <div class="form-field form-field--checkbox">
-                        <input type="checkbox" class="form-checkbox" id="check-three">
-                        <label for="check-three">Checkbox group item 3</label>
-                     </div>
-                  </fieldset>
-               </div>
-
-               <pre>
-&lt;<span class="tag">div</span> class="<span class="class">form-group form-group--checkbox</span>">
-
-
-
-&lt;<span class="tag">fieldset</span>>
-&lt;<span class="tag">legend</span>><span class="text">These items belong together</span>&lt;/<span class="tag">legend</span>>
-
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" checked>
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 1 (checked)</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 2</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-
-&lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
-&lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
-&lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 3</span>&lt;/<span class="tag">label</span>>
-&lt;/<span class="tag">div</span>>
-
-&lt;/<span class="tag">fieldset</span>>
-
-&lt;/<span class="tag">div</span>>
-               </pre>
-
-            </form>
+             </pre>
+         </div>
+         <div class="component-wrapper">
+         <p class="item-heading">Textarea</p>
+         <div class="form-field form-field--textarea">
+         <label for="textarea1">Text area label</label>
+         <textarea rows="4" cols="50" id="textarea1"></textarea>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--textarea</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Text area label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">textarea</span> rows="4" cols="50" id="name-here">&lt;/<span class="tag">textarea</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <p>&nbsp;</p>
+         <p class="item-heading">Textarea full width</p>
+         <div class="form-field form-field--textarea form-field--full-width">
+         <label for="textarea1">Text area label</label>
+         <textarea rows="4" cols="50" id="textarea1"></textarea>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--textarea form-field--full-width</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Text area label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">textarea</span> rows="4" cols="50" id="name-here">&lt;/<span class="tag">textarea</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         </div>
+         <div class="component-wrapper">
+         <p class="item-heading">Basic select</p>
+         <div class="form-field form-field--select">
+         <label for="select1">Select label</label>
+         <select name="demo" id="select1">
+         <option value="Option 1" selected="">Option 1</option>
+         <option value="Option 2">Option 2</option>
+         <option value="Option 3">Option 3</option>
+         </select>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">select</span> name="demo" id="name-here">
+         &lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
+         &lt;/<span class="tag">select</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <p>&nbsp;</p>
+         <p class="item-heading">Basic select small</p>
+         <div class="form-field form-field--select form-field--small">
+         <label for="select1">Select label</label>
+         <select name="demo" id="select1">
+         <option value="Option 1" selected="">Option 1</option>
+         <option value="Option 2">Option 2</option>
+         <option value="Option 3">Option 3</option>
+         </select>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select form-field--small</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">select</span> name="demo" id="name-here">
+         &lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
+         &lt;/<span class="tag">select</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <p>&nbsp;</p>
+         <p class="item-heading">Basic select full width</p>
+         <div class="form-field form-field--select form-field--full-width">
+         <label for="select1">Select label</label>
+         <select name="demo" id="select1">
+         <option value="Option 1" selected="">Option 1</option>
+         <option value="Option 2">Option 2</option>
+         <option value="Option 3">Option 3</option>
+         </select>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select form-field--full-width</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">select</span> name="demo" id="name-here">
+         &lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
+         &lt;/<span class="tag">select</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <p>&nbsp;</p>
+         <p class="item-heading">Basic select disabled</p>
+         <div class="form-field form-field--select">
+         <label for="select1">Select label</label>
+         <select name="demo" id="select1" disabled>
+         <option value="Option 1" selected="">Option 1</option>
+         <option value="Option 2">Option 2</option>
+         <option value="Option 3">Option 3</option>
+         </select>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--select</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Select label</span>&lt;/<span class="tag">label</span>>
+         &lt;<span class="tag">select</span> name="demo" id="name-here" disabled>
+         &lt;<span class="tag">option</span> value="Option 1"><span class="text">Option 1</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 2"><span class="text">Option 2</span>&lt;/<span class="tag">option</span>>
+         &lt;<span class="tag">option</span> value="Option 3"><span class="text">Option 3</span>&lt;/<span class="tag">option</span>>
+         &lt;/<span class="tag">select</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         </div>
+         <div class="component-wrapper">
+         <p class="item-heading">Radio buttons</p>
+         <div class="form-field form-field--radio">
+         <input type="radio" name="demo" value="one" id="radio-one" class="form-radio" checked>
+         <label for="radio-one">Radio label 1</label>
+         </div>
+         <div class="form-field form-field--radio">
+         <input type="radio" name="demo" value="one" id="radio-two" class="form-radio">
+         <label for="radio-two">Radio label 2</label>
+         </div>
+         <div class="form-field form-field--radio">
+         <input type="radio" name="demo" value="one" id="radio-three" class="form-radio" disabled>
+         <label for="radio-three">Radio label disabled</label>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>" checked>
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label 1 (checked)</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label 2</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--radio</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">radio</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-radio</span>" disabled>
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Radio label disabled</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         </div>
+         <div class="component-wrapper">
+         <p class="item-heading">Checkboxes</p>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-one" checked>
+         <label for="check-one">Checkbox label 1</label>
+         </div>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-two">
+         <label for="check-two">Checkbox label 2</label>
+         </div>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-three" disabled>
+         <label for="check-three">Checkbox label disabled</label>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" checked>
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 1 (checked)</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 2</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" disabled>
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label disabled</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         </div>
+         <div class="component-wrapper">
+         <p class="item-heading">Example of related form fields with fieldset + legend (<a href="https://accessibility.blog.gov.uk/2016/07/22/using-the-fieldset-and-legend-elements/">more info</a>)</p>
+         <div class="form-group form-group--checkbox">
+         <div class="form-group__heading">
+         Form group heading
+         </div>
+         <fieldset>
+         <legend>These items belong together</legend>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-one" checked>
+         <label for="check-one">Checkbox group item 1</label>
+         </div>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-two">
+         <label for="check-two">Checkbox group item 2</label>
+         </div>
+         <div class="form-field form-field--checkbox">
+         <input type="checkbox" class="form-checkbox" id="check-three">
+         <label for="check-three">Checkbox group item 3</label>
+         </div>
+         </fieldset>
+         </div>
+         <pre>
+         &lt;<span class="tag">div</span> class="<span class="class">form-group form-group--checkbox</span>">
+         &lt;<span class="tag">fieldset</span>>
+         &lt;<span class="tag">legend</span>><span class="text">These items belong together</span>&lt;/<span class="tag">legend</span>>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>" checked>
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 1 (checked)</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 2</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         &lt;<span class="tag">div</span> class="<span class="class">form-field form-field--checkbox</span>">
+         &lt;<span class="tag">input</span> type="<span class="tag">checkbox</span>" name="demo" value="value-here" id="name-here" class="<span class="class">form-checkbox</span>">
+         &lt;<span class="tag">label</span> for="name-here"><span class="text">Checkbox label 3</span>&lt;/<span class="tag">label</span>>
+         &lt;/<span class="tag">div</span>>
+         &lt;/<span class="tag">fieldset</span>>
+         &lt;/<span class="tag">div</span>>
+         </pre>
+         </form>
          </div>
       </div>
    </body>
