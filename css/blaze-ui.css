@@ -2205,6 +2205,28 @@ select[disabled] + label {
   margin-right: 10px;
 }
 
+.form-field--password {
+  position: relative;
+  width: 100%;
+}
+
+.form-field--password .show-hide-password {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: .75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: .6;
+}
+
+.form-field--password .show-hide-password i {
+  width: 18px;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
 .toggle input[type=checkbox] {
   height: 0;
   width: 0;
@@ -4288,7 +4310,7 @@ hr {
   }
 }
 
-.table-scroll table .form-checkbox {
+.table-scroll table .form-field {
   margin: 0;
 }
 
