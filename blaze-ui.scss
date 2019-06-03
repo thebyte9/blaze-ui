@@ -65,9 +65,17 @@
 @import 'sass/module/_tooltips';
 
 /* ==========================================================================
+  Plugins
+   ========================================================================== */
+
+@import 'sass/plugins/_animate';
+
+/* ==========================================================================
   Fonts
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+

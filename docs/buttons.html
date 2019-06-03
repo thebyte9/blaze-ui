@@ -8,15 +8,18 @@
       <link href="../dist/main.css" rel="stylesheet" type="text/css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script>
-         <!--
          $(function(){
-         $(".toggle").click(function(){
-         $(this).next().toggleClass("open");
-         return false;
-         });
-         });
-         //-->
+            $(".toggle").click(function(){
+            $(this).next().toggleClass("open");
+            return false;
+          });
 
+          $("#animated").click(function(){
+            $(this).addClass('animated heartBeat');
+            setTimeout(() => $(this).removeClass('animated heartBeat'), 500);
+          });
+         });
+        
          function toggle_visibility(id) {
                   var e = document.getElementById(id);
                   if(e.style.display == 'block')
@@ -39,7 +42,7 @@
          <div class="component-wrapper">
             <p class="item-heading">Default button</p>
             <p class="note">Buttons work with the &lt;<span class="tag">button</span>&gt; or &lt;<span class="tag">a</span>&gt; tags</p>
-            <button type="button" class="button">Button</button>
+            <button type="button" id="animated" class="button">Animated button</button>
             <pre>
               &lt;<span class="tag">button</span> class="<span class="class">button</span>">
                 <span class="text">Button</span>

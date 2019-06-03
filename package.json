@@ -32,5 +32,8 @@
     "webpack-dev-server": "^3.2.1",
     "webpack-mild-compile": "^3.3.1",
     "webpack-spritesmith": "^1.0.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.1"
   }
 }
