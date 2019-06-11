@@ -14,9 +14,10 @@
             return false;
           });
 
-          $("#animated").click(function(){
-            $(this).addClass('animated heartBeat');
-            setTimeout(() => $(this).removeClass('animated heartBeat'), 500);
+          $("#animations").change(function(event){
+            const { value } = event.target            
+            $("#animated").addClass(value);
+            setTimeout(() => $("#animated").removeClass(value), 1000);
           });
          });
         
@@ -33,7 +34,6 @@
             $(this).toggleClass('open');
           });
          });
-
       </script>
    </head>
    <body>
@@ -43,6 +43,16 @@
             <p class="item-heading">Default button</p>
             <p class="note">Buttons work with the &lt;<span class="tag">button</span>&gt; or &lt;<span class="tag">a</span>&gt; tags</p>
             <button type="button" id="animated" class="button">Animated button</button>
+            <br>
+            <div class="form-field form-field--select">
+              <select name="animations" id="animations">
+                <option default value="">Choose an option</option>
+                <option value="pulse">Pulse</option>
+                <option value="heartBeat">Heartbeat</option>
+                <option value="fadeIn">Face In</option>
+                <option value="bounceIn">Bounce In</option>
+              </select>
+            </div>
             <pre>
               &lt;<span class="tag">button</span> class="<span class="class">button</span>">
                 <span class="text">Button</span>

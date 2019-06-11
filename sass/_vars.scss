@@ -136,12 +136,33 @@ $button-max-width:            160px;
 
 
 /* ==========================================================================
-  ANIMATION
+  ANIMATION_VARS
    ========================================================================== */
 
 $animate-default: all .5s ease;
 $animate-background: background-color .5s ease;
 
+/* ==========================================================================
+  ANIMATIONS_MIXINS
+   ========================================================================== */
+
+  @mixin keyframe ($animation_name) {
+    @keyframes #{$animation_name} {
+      @content;
+    }
+  }
+
+  @mixin applyAnimation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
+      animation-delay: $delay;
+      animation-duration: $duration;
+      animation-name: $animation;
+      animation-fill-mode: $fillmode;
+      animation-direction: $direction;
+  }
+
+  @mixin applyDefaultAnimation ($keyframe) {
+    @include applyAnimation(0, 0.5s, $keyframe, ease);
+  }
 
 /* ==========================================================================
   MISC
