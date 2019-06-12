@@ -8,17 +8,27 @@
       <link href="../dist/main.css" rel="stylesheet" type="text/css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script>
-         $(function(){
-            $(".toggle").click(function(){
-            $(this).next().toggleClass("open");
-            return false;
-          });
 
-          $("#animations").change(function(event){
-            const { value } = event.target            
-            $("#animated").addClass(value);
-            setTimeout(() => $("#animated").removeClass(value), 1000);
-          });
+
+         $(function(){
+            let selectedClass = ''; 
+
+            $(".toggle").click(function(){
+              $(this).next().toggleClass("open");
+              return false;
+            });
+
+            $("#animated").click(function(){
+              $(this).addClass(selectedClass);
+              setTimeout(() => $(this).removeClass(selectedClass), 500);
+            });
+
+            $("#animations").change(function(event){
+              const { value } = event.target            
+              selectedClass = value;         
+              $("#animated").addClass(value);
+              setTimeout(() => $("#animated").removeClass(value), 500);
+            });
          });
         
          function toggle_visibility(id) {
