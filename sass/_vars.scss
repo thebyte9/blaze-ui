@@ -153,11 +153,11 @@ $animate-background: background-color .5s ease;
   }
 
   @mixin applyAnimation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
-      animation-delay: $delay;
-      animation-duration: $duration;
-      animation-name: $animation;
-      animation-fill-mode: $fillmode;
-      animation-direction: $direction;
+    animation-delay: $delay;
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-fill-mode: $fillmode;
+    animation-direction: $direction;
   }
 
   @mixin applyDefaultAnimation ($keyframe) {
