@@ -9,16 +9,24 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script>
          $(function(){
-            $(".toggle").click(function(){
-            $(this).next().toggleClass("open");
-            return false;
-          });
+            let selectedClass = ''; 
 
-          $("#animations").change(function(event){
-            const { value } = event.target            
-            $("#animated").addClass(value);
-            setTimeout(() => $("#animated").removeClass(value), 1000);
-          });
+            $(".toggle").click(function(){
+              $(this).next().toggleClass("open");
+              return false;
+            });
+
+            $("#animated").click(function(){
+              $(this).addClass(selectedClass);
+              setTimeout(() => $(this).removeClass(selectedClass), 500);
+            });
+
+            $("#animations").change(function(event){
+              const { value } = event.target            
+              selectedClass = value;         
+              $("#animated").addClass(value);
+              setTimeout(() => $("#animated").removeClass(value), 500);
+            });
          });
         
          function toggle_visibility(id) {
@@ -51,6 +59,20 @@
                 <option value="heartBeat">Heartbeat</option>
                 <option value="fadeIn">Face In</option>
                 <option value="bounceIn">Bounce In</option>
+                <option value="bounceInDown">Bounce In Down</option>
+                <option value="bounceInLeft">Bounce In Left</option>
+                <option value="bounceInRight">Bounce In Right</option>
+                <option value="bounceInUp">Bounce In Up</option>
+                <option value="bounceOut">Bounce Out</option>
+                <option value="bounceOutDown">Bounce Out Down</option>
+                <option value="bounceOutLeft">Bounce Out Left</option>
+                <option value="bounceOutRight">Bounce Out Right</option>
+                <option value="bounceOutUp">Bounce Out Up</option>
+                <option value="flipInX">flip In X</option>
+                <option value="flipInY">flip In Y</option>
+                <option value="flipOutX">flip Out X</option>
+                <option value="flipOutY">flip Out Y</option>
+
               </select>
             </div>
             <pre>
