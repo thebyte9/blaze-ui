@@ -15,22 +15,6 @@
       });
       });
       //-->
-   <!--
-       function toggle_visibility(id) {
-          var e = document.getElementById(id);
-          if(e.style.display == 'block')
-             e.style.display = 'none';
-          else
-             e.style.display = 'block';
-       }
-   //-->
-
-   $(document).ready(function(){
-    $('#more-menu-button').click(function(){
-      $(this).toggleClass('open');
-    });
-   });
-
 </script>
    </head>
    <body>
@@ -43,13 +27,13 @@
                   <div class="more-menu">
                      <ul class="more-menu__list">
                         <li class="more-menu__list-item">
-                           <a href="#">Link here</a>
+                           <button type="button" name="button" class="more-menu__link">Button here</button>
                         </li>
                         <li class="more-menu__list-item">
-                           <a href="#">Link here</a>
+                           <a href="#" class="more-menu__link">Link here</a>
                         </li>
                         <li class="more-menu__list-item">
-                           <a href="#">Link here</a>
+                           <a href="#" class="more-menu__link">Link here</a>
                         </li>
                      </ul>
                   </div>
