@@ -44,4 +44,21 @@
       }
     }
   }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    color: $nearly-black;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    background: $white;
+
+    &:hover {
+      background-color: $grey-100;
+      text-decoration: none;
+    }
+  }
 }
