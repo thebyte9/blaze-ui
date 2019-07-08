@@ -233,6 +233,17 @@ select[disabled] + label {
       top: -2px;
     }
   }
+  &--switch {
+    display: flex;
+    flex-direction: column;
+    & .switch + .switch {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    & .switch__item {
+      padding-left: 0;
+    }
+  }
 }
 
 .required {
