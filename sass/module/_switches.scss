@@ -82,16 +82,20 @@
   &--label-left {
     flex-direction: row;
   }
+
   &--label-right {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
+
   &--label-top {
     flex-direction: column;
   }
+
   &--label-base {
     flex-direction: column-reverse;
   }
+
   & + .switch {
     margin-left: 10px;
   }
@@ -99,6 +103,7 @@
   &__wrapper {
     display: flex;
   }
+
   &__item {
     display: flex;
     padding: 5px;

@@ -2077,6 +2077,191 @@ a.badge:hover span {
   margin-top: -15px;
 }
 
+.chip__avatar, .chip__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  height: 32px;
+  background-color: #eeeeee;
+  color: #333333;
+  border-radius: 16px;
+  cursor: default;
+}
+
+.chip--clickable {
+  transition: background-color .5s ease;
+  cursor: pointer;
+}
+
+.chip--clickable:hover {
+  background-color: #d5d5d5;
+}
+
+.chip--primary {
+  background-color: #03a9f4;
+  color: #ffffff;
+}
+
+.chip--primary.chip--clickable:hover {
+  background-color: #2ebcfc;
+}
+
+.chip--primary .chip__avatar {
+  background-color: #0275a8;
+}
+
+.chip--primary .chip__icon {
+  opacity: .8;
+}
+
+.chip--primary .chip__icon:hover {
+  opacity: 1;
+}
+
+.chip--secondary {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.chip--secondary.chip--clickable:hover {
+  background-color: #f77066;
+}
+
+.chip--secondary .chip__avatar {
+  background-color: #d2190b;
+}
+
+.chip--secondary .chip__icon {
+  opacity: .8;
+}
+
+.chip--secondary .chip__icon:hover {
+  opacity: 1;
+}
+
+.chip--outlined {
+  background: rgba(238, 238, 238, 0);
+  border: 1px solid #cccccc;
+}
+
+.chip--outlined.chip--clickable:hover {
+  background: rgba(204, 204, 204, 0.2);
+}
+
+.chip--outlined.chip--primary {
+  border: 1px solid #03a9f4;
+  color: #03a9f4;
+}
+
+.chip--outlined.chip--primary.chip--clickable:hover {
+  background: rgba(3, 169, 244, 0.1);
+}
+
+.chip--outlined.chip--primary .chip__avatar {
+  color: #ffffff;
+}
+
+.chip--outlined.chip--secondary {
+  border: 1px solid #f44336;
+  color: #f44336;
+}
+
+.chip--outlined.chip--secondary.chip--clickable:hover {
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.chip--outlined.chip--secondary .chip__avatar {
+  color: #ffffff;
+}
+
+.chip--outlined .chip__avatar {
+  color: #333333;
+}
+
+.chip--small {
+  height: 24px;
+  border-radius: 12px;
+}
+
+.chip--small .chip__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  font-size: .618rem;
+}
+
+.chip--small .chip__avatar i {
+  font-size: .875rem;
+}
+
+.chip--small .chip__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.chip--small .chip__icon i {
+  font-size: 1.125rem;
+}
+
+.chip__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip__wrapper .chip {
+  margin: 5px;
+}
+
+.chip__label {
+  padding: 0 12px;
+  font-size: .688rem;
+}
+
+.chip__avatar {
+  font-size: .688rem;
+  background-color: #cccccc;
+  margin-left: -1px;
+}
+
+.chip__avatar i {
+  font-size: 1rem;
+  opacity: .8;
+}
+
+.chip__icon {
+  opacity: .3;
+}
+
+.chip__icon--delete {
+  cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+.chip__icon--delete:hover {
+  opacity: .5;
+}
+
+.chip__icon--custom {
+  cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+.chip__icon--custom:hover {
+  opacity: .5;
+}
+
 p {
   line-height: 1.5em;
   margin: 0 0 30px;
