@@ -535,7 +535,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  height: 100%;
   color: #333333;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   background-color: #eeeeee;
@@ -1130,6 +1129,40 @@ textarea {
   opacity: 0;
 }
 
+.page__header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #cccccc;
+}
+
+.page__header--opens-right {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.page__header--responsive {
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .page__header--responsive .icon-button {
+    display: none;
+  }
+}
+
+.page__content--drawer {
+  text-align: left;
+  padding: 20px;
+}
+
 .item-heading {
   display: inline-block;
   width: 100%;
@@ -1165,6 +1198,7 @@ textarea {
   padding: 30px;
   background-color: #ffffff;
   text-align: left;
+  position: relative;
   /* From: this breakpoint (inclusive)*/
   /* Until: that breakpoint (exclusive)*/
   /* Responsive support is disabled, rasterize the output outside @media blocks*/
@@ -1180,6 +1214,20 @@ textarea {
 
 .component-wrapper--full-width {
   max-width: 100%;
+}
+
+.component-wrapper__header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  background-color: #666666;
+  color: #ffffff;
+}
+
+.component-wrapper__content {
+  padding: 20px;
 }
 
 pre {
@@ -2274,6 +2322,117 @@ p {
 
 .modal p:last-of-type {
   margin: 0;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f5f5;
+  box-shadow: inset -2px 0 1px -1px #cccccc;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  transition: width .3s;
+  text-align: left;
+}
+
+.drawer.open {
+  width: 250px;
+}
+
+.drawer--right {
+  box-shadow: inset 2px 0 1px -1px #cccccc;
+}
+
+.drawer--responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 100;
+  box-shadow: none;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .drawer--responsive {
+    position: inherit;
+    width: 250px;
+    box-shadow: inset -2px 0 1px -1px #cccccc;
+  }
+}
+
+.drawer--responsive.open {
+  width: 100%;
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .drawer--responsive.open {
+    width: 250px;
+  }
+}
+
+.drawer__wrapper {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+  position: relative;
+}
+
+.drawer__wrapper--drawer-right .drawer--right {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.drawer__content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.drawer__header {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.drawer__header--right {
+  justify-content: flex-start;
+}
+
+.drawer__header--responsive {
+  /* From: this breakpoint (inclusive)*/
+  /* Until: that breakpoint (exclusive)*/
+  /* Responsive support is disabled, rasterize the output outside @media blocks*/
+  /* The browser will rely on the cascade itself.*/
+  /* Remove unnecessary media query prefix 'all and '*/
+}
+
+@media (min-width: 64em) {
+  .drawer__header--responsive .icon-button {
+    display: none;
+  }
+}
+
+.drawer__content {
+  padding: 20px;
 }
 
 .form-radio {
