@@ -1,0 +1,196 @@
+%chip-icon-avatar-basic {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  height: 32px;
+  background-color: $grey-light;
+  color: $nearly-black;
+  border-radius: 16px;
+  cursor: default;
+
+  &--clickable {
+    transition: background-color .5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($grey-light, 10%);
+    }
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &.chip--clickable {
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+      }
+    }
+
+    & .chip__avatar {
+      background-color: darken($primary-color, 15%);
+    }
+
+    & .chip__icon {
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    &.chip--clickable {
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+
+    & .chip__avatar {
+      background-color: darken($secondary-color, 15%);
+    }
+
+    & .chip__icon {
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--outlined {
+    background: rgba($grey-light, 0);
+    border: 1px solid $grey;
+
+    &.chip--clickable {
+      &:hover {
+        background: rgba($grey, .2);
+      }
+    }
+
+    &.chip--primary {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+
+      &.chip--clickable {
+        &:hover {
+          background: rgba($primary-color, .1);
+        }
+      }
+
+      & .chip__avatar {
+        color: $white;
+      }
+    }
+
+    &.chip--secondary {
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+
+      &.chip--clickable {
+        &:hover {
+          background: rgba($secondary-color, .1);
+        }
+      }
+
+      & .chip__avatar {
+        color: $white;
+      }
+    }
+
+    & .chip__avatar {
+      color: $nearly-black;
+    }
+  }
+
+  &--small {
+    height: 24px;
+    border-radius: 12px;
+
+    & .chip__avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      font-size: .618rem;
+
+      & i {
+        font-size: .875rem;
+      }
+    }
+
+    & .chip__icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+
+      & i {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .chip {
+      margin: 5px;
+    }
+  }
+
+  &__label {
+    padding: 0 12px;
+    font-size: .688rem;
+  }
+
+  &__avatar {
+    @extend %chip-icon-avatar-basic;
+    font-size: .688rem;
+    background-color: $grey;
+    margin-left: -1px;
+
+    & i {
+      font-size: 1rem;
+      opacity: .8;
+    }
+  }
+
+  &__icon {
+    @extend %chip-icon-avatar-basic;
+    opacity: .3;
+
+    &--delete {
+      cursor: pointer;
+      transition: opacity .5s ease;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    &--custom {
+      cursor: pointer;
+      transition: opacity .5s ease;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
