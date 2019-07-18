@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Drawer</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+      <script>
+         function toggle() {
+            var element = document.getElementById("drawer");
+            element.classList.toggle("open");
+         }
+         function close() {
+            var element = document.getElementById("drawer");
+            element.classList.remove("open");
+         }
+      </script>
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+      <div class="drawer__wrapper">
+         <div class="drawer drawer--left drawer--responsive" id="drawer">
+            <div class="drawer__content-wrapper">
+               <div class="drawer__header drawer__header--responsive">
+                  <button type="button" name="button" class="icon-button" onclick="toggle()"><i class="material-icons">
+                  keyboard_arrow_left
+                  </i></button>
+               </div>
+               <div class="drawer__content">
+                  <p>Elit occaecat qui Lorem eiusmod culpa sunt culpa exercitation Lorem culpa. Veniam irure occaecat incididunt amet ullamco Lorem et aliquip enim. Ullamco pariatur minim aliquip dolor labore cillum sit amet ullamco qui sit officia quis tempor deserunt eu anim. Non tempor veniam ullamco irure minim officia sunt reprehenderit excepteur. Id et voluptate ea proident ipsum in do eiusmod sunt laboris pariatur excepteur eu et ad sint sint. Excepteur sit fugiat sit Lorem sunt tempor reprehenderit quis id officia cupidatat veniam irure ad et fugiat anim. Voluptate do esse est laborum irure ipsum cillum deserunt.</p>
+                  <p>Aute deserunt non et incididunt labore eiusmod occaecat minim. Eiusmod Lorem Lorem fugiat proident officia commodo mollit enim aliqua pariatur aute ea. Reprehenderit anim in ipsum et minim dolore mollit dolore. Non nulla minim excepteur amet aute mollit consequat ad minim anim cupidatat consequat nostrud qui voluptate. Consequat tempor proident tempor reprehenderit sint veniam dolore eiusmod ut sunt qui.</p>
+                  <p>Minim occaecat nulla quis Lorem nulla sint quis dolor ad ad sunt. Consectetur amet consectetur ullamco cupidatat proident labore ea sit deserunt nisi laborum sunt. Officia culpa sunt irure voluptate ipsum consectetur Lorem cillum consectetur pariatur cupidatat amet ad. Sint laboris incididunt laboris occaecat fugiat quis do cupidatat. Tempor occaecat minim sint proident et sunt elit aliqua est duis elit. Reprehenderit nulla nostrud veniam ad nulla ea officia pariatur ullamco. Et velit minim labore laboris culpa excepteur ex ex pariatur irure sint.</p>
+                  <p>Qui excepteur ut qui voluptate culpa ullamco non do consectetur irure. Quis aliquip anim irure ipsum ad qui aute dolor cupidatat enim excepteur est Lorem. Excepteur Lorem anim tempor reprehenderit amet dolore commodo. Nulla nisi dolore commodo irure labore officia tempor ad reprehenderit magna et.</p>
+               </div>
+            </div>
+         </div>
+         <div class="page page--drawer">
+            <div class="page__header page__header--drawer page__header--responsive">
+               <button type="button" name="button" class="icon-button" onclick="toggle()"><i class="material-icons">
+               menu
+               </i></button>
+               Drawer responsive
+            </div>
+            <div class="page__content page__content--drawer">
+               <p>Rough js to toggle open/close. Would be nice to add a class on the content header menu button so it can be hidden when the drawer is open & user clicks arrow button on drawer to close</p>
+               <p>Aute magna laboris proident proident velit magna adipisicing do qui veniam esse ipsum exercitation id. Labore id anim nisi voluptate dolor sit eu reprehenderit est labore amet id irure do. Cupidatat excepteur id excepteur ex velit dolor proident laboris excepteur esse et nulla reprehenderit proident.</p>
+               <p>Elit occaecat qui Lorem eiusmod culpa sunt culpa exercitation Lorem culpa. Veniam irure occaecat incididunt amet ullamco Lorem et aliquip enim. Ullamco pariatur minim aliquip dolor labore cillum sit amet ullamco qui sit officia quis tempor deserunt eu anim. Non tempor veniam ullamco irure minim officia sunt reprehenderit excepteur. Id et voluptate ea proident ipsum in do eiusmod sunt laboris pariatur excepteur eu et ad sint sint. Excepteur sit fugiat sit Lorem sunt tempor reprehenderit quis id officia cupidatat veniam irure ad et fugiat anim. Voluptate do esse est laborum irure ipsum cillum deserunt.</p>
+               <p>Aute deserunt non et incididunt labore eiusmod occaecat minim. Eiusmod Lorem Lorem fugiat proident officia commodo mollit enim aliqua pariatur aute ea. Reprehenderit anim in ipsum et minim dolore mollit dolore. Non nulla minim excepteur amet aute mollit consequat ad minim anim cupidatat consequat nostrud qui voluptate. Consequat tempor proident tempor reprehenderit sint veniam dolore eiusmod ut sunt qui.</p>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

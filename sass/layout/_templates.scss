@@ -33,12 +33,27 @@
   padding: 30px;
   background-color: $white;
   text-align: left;
+  position: relative;
   @include mq($from: tablet) {
     padding: 50px;
   }
 
   &--full-width {
     max-width: 100%;
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    background-color: $grey-dark;
+    color: $white;
+  }
+
+  &__content {
+    padding: 20px;
   }
 }
 

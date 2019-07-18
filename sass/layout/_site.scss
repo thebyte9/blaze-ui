@@ -30,6 +30,7 @@
     }
   }
 }
+
 .hidden {
   /*hidden but accesible*/
   position: absolute !important;
@@ -38,4 +39,34 @@
   width: 0;
   overflow: hidden;
   opacity: 0;
+}
+
+.page {
+  &__header {
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    background-color: $grey-light;
+    border-bottom: 1px solid $grey;
+    &--opens-right {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    &--responsive {
+      @include mq($from: desktop) {
+        & .icon-button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+    &--drawer {
+      text-align: left;
+      padding: 20px;
+    }
+  }
 }

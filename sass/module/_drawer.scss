@@ -1,0 +1,90 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-lightest;
+  box-shadow: inset -2px 0 1px -1px $grey;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  transition: width .3s;
+  text-align: left;
+
+  &.open {
+    width: 250px;
+  }
+
+  &--right {
+    box-shadow: inset 2px 0 1px -1px $grey;
+  }
+
+  &--responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    box-shadow: none;
+    @include mq($from: desktop) {
+      position: inherit;
+      width: 250px;
+      box-shadow: inset -2px 0 1px -1px $grey;
+    }
+
+    &.open {
+      width: 100%;
+      @include mq($from: desktop) {
+        width: 250px;
+      }
+    }
+  }
+
+  &__wrapper {
+    background-color: $white;
+    border: 1px solid $grey;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    position: relative;
+
+    &--drawer-right {
+      & .drawer--right {
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+    }
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    border-bottom: 1px solid $grey;
+
+    &--right {
+      justify-content: flex-start;
+    }
+
+    &--responsive {
+      @include mq($from: desktop) {
+        & .icon-button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+}
