@@ -18,6 +18,15 @@
     width: auto;
   }
 
+  &__background {
+    background: rgba(0, 0, 0, .6);
+    bottom: 0;
+    left: 0;
+    position: "absolute";
+    right: 0;
+    top: 0;
+  }
+
   &__list {
     @extend %list;
   }
