@@ -1,0 +1,63 @@
+.custom-DraftEditor {
+    &-editor .public-DraftEditorPlaceholder-root,
+    &-editor .public-DraftEditor-content {
+        padding: 10px;
+        margin: 0 -10px -10px;
+    }
+
+    &-editor .public-DraftEditor-content {
+        min-height: 100px;
+      }
+
+      &-editor .public-DraftEditorPlaceholder-inner {
+        color: $grey;
+      }
+      
+    &-hidePlaceholder .public-DraftEditorPlaceholder-root {
+        display: none;
+    }
+    
+    &-editor .public-DraftStyleDefault-pre {
+        background-color: white;
+        border: 0;
+    }
+    
+    &-root {
+        background: $white;
+        box-shadow: $box-shadow;
+        padding: 20px;
+    }
+
+    &-controls {
+        font-size: 14px;
+        margin-bottom: 5px;
+        user-select: none;
+    }
+      
+    &-styleButton {
+        color: $grey-medium;
+        cursor: pointer;
+        margin: 0 7px;
+    }
+      
+    &-activeButton {
+        color: $primary-color;
+        margin: 0 7px;
+    }
+
+    &-editor {
+        border-top: 1px solid $grey-lightest;
+        cursor: text;
+        margin-top: 10px;
+    }
+
+    &-editor 
+    &-blockquote {
+        border-left: 4px solid $grey-light;
+        color: $grey-dark;
+        font-style: italic;
+        margin: 16px 0;
+        padding: 10px 20px;
+    }
+} 
+

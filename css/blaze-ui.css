@@ -5062,6 +5062,66 @@ hr {
   opacity: 1;
 }
 
+.custom-DraftEditor-editor .public-DraftEditorPlaceholder-root,
+.custom-DraftEditor-editor .public-DraftEditor-content {
+  padding: 10px;
+  margin: 0 -10px -10px;
+}
+
+.custom-DraftEditor-editor .public-DraftEditor-content {
+  min-height: 100px;
+}
+
+.custom-DraftEditor-editor .public-DraftEditorPlaceholder-inner {
+  color: #cccccc;
+}
+
+.custom-DraftEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+  display: none;
+}
+
+.custom-DraftEditor-editor .public-DraftStyleDefault-pre {
+  background-color: white;
+  border: 0;
+}
+
+.custom-DraftEditor-root {
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.custom-DraftEditor-controls {
+  font-size: 14px;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+.custom-DraftEditor-styleButton {
+  color: #999999;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+.custom-DraftEditor-activeButton {
+  color: #03a9f4;
+  margin: 0 7px;
+}
+
+.custom-DraftEditor-editor {
+  border-top: 1px solid #f4f5f5;
+  cursor: text;
+  margin-top: 10px;
+}
+
+.custom-DraftEditor-editor .custom-DraftEditor-blockquote {
+  border-left: 4px solid #eeeeee;
+  color: #666666;
+  font-style: italic;
+  margin: 16px 0;
+  padding: 10px 20px;
+}
+
 /* ==========================================================================
   Fonts
    ========================================================================== */
