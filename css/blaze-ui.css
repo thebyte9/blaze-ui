@@ -5166,7 +5166,7 @@ hr {
 }
 
 .loader__spinner--linear {
-  animation: spinner .6s infinite linear;
+  animation: spinner 0.6s infinite linear;
 }
 
 .loader__spinner--ease {

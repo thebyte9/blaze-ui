@@ -53,11 +53,11 @@
         text-align: center;
         &--left {
             text-align: left;
-          }
+        }
           
-          &--rigth {
+        &--rigth {
             text-align: right;
-          }
+        }
       }
       &__step {
         fill: $white;
@@ -90,11 +90,11 @@
         height: 50px;
         border-radius: 50%;
         &--linear {
-            animation: spinner .6s infinite linear;
+            animation: $animate-spinner-linear;
           }
           
         &--ease {
-            animation: spinner 1s ease-in-out infinite;
+            animation: $animate-spinner-ease;
         }
       }
   }
