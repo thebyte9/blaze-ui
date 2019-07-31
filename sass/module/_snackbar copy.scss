@@ -1,0 +1,97 @@
+@mixin applyPosition (
+    $top, 
+    $left, 
+    $right, 
+    $animation_name
+    ) {
+        top: $top;
+        left: $left;
+        right: $right;
+        animation: 0.3s $animation_name ease 1; 
+}
+
+@mixin generateModifiers (
+    $name, 
+    $top, 
+    $margin,  
+    $activeAniation, 
+    $leaveAnimation
+    ) {
+        .#{$name}Left {
+            @include applyPosition($top, $margin, none, $leaveAnimation)
+        } 
+        .#{$name}Left.active {
+            @include applyPosition($top, $margin, none, $activeAniation);
+            opacity:1;
+        }
+    
+        .#{$name}Right {
+            @include applyPosition($top, none, $margin, $leaveAnimation)
+        } 
+        .#{$name}Right.active {
+            @include applyPosition($top, none, $margin, $activeAniation);
+            opacity:1;
+        }
+}
+
+@mixin generateAnimation (
+    $animation_name, 
+    $initialDisplay, 
+    $finalDisplay,
+    $initialOpacity, 
+    $finalOpacity, 
+    $initialTop, 
+    $finalTop
+    ) {
+    @keyframes #{$animation_name} {
+        0%{
+            display: $initialDisplay;
+            top: $initialTop;
+            opacity: $initialOpacity;
+        }
+        75%{
+            top: $finalTop;
+            opacity: $finalOpacity;
+        }
+        100%{
+            display: $finalDisplay;
+        }
+    }
+}
+
+.snackbar{
+	background: $nearly-black;
+	box-shadow: $box-shadow;
+    color: $white;
+    position: fixed;
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	font-size: 16px;
+	border-radius:3px;
+	transform: translateY(-50%);
+	opacity:0;
+    & .message{
+        height:40px;
+        line-height:40px;
+        padding:0 10px;
+        text-align:center;
+    }
+    & .close{
+        width:40px;
+        height:40px;
+        cursor:pointer;
+        border-radius:50%;
+        background: $black-opacity;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@include generateModifiers(snackbar--bottom, 90%, 5%, upBottom, downBottom);
+@include generateModifiers(snackbar--top, 10%, 5%, upDown, downTop);
+
+@include generateAnimation(upTop, none, block, 0, 1, 100%, 90%);
+@include generateAnimation(downTop, block, block, 1, 0, 90%, -100%);

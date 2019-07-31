@@ -88,6 +88,7 @@ $blue-grey-700:           #455a64;
 
 $shadow:                  rgba(18, 23, 28, .14);
 $white-opacity:           rgba(255, 255, 255, .94);
+$black-opacity:           rgba(0, 0, 0, .1);
 $white-translucent:       rgba(255, 255, 255, .2);
 
 $primary-button-color:    #03a9f4;/*blue*/
@@ -136,6 +137,28 @@ $animate-default: all .5s ease;
 $animate-background: background-color .5s ease;
 $animate-spinner-linear: spinner .6s infinite linear;
 $animate-spinner-ease: spinner 1s ease-in-out infinite;
+
+/* ==========================================================================
+  ANIMATIONS_MIXINS
+   ========================================================================== */
+
+   @mixin keyframe ($animation_name) {
+    @keyframes #{$animation_name} {
+      @content;
+    }
+  }
+
+  @mixin applyAnimation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
+    animation-delay: $delay;
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-fill-mode: $fillmode;
+    animation-direction: $direction;
+  }
+
+  @mixin applyDefaultAnimation ($keyframe) {
+    @include applyAnimation(0, 0.5s, $keyframe, ease);
+  }
 
 /* ==========================================================================
   MISC

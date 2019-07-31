@@ -1,0 +1,84 @@
+@mixin applyPosition (
+    $top, 
+    $left, 
+    $right, 
+    $animation_name
+    ) {
+        top: $top;
+        left: $left;
+        right: $right;
+        animation: .5s $animation_name ease-in-out 1; 
+}
+
+@mixin generateModifiers (
+    $name, 
+    $top, 
+    $margin,  
+    $activeAniation, 
+    $leaveAnimation
+    ) {
+        .#{$name}Left.active {
+            @include applyPosition($top, $margin, none, $activeAniation);
+            opacity:1;
+        }
+        .#{$name}Right.active {
+            @include applyPosition($top, none, $margin, $activeAniation);
+            opacity:1;
+        }
+}
+
+@mixin generateAnimation (
+    $animation_name, 
+    $initialTop, 
+    $finalTop
+    ) {
+    @keyframes #{$animation_name} {
+        0%{
+            top: $initialTop;
+        }
+        75%{
+            top: $finalTop;
+        }
+    }
+}
+
+.snackbar{
+	background: $nearly-black;
+	box-shadow: $box-shadow;
+    color: $white;
+    position: fixed;
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	font-size: 16px;
+	border-radius:3px;
+	transform: translateY(-50%);
+	opacity:0;
+    & .message{
+        height:40px;
+        line-height:40px;
+        padding:0 10px;
+        text-align:center;
+    }
+    & .close{
+        width:40px;
+        height:40px;
+        cursor:pointer;
+        border-radius:50%;
+        background: $black-opacity;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+@include generateModifiers(snackbar--bottom, 90%, 5%, upBottom, downBottom);
+@include generateAnimation(upBottom, 150%, 90%);
+@include generateAnimation(downBottom, 90%, 150%);
+
+@include generateModifiers(snackbar--top, 10%, 5%, downTop, upTop);
+@include generateAnimation(downTop, -50%, 10%);
+@include generateAnimation(upTop, 10%, -50%);
