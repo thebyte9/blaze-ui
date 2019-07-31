@@ -1,0 +1,109 @@
+.loader {
+    width: 100%;
+    &__bar {
+        position: relative;
+        background-color: $white;
+        background-color: $grey-light; 
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      &__lock {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex; 
+        padding: 5%;
+        background-color: rgba(0, 0, 0, .2);
+        display: flex;
+        &--bar {
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          
+          &--spinner {
+            justify-content: center;
+            align-items: center;
+          }
+      }  
+      
+      &__progress {
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 7px;
+        border-radius: 10px;
+        transition-duration: .8;
+        transition: background-color .4s ease;
+        &--icon .loader__step--default  {
+            opacity: 1;
+            transform: scale(1);
+          }
+      }
+      &__status {
+        font-size: $font-regular;
+        color: $grey-dark;
+        display: block;
+        text-align: center;
+        &--left {
+            text-align: left;
+        }
+          
+        &--right {
+            text-align: right;
+        }
+      }
+      &__step {
+        fill: $white;
+        width: 15px;
+        height: 15px;
+        &--default {
+            background-color: $primary-color;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            transition: all .2s ease;
+            transform: scale(0);
+            opacity: 0;
+            & .icon {
+                color: $white;
+                font-size: 16px;
+                font-weight: bold;
+              }
+          }
+      }
+      &__spinner {
+        border: 4px solid $grey-light;
+        border-top-color: $primary-color;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &--linear {
+            animation: $animate-spinner-linear;
+          }
+          
+        &--ease {
+            animation: $animate-spinner-ease;
+        }
+      }
+  }
+    
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

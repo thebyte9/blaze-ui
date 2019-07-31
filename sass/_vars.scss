@@ -134,7 +134,8 @@ $button-max-width:            160px;
 
 $animate-default: all .5s ease;
 $animate-background: background-color .5s ease;
-
+$animate-spinner-linear: spinner .6s infinite linear;
+$animate-spinner-ease: spinner 1s ease-in-out infinite;
 
 /* ==========================================================================
   MISC
