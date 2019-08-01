@@ -507,6 +507,10 @@
 /*pale cyan*/
 /*grey light*/
 /*grey*/
+/*red*/
+/*green*/
+/*cyan*/
+/*orange*/
 /* ==========================================================================
   BUTTONS
    ========================================================================== */
@@ -5185,53 +5189,22 @@ hr {
   }
 }
 
-.snackbar {
-  background: #333333;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-  position: fixed;
-  box-sizing: border-box;
-  padding: 10px;
-  display: flex;
-  font-size: 16px;
-  border-radius: 3px;
-  transform: translateY(-50%);
-  opacity: 0;
-}
-
-.snackbar .message {
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-  text-align: center;
-}
-
-.snackbar .close {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.snackbar--bottomLeft.active {
+.snackbar--bottom-left.active {
   top: 90%;
   left: 5%;
   right: none;
-  animation: 0.5s upBottom ease-in-out 1;
+  animation: 0.3s upBottom ease;
   opacity: 1;
+  transform: translateY(-100%);
 }
 
-.snackbar--bottomRight.active {
+.snackbar--bottom-right.active {
   top: 90%;
   left: none;
   right: 5%;
-  animation: 0.5s upBottom ease-in-out 1;
+  animation: 0.3s upBottom ease;
   opacity: 1;
+  transform: translateY(-100%);
 }
 
 @keyframes upBottom {
@@ -5243,29 +5216,22 @@ hr {
   }
 }
 
-@keyframes downBottom {
-  0% {
-    top: 90%;
-  }
-  75% {
-    top: 150%;
-  }
-}
-
-.snackbar--topLeft.active {
+.snackbar--top-left.active {
   top: 10%;
   left: 5%;
   right: none;
-  animation: 0.5s downTop ease-in-out 1;
+  animation: 0.3s downTop ease;
   opacity: 1;
+  transform: translateY(0%);
 }
 
-.snackbar--topRight.active {
+.snackbar--top-right.active {
   top: 10%;
   left: none;
   right: 5%;
-  animation: 0.5s downTop ease-in-out 1;
+  animation: 0.3s downTop ease;
   opacity: 1;
+  transform: translateY(0%);
 }
 
 @keyframes downTop {
@@ -5277,13 +5243,81 @@ hr {
   }
 }
 
-@keyframes upTop {
-  0% {
-    top: 10%;
-  }
-  75% {
-    top: -50%;
-  }
+.snackbar {
+  background: #333333;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 60px;
+  position: fixed;
+  font-size: .9rem;
+  padding: 10px;
+  display: flex;
+  opacity: 0;
+}
+
+.snackbar .message {
+  padding: 0 10px;
+  max-width: 185px;
+  display: flex;
+  align-items: center;
+}
+
+.snackbar .message a {
+  margin: 0 5px;
+  color: #ffffff;
+  box-shadow: 0 2px 0 0 #ffffff;
+}
+
+.snackbar .message i {
+  padding: 5px 10px 0 0;
+  align-self: flex-start;
+}
+
+.snackbar .close {
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.snackbar .close:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.snackbar--success {
+  color: #ffffff;
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.snackbar--warning {
+  color: #ffffff;
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.snackbar--alert {
+  color: #ffffff;
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.snackbar--info {
+  color: #ffffff;
+  background-color: #00bcd4;
+  border-color: #00bcd4;
 }
 
 /* ==========================================================================

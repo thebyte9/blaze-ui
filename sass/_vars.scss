@@ -69,7 +69,6 @@ $purple:                  #9c27b0;
 $indigo:                  #9c27b0;
 $teal:                    #009688;
 $yellow:                  #ffc107;
-$cyan:                    #00bcd4;
 
 /*Greyscale colours*/
 $grey:                    #cccccc;
@@ -112,6 +111,11 @@ $success-alert-color:     #c8e6c9;/*pale green*/
 $info-alert-color:        #b2ebf2;/*pale cyan*/
 $light-alert-color:       #eeeeee;/*grey light*/
 $dark-alert-color:        #cccccc;/*grey*/
+
+$alert-snackbar-color:       #f44336;/*red*/
+$success-snackbar-color:     #4caf50;/*green*/
+$info-snackbar-color:        #00bcd4;/*cyan*/
+$warning-snackbar-color:     #ff5722;/*orange*/
 
 
 /* ==========================================================================

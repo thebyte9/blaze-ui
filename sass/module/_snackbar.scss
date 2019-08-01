@@ -7,23 +7,25 @@
         top: $top;
         left: $left;
         right: $right;
-        animation: .5s $animation_name ease-in-out 1; 
+        animation: .3s $animation_name ease; 
 }
 
 @mixin generateModifiers (
     $name, 
     $top, 
     $margin,  
-    $activeAniation, 
-    $leaveAnimation
+    $activeAnimation, 
+    $translateY
     ) {
-        .#{$name}Left.active {
-            @include applyPosition($top, $margin, none, $activeAniation);
+        .#{$name}-left.active {
+            @include applyPosition($top, $margin, none, $activeAnimation);
             opacity:1;
+            transform: translateY($translateY);
         }
-        .#{$name}Right.active {
-            @include applyPosition($top, none, $margin, $activeAniation);
+        .#{$name}-right.active {
+            @include applyPosition($top, none, $margin, $activeAnimation);
             opacity:1;
+            transform: translateY($translateY);
         }
 }
 
@@ -42,43 +44,80 @@
     }
 }
 
+@include generateModifiers(snackbar--bottom, 90%, 5%, upBottom, -100%);
+@include generateAnimation(upBottom, 150%, 90%);
+
+@include generateModifiers(snackbar--top, 10%, 5%, downTop, 0%);
+@include generateAnimation(downTop, -50%, 10%);
+
 .snackbar{
 	background: $nearly-black;
 	box-shadow: $box-shadow;
     color: $white;
-    position: fixed;
 	box-sizing: border-box;
+	border-radius:3px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 60px;
+    position: fixed;
+	font-size: .9rem;
 	padding: 10px;
 	display: flex;
-	font-size: 16px;
-	border-radius:3px;
-	transform: translateY(-50%);
-	opacity:0;
+    opacity:0;
     & .message{
-        height:40px;
-        line-height:40px;
         padding:0 10px;
-        text-align:center;
+        max-width: 185px;
+        display: flex;
+        align-items: center;
+        & a {
+            margin : 0 5px;
+            color: $white;
+            box-shadow: 0 2px 0 0 $white;
+        }
+        & i {
+            padding: 5px 10px 0 0;
+            align-self: flex-start;
+        }
     }
     & .close{
-        width:40px;
-        height:40px;
-        cursor:pointer;
-        border-radius:50%;
         background: $black-opacity;
+        position: absolute;
+        border-radius:50%;
         font-size: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
+        right: 10px;
+        width:40px;
+        height:40px;
+        transition: .3s;
+        cursor:pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+
+    &--success {
+      color: $white;
+      background-color: $success-snackbar-color;
+      border-color: $success-snackbar-color;
+    }
+
+    &--warning {
+        color: $white;
+        background-color: $warning-snackbar-color;
+        border-color: $warning-snackbar-color;
+    }
+
+    &--alert {
+        color: $white;
+        background-color: $alert-snackbar-color;
+        border-color: $alert-snackbar-color;
+    }
+
+    &--info {
+        color: $white;
+        background-color: $info-snackbar-color;
+        border-color: $info-snackbar-color;
     }
 }
-
-
-
-@include generateModifiers(snackbar--bottom, 90%, 5%, upBottom, downBottom);
-@include generateAnimation(upBottom, 150%, 90%);
-@include generateAnimation(downBottom, 90%, 150%);
-
-@include generateModifiers(snackbar--top, 10%, 5%, downTop, upTop);
-@include generateAnimation(downTop, -50%, 10%);
-@include generateAnimation(upTop, 10%, -50%);
