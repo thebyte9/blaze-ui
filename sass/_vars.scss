@@ -143,28 +143,6 @@ $animate-spinner-linear: spinner .6s infinite linear;
 $animate-spinner-ease: spinner 1s ease-in-out infinite;
 
 /* ==========================================================================
-  ANIMATIONS_MIXINS
-   ========================================================================== */
-
-   @mixin keyframe ($animation_name) {
-    @keyframes #{$animation_name} {
-      @content;
-    }
-  }
-
-  @mixin applyAnimation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
-    animation-delay: $delay;
-    animation-name: $animation;
-    animation-duration: $duration;
-    animation-fill-mode: $fillmode;
-    animation-direction: $direction;
-  }
-
-  @mixin applyDefaultAnimation ($keyframe) {
-    @include applyAnimation(0, 0.5s, $keyframe, ease);
-  }
-
-/* ==========================================================================
   MISC
    ========================================================================== */
 
