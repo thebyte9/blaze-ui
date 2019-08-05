@@ -5277,6 +5277,10 @@ hr {
   align-self: flex-start;
 }
 
+.snackbar .message p {
+  margin: 0;
+}
+
 .snackbar .close {
   background: rgba(0, 0, 0, 0.1);
   position: absolute;
