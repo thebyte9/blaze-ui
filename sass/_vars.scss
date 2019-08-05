@@ -69,7 +69,6 @@ $purple:                  #9c27b0;
 $indigo:                  #9c27b0;
 $teal:                    #009688;
 $yellow:                  #ffc107;
-$cyan:                    #00bcd4;
 
 /*Greyscale colours*/
 $grey:                    #cccccc;
@@ -88,6 +87,7 @@ $blue-grey-700:           #455a64;
 
 $shadow:                  rgba(18, 23, 28, .14);
 $white-opacity:           rgba(255, 255, 255, .94);
+$black-opacity:           rgba(0, 0, 0, .1);
 $white-translucent:       rgba(255, 255, 255, .2);
 
 $primary-button-color:    #03a9f4;/*blue*/
@@ -111,6 +111,11 @@ $success-alert-color:     #c8e6c9;/*pale green*/
 $info-alert-color:        #b2ebf2;/*pale cyan*/
 $light-alert-color:       #eeeeee;/*grey light*/
 $dark-alert-color:        #cccccc;/*grey*/
+
+$alert-snackbar-color:       #f44336;/*red*/
+$success-snackbar-color:     #4caf50;/*green*/
+$info-snackbar-color:        #00bcd4;/*cyan*/
+$warning-snackbar-color:     #ff5722;/*orange*/
 
 
 /* ==========================================================================

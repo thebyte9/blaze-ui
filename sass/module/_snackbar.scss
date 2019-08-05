@@ -1,0 +1,126 @@
+@mixin applyPosition (
+    $top, 
+    $left, 
+    $right, 
+    $animation_name
+    ) {
+        top: $top;
+        left: $left;
+        right: $right;
+        animation: .3s $animation_name ease; 
+}
+
+@mixin generateModifiers (
+    $name, 
+    $top, 
+    $margin,  
+    $activeAnimation, 
+    $translateY
+    ) {
+        .#{$name}-left.active {
+            @include applyPosition($top, $margin, none, $activeAnimation);
+            opacity:1;
+            transform: translateY($translateY);
+        }
+        .#{$name}-right.active {
+            @include applyPosition($top, none, $margin, $activeAnimation);
+            opacity:1;
+            transform: translateY($translateY);
+        }
+}
+
+@mixin generateAnimation (
+    $animation_name, 
+    $initialTop, 
+    $finalTop
+    ) {
+    @keyframes #{$animation_name} {
+        0%{
+            top: $initialTop;
+        }
+        75%{
+            top: $finalTop;
+        }
+    }
+}
+
+@include generateModifiers(snackbar--bottom, 90%, 5%, upBottom, -100%);
+@include generateAnimation(upBottom, 150%, 90%);
+
+@include generateModifiers(snackbar--top, 10%, 5%, downTop, 0%);
+@include generateAnimation(downTop, -50%, 10%);
+
+.snackbar{
+	background: $nearly-black;
+	box-shadow: $box-shadow;
+    color: $white;
+	box-sizing: border-box;
+	border-radius: 3px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 60px;
+    position: fixed;
+	font-size: .9rem;
+	padding: 10px;
+	display: flex;
+    opacity: 0;
+    & .message{
+        padding: 0 10px;
+        max-width: 185px;
+        display: flex;
+        align-items: center;
+        & a {
+            margin : 0 5px;
+            color: $white;
+            box-shadow: 0 2px 0 0 $white;
+        }
+        & i {
+            padding: 5px 10px 0 0;
+            align-self: flex-start;
+        }
+        & p {
+            margin: 0;
+        }
+    }
+    & .close{
+        background: $black-opacity;
+        position: absolute;
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+
+    &--success {
+      color: $white;
+      background-color: $success-snackbar-color;
+      border-color: $success-snackbar-color;
+    }
+
+    &--warning {
+        color: $white;
+        background-color: $warning-snackbar-color;
+        border-color: $warning-snackbar-color;
+    }
+
+    &--alert {
+        color: $white;
+        background-color: $alert-snackbar-color;
+        border-color: $alert-snackbar-color;
+    }
+
+    &--info {
+        color: $white;
+        background-color: $info-snackbar-color;
+        border-color: $info-snackbar-color;
+    }
+}
