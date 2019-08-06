@@ -518,9 +518,6 @@
   ANIMATION
    ========================================================================== */
 /* ==========================================================================
-  ANIMATIONS_MIXINS
-   ========================================================================== */
-/* ==========================================================================
   MISC
    ========================================================================== */
 /* ==========================================================================
@@ -5122,6 +5119,18 @@ hr {
   transform: scale(1);
 }
 
+.loader__progress--green {
+  background-color: #4caf50;
+}
+
+.loader__progress--orange {
+  background-color: #ff5722;
+}
+
+.loader__progress--red {
+  background-color: #f44336;
+}
+
 .loader__status {
   font-size: 400;
   color: #666666;
@@ -5144,7 +5153,6 @@ hr {
 }
 
 .loader__step--default {
-  background-color: #03a9f4;
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -5178,6 +5186,26 @@ hr {
 
 .loader__spinner--ease {
   animation: spinner 1s ease-in-out infinite;
+}
+
+.loader__spinner--bigg {
+  width: 70px;
+  height: 70px;
+}
+
+.loader__spinner--med {
+  width: 50px;
+  height: 50px;
+}
+
+.loader__spinner--small {
+  width: 30px;
+  height: 30px;
+}
+
+.loader__spinner--x-small {
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes spinner {
