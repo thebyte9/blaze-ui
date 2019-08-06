@@ -45,6 +45,17 @@
             opacity: 1;
             transform: scale(1);
           }
+        &--green {
+          background-color: $green;
+        }
+    
+        &--orange {
+          background-color: $orange;
+        }
+    
+        &--red {
+          background-color: $red;
+        }
       }
       &__status {
         font-size: $font-regular;
@@ -64,7 +75,6 @@
         width: 15px;
         height: 15px;
         &--default {
-            background-color: $primary-color;
             width: 23px;
             height: 23px;
             border-radius: 50%;
@@ -95,6 +105,26 @@
           
         &--ease {
             animation: $animate-spinner-ease;
+        }
+
+        &--big {
+          width: 70px;
+          height: 70px;
+        }
+
+        &--med {
+          width: 50px;
+          height: 50px;
+        }
+
+        &--small {
+          width: 30px;
+          height: 30px;
+        }
+      
+        &--x-small {
+          width: 20px;
+          height: 20px;
         }
       }
   }
