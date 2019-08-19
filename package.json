@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node-sass --output-style expanded --source-map true blaze-ui.scss css/blaze-ui.css",
-    "dev": "webpack-dev-server --host localhost --port 3012 -d --mode development",
+    "dev": "webpack-dev-server --host localhost --port 3000 -d --mode development",
     "lint": "sass-lint -v -q"
   },
   "repository": {
