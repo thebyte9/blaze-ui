@@ -46,7 +46,9 @@ option {
 label {
   color: $grey-dark;
   margin-bottom: 3px;
-  text-transform: capitalize;
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
 
 input[type][disabled] {
