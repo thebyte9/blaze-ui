@@ -1,0 +1,47 @@
+.multiselect {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    &__clear {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    &__input {
+        width: 100%;
+        border: 0;
+        background: transparent;
+      }
+      
+    &__dropdown {
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        max-height: 250px;
+        overflow-y: auto;
+        transform: translateY(100%);
+        width: 100%;
+        box-shadow: $box-shadow;
+        background: $white;
+        & p {
+            margin-top: 25px;
+            padding-left: 15px;           
+        }
+      }
+
+      .form-field {
+        width: 40%;
+        margin: 0;
+      }
+
+      .form-group {
+        margin: 0;
+        padding: 10px 20px;
+      }
+      
+      .form-group:hover {
+        background: $grey-light;
+        cursor: pointer;
+      }
+  }
+
