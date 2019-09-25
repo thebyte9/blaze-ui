@@ -1,0 +1,9 @@
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-style: dashed;
+    border-color: $grey-light;
+    height: 250px;
+  }
