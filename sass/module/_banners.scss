@@ -1,0 +1,14 @@
+.banner {
+  &--wallpaper {
+    position: fixed;
+    top: 0;
+    right: -9999px;
+    left: -9999px;
+    margin: auto;
+    width: 1920px;
+    height: 1200px;
+    & img {
+      max-width: none;
+    }
+  }
+}
