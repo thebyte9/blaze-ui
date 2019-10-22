@@ -1435,6 +1435,42 @@ pre .text {
   margin-bottom: 0;
 }
 
+.autocomplete {
+  width: 100%;
+}
+
+.autocomplete__options {
+  position: relative;
+  display: none;
+}
+
+.autocomplete__options.show {
+  display: flex;
+}
+
+.autocomplete__options-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+}
+
+.autocomplete__item {
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.autocomplete__item:hover {
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
 .avatar {
   position: relative;
   width: 150px;
