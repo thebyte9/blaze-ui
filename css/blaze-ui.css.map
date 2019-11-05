@@ -18,6 +18,7 @@
 		"../sass/module/_autocomplete.scss",
 		"../sass/module/_avatars.scss",
 		"../sass/module/_badges.scss",
+		"../sass/module/_banners.scss",
 		"../sass/module/_breadcrumb.scss",
 		"../sass/module/_buttons.scss",
 		"../sass/module/_cards.scss",

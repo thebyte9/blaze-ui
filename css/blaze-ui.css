@@ -1666,6 +1666,20 @@ a.badge:hover span {
   opacity: 1;
 }
 
+.banner--wallpaper {
+  position: fixed;
+  top: 0;
+  right: -9999px;
+  left: -9999px;
+  margin: auto;
+  width: 1920px;
+  height: 1200px;
+}
+
+.banner--wallpaper img {
+  max-width: none;
+}
+
 .breadcrumb {
   display: flex;
   align-content: center;
