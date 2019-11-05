@@ -13,6 +13,7 @@ textarea {
   border: 1px solid $grey;
   padding: 10px;
   width: 100%;
+  color: $nearly-black;
 }
 
 select {
@@ -146,8 +147,18 @@ select[disabled] + label {
         width: 18px;
         font-size: 1rem;
         margin-left: 5px;
-
       }
+    }
+  }
+
+  &--autocomplete {
+    margin: 0;
+    max-width: 500px;
+
+    & input {
+      height: 48px;
+      padding: 0 16px;
+      font-size: 1rem;
     }
   }
 }
@@ -236,13 +247,16 @@ select[disabled] + label {
       top: -2px;
     }
   }
+
   &--switch {
     display: flex;
     flex-direction: column;
+
     & .switch + .switch {
       margin-left: 0;
       margin-top: 5px;
     }
+
     & .switch__item {
       padding-left: 0;
     }

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Components</title>
+      <link href="../dist/main.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="site-container site-container--template">
+         <h2 class="group-heading">Autocomplete</h2>
+         <div class="component-wrapper">
+            <p>Autocomplete component allows users to quickly find and select one from suggested options.</p>
+            <div class="autocomplete">
+               <div class="form-field form-field--input form-field--autocomplete">
+                  <label class=""></label>
+                  <input data-testid="input" type="text" placeholder="Search" value="">
+               </div>
+               <div class="autocomplete__options show">
+                 <div class="autocomplete__options-wrapper">
+                  <div class="autocomplete__item" role="button" data-testid="option-1">Laravel</div>
+                  <div class="autocomplete__item" role="button" data-testid="option-2">React</div>
+                  <div class="autocomplete__item" role="button" data-testid="option-3">Adonis</div>
+                </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
